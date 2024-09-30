@@ -13,6 +13,20 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryWhite: "#ffffff",
+        secondaryWhite: "#F4F5FF",
+        primaryBlack: "#000000",
+        primaryBlue: "#2B00FF",
+        secondaryGray: "#77818A",
+        darkBlue: "#161527",
+      },
+      backgroundImage: {
+        "hero-bg": "url('/hero_bg.png')",
+      },
+      fontFamily: {
+        istok: ["Istok Web", "sans-serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
+        roboto: ["Roboto Condensed", "sans-serif"],
       },
     },
   },
