@@ -25,13 +25,16 @@ const TopNavBar = () => {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
+      disableAnimation={false}
       maxWidth="2xl"
-      className="md:px-10 md:pt-3 bg-transparent"
+      className={`md:px-10 md:pt-3 bg-transparent ${
+        isMenuOpen ? "bg-[#161527]" : ""
+      }`}
     >
       <NavbarContent>
         <NavbarBrand className="flex items-center gap-4">
           <Image src={logo} alt="Logo" />
-          <p className="font-bold text-primaryWhite text-[18px] font-istok leading-[23px] tracking-[.30em]">
+          <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
             FUSHION AI
           </p>
         </NavbarBrand>
@@ -77,7 +80,7 @@ const TopNavBar = () => {
         className="md:hidden "
       />
 
-      <NavbarMenu className="bg-gray-950 pt-20 gap-12">
+      <NavbarMenu className="bg-[#161527] pt-20 gap-12">
         {menuItems.map((item, index) => (
           <NavbarMenuItem
             key={`${item}-${index}`}
