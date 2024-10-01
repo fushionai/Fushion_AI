@@ -65,6 +65,7 @@ const ServicesSection = () => {
           slidesToScroll: 1,
           arrows: false,
           dots: true,
+          speed: 200,
         },
       },
     ],
