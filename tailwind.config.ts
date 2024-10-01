@@ -21,7 +21,7 @@ const config: Config = {
         darkBlue: "#161527",
       },
       backgroundImage: {
-        "hero-bg": "url('/hero_bg.png')",
+        "hero-bg": "url('/images/hero_bg.jpg')",
       },
       fontFamily: {
         istok: ["Istok Web", "sans-serif"],
