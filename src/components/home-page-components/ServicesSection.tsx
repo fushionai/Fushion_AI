@@ -108,9 +108,8 @@ const ServicesSection = () => {
         <article className="pt-28 max-md:pt-12">
           <Slider {...settings}>
             {servicesSectionContents.map((service, index) => (
-              <div>
+              <div key={index}>
                 <Service
-                  key={index}
                   icon={service.icon}
                   title={service.title}
                   description={service.description}
