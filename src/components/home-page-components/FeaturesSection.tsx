@@ -1,5 +1,3 @@
-import React from "react";
-
 const FeaturesSection = () => {
   return (
     <section className="bg-primaryWhite py-20">

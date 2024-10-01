@@ -11,6 +11,7 @@ import Image from "next/image";
 
 import servicesSectionContents from "@/contents/home-page-contents/services-section-contents";
 import Service from "./Service";
+import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 
 const ServicesSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -98,7 +99,14 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="relative bg-hero-bg bg-slate-400 bg-center bg-cover bg-no-repeat  px-32 max-md:px-12 pt-32 max-md:pt-20 pb-40 max-md:pb-32">
+    <section className="relative bg-center bg-cover bg-no-repeat  px-32 max-md:px-12 pt-32 max-md:pt-20 pb-40 max-md:pb-32">
+      <Image
+        src={heroBg}
+        alt="Background image"
+        layout="fill"
+        loading="eager"
+        className="-z-10 object-cover"
+      />
       <div className="-z-10 before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[#161527] before:opacity-[80%]"></div>
       <main className="relative z-20">
         <div className="flex items-center gap-20 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
