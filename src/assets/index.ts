@@ -6,7 +6,7 @@ import reach from "./icons/home-page-icons/reach.svg";
 import nextArrow from "./icons/home-page-icons/nextArrow.svg";
 import prevArrow from "./icons/home-page-icons/prevArrow.svg";
 
-export default {
+const assets = {
   // Home page services sections icons
   insights,
   bulb,
@@ -15,3 +15,5 @@ export default {
   nextArrow,
   prevArrow,
 };
+
+export default assets;
