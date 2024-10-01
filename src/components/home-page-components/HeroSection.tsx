@@ -4,7 +4,7 @@ import TopNavBar from "@/components/TopNavBar";
 
 const HeroSection = () => {
   return (
-    <section className="bg-hero-bg bg-center bg-cover bg-no-repeat max-h-screen pb-20 max-sm:pb-28">
+    <section className="bg-hero-bg bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
       <header>
         <TopNavBar />
       </header>

@@ -19,6 +19,7 @@ const config: Config = {
         primaryBlue: "#2B00FF",
         secondaryGray: "#77818A",
         darkBlue: "#161527",
+        snowWhite: "#FDFDFD",
       },
       backgroundImage: {
         "hero-bg": "url('/images/hero_bg.jpg')",
