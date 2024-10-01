@@ -86,6 +86,7 @@ const TopNavBar = () => {
             <Image src={assets.menu} alt="Navbar menu" />
           )
         }
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
 
       <NavbarMenu className="bg-[#161527] pt-20 gap-12">
