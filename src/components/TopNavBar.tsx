@@ -15,6 +15,7 @@ import {
 
 import logo from "../assets/icons/logo.svg";
 import Image from "next/image";
+import assets from "@/assets/index";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,6 +79,13 @@ const TopNavBar = () => {
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="md:hidden "
+        icon={
+          isMenuOpen ? (
+            <Image src={assets.close} alt="Navbar close" />
+          ) : (
+            <Image src={assets.menu} alt="Navbar menu" />
+          )
+        }
       />
 
       <NavbarMenu className="bg-[#161527] pt-20 gap-12">

@@ -1,3 +1,7 @@
+// NavBar icons
+import menu from "./icons/menu.svg";
+import close from "./icons/close.svg";
+
 // Home page services sections icons
 import insights from "./icons/home-page-icons/insight.svg";
 import bulb from "./icons/home-page-icons/bulb.svg";
@@ -7,6 +11,9 @@ import nextArrow from "./icons/home-page-icons/nextArrow.svg";
 import prevArrow from "./icons/home-page-icons/prevArrow.svg";
 
 const assets = {
+  // NavBar icons
+  menu,
+  close,
   // Home page services sections icons
   insights,
   bulb,
