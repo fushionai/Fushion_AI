@@ -3,7 +3,7 @@ import valuesSectionContent from "@/contents/home-page-contents/values-section-c
 
 const ValuesSection = () => {
   return (
-    <section className="bg-primaryWhite py-20">
+    <section className="bg-primaryWhite py-20 max-md:pt-14 max-sm:pt-5">
       <header>
         <h2 className="px-10 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-center text-darkBlue leading-[32px]">
           Core Values of Fushion AI

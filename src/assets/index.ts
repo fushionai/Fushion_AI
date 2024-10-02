@@ -16,6 +16,19 @@ import integrity from "./icons/home-page-icons/integration.svg";
 import professionalism from "./icons/home-page-icons/badge.svg";
 import customer from "./icons/home-page-icons/customer.svg";
 
+// Home page features section images
+import statistics from "./images/home-page-images/statistics.png";
+import analysis from "./images/home-page-images/analysis.png";
+import insight from "./images/home-page-images/insight.png";
+import person from "./images/home-page-images/person.png";
+import agreement from "./images/home-page-images/agreement.png";
+import statisticsWithBg from "./images/home-page-images/statistics-with-bg.svg";
+import analysisWithBg from "./images/home-page-images/analysis-with-bg.svg";
+import insightWithBg from "./images/home-page-images/insight-with-bg.svg";
+import personWithBg from "./images/home-page-images/person-with-bg.svg";
+import docsWithBg from "./images/home-page-images/docs-with-bg.svg";
+import agreementWithBg from "./images/home-page-images/agreement-with-bg.svg";
+
 const assets = {
   // NavBar icons
   menu,
@@ -33,6 +46,19 @@ const assets = {
   integrity,
   professionalism,
   customer,
+
+  // Home page features section images
+  statistics,
+  analysis,
+  insight,
+  person,
+  agreement,
+  statisticsWithBg,
+  analysisWithBg,
+  insightWithBg,
+  personWithBg,
+  docsWithBg,
+  agreementWithBg,
 };
 
 export default assets;
