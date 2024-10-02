@@ -60,7 +60,7 @@ const ServicesSection = () => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

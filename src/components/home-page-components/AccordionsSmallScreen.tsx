@@ -14,7 +14,7 @@ function FeaturesSmallScreen() {
   const settings: Settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
     afterChange: (i) => {
@@ -28,7 +28,7 @@ function FeaturesSmallScreen() {
   };
 
   return (
-    <main className="mx-auto max-w-[700px]">
+    <main className="mx-auto">
       <div className="flex justify-center mb-4">
         {num.map((n, index) => {
           const distance = Math.abs(currentSlide - index);
