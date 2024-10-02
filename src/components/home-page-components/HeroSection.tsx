@@ -14,7 +14,7 @@ const HeroSection = () => {
         alt="Background image"
         layout="fill"
         loading="eager"
-        className="-z-10 object-cover "
+        className="-z-10 object-fill "
       />
       <section>
         <header>

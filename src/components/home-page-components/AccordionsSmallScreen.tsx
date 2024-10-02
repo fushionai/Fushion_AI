@@ -13,6 +13,7 @@ function FeaturesSmallScreen() {
 
   const settings: Settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 200,
     slidesToShow: 1,
@@ -51,10 +52,10 @@ function FeaturesSmallScreen() {
         })}
       </div>
 
-      <div className="slider-container ">
+      <div className="slider-container">
         <Slider ref={sliderRef} {...settings}>
           <div>
-            <article className="px-4 mx-auto ">
+            <article className="px-4 mx-auto">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
                 Unmatched Expertise in{" "}
                 <span className="text-primaryBlue">AI</span> and{" "}
