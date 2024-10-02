@@ -14,7 +14,7 @@ function FeaturesSmallScreen() {
   const settings: Settings = {
     dots: false,
     infinite: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     afterChange: (i) => {
