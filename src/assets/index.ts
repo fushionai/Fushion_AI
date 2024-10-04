@@ -29,6 +29,11 @@ import personWithBg from "./images/home-page-images/person-with-bg.svg";
 import docsWithBg from "./images/home-page-images/docs-with-bg.svg";
 import agreementWithBg from "./images/home-page-images/agreement-with-bg.svg";
 
+// Home page testimonial section icons
+import stars from "./icons/home-page-icons/stars.svg";
+import testimonialPerson from "./images/home-page-images/vector.png";
+import testimonialLogo from "./icons/home-page-icons/company.svg";
+
 const assets = {
   // NavBar icons
   menu,
@@ -59,6 +64,11 @@ const assets = {
   personWithBg,
   docsWithBg,
   agreementWithBg,
+
+  // Home page testimonial section icons
+  stars,
+  testimonialPerson,
+  testimonialLogo,
 };
 
 export default assets;

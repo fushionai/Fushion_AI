@@ -22,9 +22,12 @@ const config: Config = {
         darkGray: "#222222",
         darkBlue: "#161527",
         snowWhite: "#FDFDFD",
+        gradientWhiteLight: "linear-gradient(90deg, #FFFFFF, #DCDCDC)",
       },
       backgroundImage: {
         "hero-bg": "url('/images/hero_bg.jpg')",
+        "gradient-secondary": "linear-gradient(90deg, #4620FF, #5A38FF)",
+        "gradient-secondary-light": "linear-gradient(90deg, #FFFFFF, #DCDCDC)",
       },
       fontFamily: {
         istok: ["Istok Web", "sans-serif"],
