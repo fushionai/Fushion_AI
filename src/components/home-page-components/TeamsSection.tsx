@@ -11,29 +11,29 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const TeamsSection = () => {
-  const CustomPrevArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={onClick}
-        className={`py-4 absolute md:top-1/2 max-md:bottom-[-91px] -left-[4rem] max-md:left-7 transform -translate-y-1/2  cursor-pointer`}
-      >
-        <Image src={assets.prevArrow} alt="Previous arrow" />
-      </div>
-    );
-  };
+  // const CustomPrevArrow = (props: any) => {
+  //   const { onClick } = props;
+  //   return (
+  //     <div
+  //       onClick={onClick}
+  //       className={`py-4 absolute md:top-1/2 max-md:bottom-[-91px] -left-[4rem] max-md:left-7 transform -translate-y-1/2  cursor-pointer`}
+  //     >
+  //       <Image src={assets.prevArrow} alt="Previous arrow" />
+  //     </div>
+  //   );
+  // };
 
-  const CustomNextArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        onClick={onClick}
-        className={` py-4 absolute md:top-1/2 max-md:bottom-[-90px] -right-[4rem] max-md:right-7 transform -translate-y-1/2  cursor-pointer`}
-      >
-        <Image src={assets.nextArrow} alt="Next arrow" />
-      </div>
-    );
-  };
+  // const CustomNextArrow = (props: any) => {
+  //   const { onClick } = props;
+  //   return (
+  //     <div
+  //       onClick={onClick}
+  //       className={` py-4 absolute md:top-1/2 max-md:bottom-[-90px] -right-[4rem] max-md:right-7 transform -translate-y-1/2  cursor-pointer`}
+  //     >
+  //       <Image src={assets.nextArrow} alt="Next arrow" />
+  //     </div>
+  //   );
+  // };
 
   // const settings = {
   //   dots: true,
