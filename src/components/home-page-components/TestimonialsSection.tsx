@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
     return (
       <div
         onClick={onClick}
-        className={`py-4 max-medium:py-2  px-6 max-medium:px-4 max-medium-leading-4 font-thin text-slate-300 bg-474747 absolute top-1/2 -left-[4rem] medium:-left-[8rem] transform -translate-y-1/2 text-3xl medium:text-4xl   cursor-pointer`}
+        className={`py-4 absolute md:top-1/2 max-md:bottom-[-91px] -left-[4rem] max-md:left-7 transform -translate-y-1/2  cursor-pointer`}
       >
         <Image src={assets.prevArrow} alt="Previous arrow" />
       </div>
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
     return (
       <div
         onClick={onClick}
-        className={` py-4 max-medium:py-2  px-6 max-medium:px-4 max-medium-leading-4 font-thin text-slate-300 bg-474747 absolute top-1/2 -right-[4rem] medium:-right-[8rem] transform -translate-y-1/2 text-3xl medium:text-4xl   cursor-pointer`}
+        className={` py-4 absolute md:top-1/2 max-md:bottom-[-90px] -right-[4rem] max-md:right-7 transform -translate-y-1/2  cursor-pointer`}
       >
         <Image src={assets.nextArrow} alt="Next arrow" />
       </div>
@@ -50,7 +50,6 @@ const TestimonialsSection = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
           dots: true,
           speed: 200,
         },
@@ -75,24 +74,10 @@ const TestimonialsSection = () => {
       const backgroundColor = isActiveDot ? "bg-[#58BAD0]" : "bg-[#646464]";
 
       return (
-        <div key={i} className={`mt-16 max-md:mt-10 relative`}>
-          <section>
-            {i === 0 && activeDotIndex > 0 && (
-              <div
-                className={`md:hidden py-4 max-medium:py-2  px-6 max-medium:px-4 max-medium-leading-4 font-thin text-slate-300 bg-474747 absolute top-0  -left-[4rem] medium:-left-[8rem] transform -translate-y-1/2 text-3xl medium:text-4xl   cursor-pointer`}
-              >
-                <Image src={assets.prevArrow} alt="Previous arrow" />
-              </div>
-            )}
-            <span
-              className={`block h-2 w-2 rounded-full  ${backgroundColor}`}
-            ></span>
-            <div
-              className={`md:hidden py-4 max-medium:py-2  px-6 max-medium:px-4 max-medium-leading-4 font-thin text-slate-300 bg-474747 absolute top-0 -right-[4rem] medium:-right-[8rem] transform -translate-y-1/2 text-3xl medium:text-4xl   cursor-pointer`}
-            >
-              <Image src={assets.nextArrow} alt="Next arrow" />
-            </div>
-          </section>
+        <div key={i} className={`mt-16 max-md:mt-10 `}>
+          <span
+            className={`block h-2 w-2 rounded-full mx-auto ${backgroundColor}`}
+          ></span>
         </div>
       );
     },

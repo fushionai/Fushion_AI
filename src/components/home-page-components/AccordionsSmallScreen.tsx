@@ -30,7 +30,7 @@ function FeaturesSmallScreen() {
 
   return (
     <main className="mx-auto">
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-4 px-1">
         {num.map((n, index) => {
           const distance = Math.abs(currentSlide - index);
           const opacity = Math.max(0.2, 1 - distance * 0.15); // Minimum opacity of 0.2
@@ -39,7 +39,7 @@ function FeaturesSmallScreen() {
             <p
               key={index}
               onClick={() => handleNumberClick(index)}
-              className={`cursor-pointer px-6 max-sm:px-5 pb-1  font-roboto font-normal text-[20px] leading-[30px] border-b-[2px]  transition-all ease-linear ${
+              className={`cursor-pointer px-6 max-sm:px-4 pb-1  font-roboto font-normal text-[20px] leading-[30px] border-b-[2px]  transition-all ease-linear ${
                 currentSlide === index
                   ? "text-darkBlue border-primaryBlue"
                   : "text-secondaryGray border-primaryLightBlue"
