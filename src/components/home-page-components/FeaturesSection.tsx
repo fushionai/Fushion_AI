@@ -26,7 +26,7 @@ const FeaturesSection = () => {
     if (orderArray.length > 0) {
       setCurrentImage(imageMap[orderArray[0]]);
     }
-  }, [selectedOrder]);
+  }, [selectedOrder, imageMap]);
 
   return (
     <section className="bg-primaryWhite py-20 max-md:pb-0">

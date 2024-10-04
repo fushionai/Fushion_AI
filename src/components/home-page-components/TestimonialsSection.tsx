@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
 import Slider from "react-slick";
@@ -12,8 +11,6 @@ import assets from "@/assets/index";
 import Testimonial from "./Testimonial";
 
 const TestimonialsSection = () => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
   const CustomPrevArrow = (props: any) => {
     const { onClick } = props;
     return (
@@ -64,8 +61,6 @@ const TestimonialsSection = () => {
 
       // Calculate the index of the active dot to show
       const activeDotIndex = (this as any).currentSlide % totalSlides;
-
-      setCurrentSlideIndex(activeDotIndex);
 
       // Determine whether the current dot is the active one
       const isActiveDot = i === activeDotIndex;

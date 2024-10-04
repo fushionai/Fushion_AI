@@ -22,7 +22,7 @@ const Testimonial = ({
       <div className="flex flex-col items-center justify-center">
         <Image src={assets.stars} alt="Full start" loading="eager" />
         <blockquote className="mt-10 max-sm:mt-7 font-roboto font-normal text-primaryWhite  text-center italic text-[24px] max-sm:text-[16px] leading-[36px] max-sm:leading-[24px]">
-          "{description}"
+          &quot;{description}&quot;;
         </blockquote>
       </div>
       <footer className="mt-16 flex max-[900px]:flex-col items-center justify-center max-[900px]:items-start gap-5 max-[900px]:gap-7">
