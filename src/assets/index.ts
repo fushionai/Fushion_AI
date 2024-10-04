@@ -34,6 +34,8 @@ import stars from "./icons/home-page-icons/stars.svg";
 import testimonialPerson from "./images/home-page-images/vector.png";
 import testimonialLogo from "./icons/home-page-icons/company.svg";
 
+// Home page our team section
+import team from "./images/home-page-images/team.png";
 const assets = {
   // NavBar icons
   menu,
@@ -69,6 +71,9 @@ const assets = {
   stars,
   testimonialPerson,
   testimonialLogo,
+
+  // Home page our team section
+  team,
 };
 
 export default assets;

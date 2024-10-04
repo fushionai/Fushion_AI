@@ -29,7 +29,7 @@ const FeaturesSection = () => {
   }, [selectedOrder, imageMap]);
 
   return (
-    <section className="bg-primaryWhite py-20 max-md:pb-0">
+    <section className="max-container bg-primaryWhite py-20 max-md:pb-0">
       <header>
         <h2 className="px-10 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-center text-darkBlue leading-[32px]">
           Why Choose{" "}

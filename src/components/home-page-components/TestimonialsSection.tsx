@@ -78,41 +78,44 @@ const TestimonialsSection = () => {
     },
   };
   return (
-    <section className="bg-[#161527] py-20 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5">
-      <header>
-        <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
-          <h1 className="text-primaryWhite md:text-nowrap max-md:text-center ">
-            Committed to Your Success
-          </h1>
-          <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
-        </div>
-        <p className="max-w-[1154px] mt-10 max-md:mt-8 font-roboto font-normal text-[20px] text-primaryWhite leading-[30px] max-md:text-center">
-          At Fushion AI, your success is our priority. We are dedicated to
-          delivering high-quality services that help you make smart, data-driven
-          decisions. Whether you are a consumer, real estate agent, or real
-          estate professional, we are here to support you with our expertise.
-        </p>
-      </header>
+    <section className=" bg-[#161527] py-20 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5">
+      <section className="max-container">
+        <header>
+          <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
+            <h1 className="text-primaryWhite md:text-nowrap max-md:text-center ">
+              Committed to Your Success
+            </h1>
+            <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
+          </div>
+          <p className="max-w-[1154px] mt-10 max-md:mt-8 font-roboto font-normal text-[20px] text-primaryWhite leading-[30px] max-md:text-center">
+            At Fushion AI, your success is our priority. We are dedicated to
+            delivering high-quality services that help you make smart,
+            data-driven decisions. Whether you are a consumer, real estate
+            agent, or real estate professional, we are here to support you with
+            our expertise.
+          </p>
+        </header>
 
-      <main>
-        <article className="pt-20 max-md:pt-12">
-          <Slider {...settings}>
-            {testimonialSectionContents.map((testimonial, index) => (
-              <div key={index}>
-                <Testimonial
-                  key={index}
-                  description={testimonial.testimonial}
-                  fullName={testimonial.fullName}
-                  position={testimonial.position}
-                  companyName={testimonial.companyName}
-                  companyLogo={testimonial.companyLogo}
-                  profile={testimonial.profile}
-                />
-              </div>
-            ))}
-          </Slider>
-        </article>{" "}
-      </main>
+        <main>
+          <article className="pt-20 max-md:pt-12">
+            <Slider {...settings}>
+              {testimonialSectionContents.map((testimonial, index) => (
+                <div key={index}>
+                  <Testimonial
+                    key={index}
+                    description={testimonial.testimonial}
+                    fullName={testimonial.fullName}
+                    position={testimonial.position}
+                    companyName={testimonial.companyName}
+                    companyLogo={testimonial.companyLogo}
+                    profile={testimonial.profile}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </article>{" "}
+        </main>
+      </section>
     </section>
   );
 };

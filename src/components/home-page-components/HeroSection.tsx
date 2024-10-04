@@ -14,9 +14,9 @@ const HeroSection = () => {
         alt="Background image"
         layout="fill"
         loading="eager"
-        className="-z-10 object-fill "
+        className="-z-10 object-cover "
       />
-      <section>
+      <section className="max-container">
         <header>
           <TopNavBar />
         </header>

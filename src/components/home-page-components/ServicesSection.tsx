@@ -108,7 +108,7 @@ const ServicesSection = () => {
         className="-z-10 object-cover"
       />
       <div className="-z-10 before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[#161527] before:opacity-[80%]"></div>
-      <main className="relative z-20">
+      <main className="max-container relative z-20 ">
         <div className="flex items-center max-md:justify-center gap-20 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
           <h1 className="text-primaryWhite text-nowrap">Service We Offer</h1>
           <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
