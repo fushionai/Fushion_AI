@@ -100,7 +100,7 @@ const TeamsSection = () => {
         </p>
       </header>
 
-      <div className="hidden mt-10  max-[1160px]:block mx-auto">
+      {/* <div className="hidden mt-10  max-[1160px]:block mx-auto">
         <Slider {...settings}>
           {ourTeamSectionContent.map((team, index) => (
             <div key={index}>
@@ -129,7 +129,7 @@ const TeamsSection = () => {
             />
           ))}
         </div>
-      </main>
+      </main> */}
     </section>
   );
 };
