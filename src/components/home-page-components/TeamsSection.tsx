@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 
-import assets from "@/assets/index";
-import ourTeamSectionContent from "@/contents/home-page-contents/our-team-section-content";
+// import assets from "@/assets/index";
+// import ourTeamSectionContent from "@/contents/home-page-contents/our-team-section-content";
 // import Team from "./Team";
 
 // import Slider from "react-slick";

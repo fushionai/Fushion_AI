@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import Image from "next/image";
 
@@ -12,14 +12,17 @@ const FeaturesSection = () => {
 
   const [currentImage, setCurrentImage] = useState(assets.statisticsWithBg); // Initial image
 
-  const imageMap: { [key: string]: any } = {
-    "1": assets.statisticsWithBg,
-    "2": assets.analysisWithBg,
-    "3": assets.insightWithBg,
-    "4": assets.personWithBg,
-    "5": assets.docsWithBg,
-    "6": assets.agreementWithBg,
-  };
+  const imageMap: { [key: string]: any } = useMemo(
+    () => ({
+      "1": assets.statisticsWithBg,
+      "2": assets.analysisWithBg,
+      "3": assets.insightWithBg,
+      "4": assets.personWithBg,
+      "5": assets.docsWithBg,
+      "6": assets.agreementWithBg,
+    }),
+    []
+  );
 
   useEffect(() => {
     const orderArray = Array.from(selectedOrder);
