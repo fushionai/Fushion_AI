@@ -36,6 +36,12 @@ import testimonialLogo from "./icons/home-page-icons/company.svg";
 
 // Home page our team section
 import team from "./images/home-page-images/team.png";
+
+// Footer icons
+import facebook from "./icons/facebook.svg";
+import instagram from "./icons/instagram.svg";
+import twitter from "./icons/twitter.svg";
+
 const assets = {
   // NavBar icons
   menu,
@@ -74,6 +80,11 @@ const assets = {
 
   // Home page our team section
   team,
+
+  // Footer icons
+  facebook,
+  instagram,
+  twitter,
 };
 
 export default assets;

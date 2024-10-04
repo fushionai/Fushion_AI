@@ -5,6 +5,7 @@ import ValuesSection from "@/components/home-page-components/ValuesSection";
 import TestimonialsSection from "@/components/home-page-components/TestimonialsSection";
 import TeamsSection from "@/components/home-page-components/TeamsSection";
 import UpFooter from "@/components/home-page-components/UpFooter";
+import Footer from "@/components/Footer";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <TestimonialsSection />
       <TeamsSection />
       <UpFooter />
+      <Footer />
     </main>
   );
 };
