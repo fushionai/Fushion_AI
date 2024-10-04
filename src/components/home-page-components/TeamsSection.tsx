@@ -35,56 +35,56 @@ const TeamsSection = () => {
     );
   };
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1160,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-          speed: 200,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          speed: 200,
-        },
-      },
-    ],
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1160,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //         speed: 200,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //         speed: 200,
+  //       },
+  //     },
+  //   ],
 
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
+  //   prevArrow: <CustomPrevArrow />,
+  //   nextArrow: <CustomNextArrow />,
 
-    customPaging: function (i: any) {
-      const totalSlides = ourTeamSectionContent.length;
+  //   customPaging: function (i: any) {
+  //     const totalSlides = ourTeamSectionContent.length;
 
-      const activeDotIndex = (this as any).currentSlide % totalSlides;
+  //     const activeDotIndex = (this as any).currentSlide % totalSlides;
 
-      const isActiveDot = i === activeDotIndex;
+  //     const isActiveDot = i === activeDotIndex;
 
-      const backgroundColor = isActiveDot ? "bg-[#2B00FF]" : "bg-[#77818A]";
+  //     const backgroundColor = isActiveDot ? "bg-[#2B00FF]" : "bg-[#77818A]";
 
-      return (
-        <div key={i} className={`mt-16 max-md:mt-10 `}>
-          <span
-            className={`block h-2 w-2 rounded-full mx-auto ${backgroundColor}`}
-          ></span>
-        </div>
-      );
-    },
-  };
+  //     return (
+  //       <div key={i} className={`mt-16 max-md:mt-10 `}>
+  //         <span
+  //           className={`block h-2 w-2 rounded-full mx-auto ${backgroundColor}`}
+  //         ></span>
+  //       </div>
+  //     );
+  //   },
+  // };
 
-  const bgColors = ["bg-[#77818A]", "bg-[#2B00FF]", "bg-[#161527]"];
+  // const bgColors = ["bg-[#77818A]", "bg-[#2B00FF]", "bg-[#161527]"];
   return (
     <section className="max-container bg-primaryWhite pt-28 max-md:py-[40px] pb-28 px-2 ">
       <header>
