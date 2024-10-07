@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Transform real estate with the power of data",
 };
 
+import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider>
+          {children}
+          <Footer />
+        </NextUIProvider>
       </body>
     </html>
   );

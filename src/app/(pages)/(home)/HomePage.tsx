@@ -17,7 +17,6 @@ const HomePage = () => {
       <TestimonialsSection />
       <TeamsSection />
       <UpFooter />
-      <Footer />
     </main>
   );
 };
