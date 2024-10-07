@@ -14,9 +14,15 @@ const Footer = () => {
               Let&apos;s talk
             </h2>
             <div className="mt-4 flex items-center gap-[36px] ">
-              <Image src={assets.facebook} alt="Our Facebook" />
-              <Image src={assets.instagram} alt="Our Instagram " />
-              <Image src={assets.twitter} alt="Our Twitter" />
+              <Link href="#" target="_blank">
+                <Image src={assets.facebook} alt="Our Facebook" />
+              </Link>
+              <Link href="#" target="_blank">
+                <Image src={assets.instagram} alt="Our Instagram " />
+              </Link>
+              <Link href="#" target="_blank">
+                <Image src={assets.twitter} alt="Our Twitter" />
+              </Link>
             </div>
             <p className="mt-4 font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
               Innovating Real Estate with AI Precision

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -21,6 +22,11 @@ const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = ["Home", "Our Product", "About Us", "Contact"];
+
+  const pathname = usePathname();
+
+  console.log(pathname);
+  console.log(pathname === "/");
 
   return (
     <Navbar
@@ -44,19 +50,24 @@ const TopNavBar = () => {
       <NavbarContent className="hidden md:flex gap-10" justify="center">
         <NavbarItem>
           <Link
-            className="text-secondaryGray font-roboto font-bold text-[16px]"
-            href="#"
+            className={`${
+              pathname === "/" ? "text-primaryWhite" : "text-secondaryGray"
+            } font-roboto font-bold text-[16px]`}
+            href="/"
           >
             Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link
-            className="text-secondaryGray font-roboto font-bold text-[16px]"
-            href="#"
-            // aria-current="page"
+            className={`${
+              pathname.includes("/our-products")
+                ? "text-primaryWhite"
+                : "text-secondaryGray"
+            } font-roboto font-bold text-[16px]`}
+            href="/our-products"
           >
-            Our Product
+            Our Products
           </Link>
         </NavbarItem>
         <NavbarItem>
