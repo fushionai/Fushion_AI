@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import assets from "@/assets/index";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -22,15 +23,25 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex max-md:flex-col items-center gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
-            <h2 className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]">
+            <Link
+              href="#"
+              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+            >
               About Us
-            </h2>
-            <h2 className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]">
+            </Link>
+
+            <Link
+              href="#"
+              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+            >
               Services
-            </h2>
-            <h2 className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]">
+            </Link>
+            <Link
+              href="#"
+              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+            >
               Projects
-            </h2>
+            </Link>
           </div>
           <div>
             <Button className="mt-9 max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">

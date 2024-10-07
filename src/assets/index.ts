@@ -42,6 +42,9 @@ import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";
 import twitter from "./icons/twitter.svg";
 
+// Our products images and Icons
+import productsHero from "./images/products-page-images/our-products-hero.png";
+
 const assets = {
   // NavBar icons
   menu,
@@ -85,6 +88,9 @@ const assets = {
   facebook,
   instagram,
   twitter,
+
+  // Our products images and Icons
+  productsHero,
 };
 
 export default assets;
