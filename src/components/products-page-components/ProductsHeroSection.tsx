@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import { Button } from "@nextui-org/react";
-
 import TopNavBar from "@/components/TopNavBar";
 
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
