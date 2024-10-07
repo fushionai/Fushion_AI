@@ -48,6 +48,8 @@ import propertyRobot from "./icons/products-page-icons/property-robot.svg";
 import propertyAI from "./icons/products-page-icons/property-ai.svg";
 import propertyDashboard from "./icons/products-page-icons/property-dashboard.svg";
 import propertyFingerPrint from "./icons/products-page-icons/property-fingerprint.svg";
+import prevBlack from "./icons/products-page-icons/black-prev.svg";
+import nextBlack from "./icons/products-page-icons/black-next.svg";
 
 const assets = {
   // NavBar icons
@@ -99,6 +101,8 @@ const assets = {
   propertyAI,
   propertyDashboard,
   propertyFingerPrint,
+  prevBlack,
+  nextBlack,
 };
 
 export default assets;

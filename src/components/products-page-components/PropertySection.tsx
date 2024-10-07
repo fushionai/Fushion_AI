@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PropertySection = () => {
   return (
-    <section className="p-[120px] max-md:px-[16px] max-md:py-[40px]">
+    <section className="p-[120px] max-md:px-[16px] max-md:py-[40px] bg-primaryWhite">
       <header>
         <h2 className="font-ubuntu font-bold text-[40px] leading-[45px] text-center text-darkBlue">
           Property Valuation

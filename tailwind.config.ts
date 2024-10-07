@@ -23,6 +23,7 @@ const config: Config = {
         darkBlue: "#161527",
         snowWhite: "#FDFDFD",
         gradientWhiteLight: "linear-gradient(90deg, #FFFFFF, #DCDCDC)",
+        gradientBlue: "linear-gradient(90deg, #4620FF, #5A38FF)",
       },
       backgroundImage: {
         "hero-bg": "url('/images/hero_bg.jpg')",
