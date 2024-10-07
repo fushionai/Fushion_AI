@@ -15,7 +15,7 @@ function FeaturesSmallScreen() {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 200,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     afterChange: (i) => {
