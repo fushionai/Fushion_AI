@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#161527] py-[40px] px-[143px] max-md:py-[40px] max-md:px-[16px]">
       <section className="max-container">
-        <div className="flex max-md:flex-col items-start justify-between">
+        <div className="flex max-[1200px]:flex-col items-start justify-between">
           <div>
             <h2 className="font-istok font-bold text-[20px] leading-[28px] text-primaryWhite">
               Let&apos;s talk
@@ -21,7 +21,7 @@ const Footer = () => {
               Innovating Real Estate with AI Precision
             </p>
           </div>
-          <div className="flex max-md:flex-col items-center gap-36 max-md:gap-10 max-md:mt-10">
+          <div className="flex max-md:flex-col items-center gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
             <h2 className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]">
               About Us
             </h2>
@@ -33,7 +33,7 @@ const Footer = () => {
             </h2>
           </div>
           <div>
-            <Button className="mt-9 max-md:mt-6 w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+            <Button className="mt-9 max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
               Contact Us
             </Button>
           </div>
