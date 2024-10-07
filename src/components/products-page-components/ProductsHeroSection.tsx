@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/TopNavBar";
 
-import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 
 const ProductsHeroSection = () => {
   return (

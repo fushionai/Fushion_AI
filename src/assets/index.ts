@@ -44,6 +44,10 @@ import twitter from "./icons/twitter.svg";
 
 // Our products images and Icons
 import productsHero from "./images/products-page-images/our-products-hero.png";
+import propertyRobot from "./icons/products-page-icons/property-robot.svg";
+import propertyAI from "./icons/products-page-icons/property-ai.svg";
+import propertyDashboard from "./icons/products-page-icons/property-dashboard.svg";
+import propertyFingerPrint from "./icons/products-page-icons/property-fingerprint.svg";
 
 const assets = {
   // NavBar icons
@@ -91,6 +95,10 @@ const assets = {
 
   // Our products images and Icons
   productsHero,
+  propertyRobot,
+  propertyAI,
+  propertyDashboard,
+  propertyFingerPrint,
 };
 
 export default assets;
