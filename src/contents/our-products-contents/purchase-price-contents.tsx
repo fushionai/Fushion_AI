@@ -30,7 +30,7 @@ const benefitOfBuyersList = [
   "Property Value Information: Receive the WOZ value of the properties for an official valuation reference.",
 ];
 
-export default {
+const purchasePriceInfo = {
   heroSectionList,
   purchasePriceContents,
   informationIncludedList,
@@ -38,3 +38,5 @@ export default {
   deliveryTime,
   benefitOfBuyersList,
 };
+
+export default purchasePriceInfo;

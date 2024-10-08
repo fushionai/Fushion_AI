@@ -24,3 +24,13 @@ const assessedBenefitOfBuyer = [
   "Comprehensive Property Data: Access recent and historical transactions for up to 20 properties, aiding informed decision-making.",
   "Property Value Information: Receive the official WOZ value for accurate property valuation reference.",
 ];
+
+const assessedPropertyInfo = {
+  assessedHeroSectionList,
+  whatIsIt,
+  assessedInformationIncludedList,
+  assessedDeliveryTime,
+  assessedBenefitOfBuyer,
+};
+
+export default assessedPropertyInfo;

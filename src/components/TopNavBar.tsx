@@ -17,7 +17,6 @@ import {
 import logo from "../assets/icons/logo.svg";
 import Image from "next/image";
 import assets from "@/assets/index";
-import { link } from "fs";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

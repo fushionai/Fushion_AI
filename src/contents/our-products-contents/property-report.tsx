@@ -24,3 +24,13 @@ const propertyInformationIncludedList = [
 ];
 
 const propertyDeliveryTime = "Less than 1 working day via email upon payment";
+
+const propertyReport = {
+  propertyHeroContent,
+  propertyHeroList,
+  propertyBenefitOfBuyer,
+  propertyInformationIncludedList,
+  propertyDeliveryTime,
+};
+
+export default propertyReport;
