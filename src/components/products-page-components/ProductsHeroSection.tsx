@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import TopNavBar from "@/components/TopNavBar";
 
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import Link from "next/link";
 
 const ProductsHeroSection = () => {
   return (
@@ -29,7 +30,10 @@ const ProductsHeroSection = () => {
           </h6>
 
           <div className="mt-12 max-md:mt-10 flex flex-wrap justify-center items-center  gap-6 max-md:gap-4">
-            <div className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px]">
+            <Link
+              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              href="our-products/purchase-price-info"
+            >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite ">
                   Purchase Price Information
@@ -39,8 +43,11 @@ const ProductsHeroSection = () => {
                   real estate market dynamics.
                 </p>
               </article>
-            </div>
-            <div className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px]">
+            </Link>
+            <Link
+              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              href="#"
+            >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite">
                   Assessed Property Value
@@ -50,8 +57,11 @@ const ProductsHeroSection = () => {
                   accurately.
                 </p>
               </article>
-            </div>
-            <div className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px]">
+            </Link>
+            <Link
+              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              href="#"
+            >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite">
                   Property Report
@@ -63,7 +73,7 @@ const ProductsHeroSection = () => {
                   insights.
                 </p>
               </article>
-            </div>
+            </Link>
           </div>
         </main>
       </section>
