@@ -46,7 +46,7 @@ const ProductsHeroSection = () => {
             </Link>
             <Link
               className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
-              href="#"
+              href="our-products/assessed-property-value"
             >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite">
