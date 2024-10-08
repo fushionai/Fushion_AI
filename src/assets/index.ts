@@ -50,6 +50,7 @@ import propertyDashboard from "./icons/products-page-icons/property-dashboard.sv
 import propertyFingerPrint from "./icons/products-page-icons/property-fingerprint.svg";
 import prevBlack from "./icons/products-page-icons/black-prev.svg";
 import nextBlack from "./icons/products-page-icons/black-next.svg";
+import note from "./icons/products-page-icons/note.svg";
 
 const assets = {
   // NavBar icons
@@ -103,6 +104,7 @@ const assets = {
   propertyFingerPrint,
   prevBlack,
   nextBlack,
+  note,
 };
 
 export default assets;

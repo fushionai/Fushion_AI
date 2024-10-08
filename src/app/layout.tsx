@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Transform real estate with the power of data",
 };
 
-import Footer from "@/components/Footer";
+import Footer from "@/components/layouts/Footer";
 
 export default function RootLayout({
   children,

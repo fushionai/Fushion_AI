@@ -1,9 +1,9 @@
 import Image from "next/image";
+import { Button } from "@nextui-org/react";
 
-import TopNavBar from "@/components/TopNavBar";
+import TopNavBar from "@/components/layouts/TopNavBar";
 import assessedPropertyContents from "@/contents/our-products-contents/assessed-property-value";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
-import { Button } from "@nextui-org/react";
 
 const AssessedPropertyValuePage = () => {
   return (

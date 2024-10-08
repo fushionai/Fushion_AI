@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { Button } from "@nextui-org/react";
 
-import TopNavBar from "@/components/TopNavBar";
+import TopNavBar from "@/components/layouts/TopNavBar";
 import propertyReportContents from "@/contents/our-products-contents/property-report";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
-import { Button } from "@nextui-org/react";
+
+import assert from "@/assets/index";
 
 const PropertyReportPage = () => {
   return (
@@ -30,16 +32,28 @@ const PropertyReportPage = () => {
                   {propertyReportContents.propertyHeroContent}
                 </p>
               </header>
-              <ul className="list-disc space-y-3 max-md:px-6">
-                {propertyReportContents.propertyHeroList.map((list, index) => (
-                  <li
-                    key={index}
-                    className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
-                  >
-                    {list}
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <ul className="list-disc space-y-3 max-md:px-6">
+                  {propertyReportContents.propertyHeroList.map(
+                    (list, index) => (
+                      <li
+                        key={index}
+                        className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
+                      >
+                        {list}
+                      </li>
+                    )
+                  )}
+                </ul>
+                <div className="max-w-[547px] mt-6 flex items-center gap-4 lg:ml-[-16px]">
+                  <Image src={assert.note} alt="note" />
+                  <p className="font-roboto font-normal text-[15px] leading-[22px] text-primaryWhite">
+                    Please note that the Comprehensive Property Report may
+                    sometimes be unavailable, and not all elements may be
+                    included in every report.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="max-md:flex justify-center items-center">
               <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
@@ -55,6 +69,7 @@ const PropertyReportPage = () => {
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
             Benefit for Buyers:
           </h2>
+
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             {propertyReportContents.propertyBenefitOfBuyer.map(
               (list, index) => (
@@ -89,6 +104,7 @@ const PropertyReportPage = () => {
           </ul>
         </article>
       </div>
+
       <div className="bg-primaryWhite">
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
           <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">

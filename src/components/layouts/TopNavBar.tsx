@@ -14,7 +14,7 @@ import {
   Button,
 } from "@nextui-org/react";
 
-import logo from "../assets/icons/logo.svg";
+import logo from "@/assets/icons/logo.svg";
 import Image from "next/image";
 import assets from "@/assets/index";
 
