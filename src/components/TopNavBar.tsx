@@ -17,11 +17,29 @@ import {
 import logo from "../assets/icons/logo.svg";
 import Image from "next/image";
 import assets from "@/assets/index";
+import { link } from "fs";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ["Home", "Our Product", "About Us", "Contact"];
+  const menuItems = [
+    {
+      title: "Home",
+      link: "/",
+    },
+    {
+      title: "Our Products",
+      link: "/our-products",
+    },
+    {
+      title: "About Us",
+      link: "/about-us",
+    },
+    {
+      title: "Contact",
+      link: "/contact",
+    },
+  ];
 
   const pathname = usePathname();
 
@@ -108,8 +126,16 @@ const TopNavBar = () => {
             }`}
           >
             <Link
-              className=" text-secondaryGray font-roboto font-bold text-[24px] "
-              href="#"
+              className={`${
+                index == 0
+                  ? pathname === "/"
+                    ? "text-primaryWhite"
+                    : "text-secondaryGray"
+                  : pathname.includes(item.link)
+                  ? "text-primaryWhite"
+                  : "text-secondaryGray"
+              } font-roboto font-bold text-[24px]`}
+              href={item.link}
               size="lg"
             >
               {index === 3 ? (
@@ -117,7 +143,7 @@ const TopNavBar = () => {
                   Contact
                 </Button>
               ) : (
-                item
+                item.title
               )}
             </Link>
           </NavbarMenuItem>
