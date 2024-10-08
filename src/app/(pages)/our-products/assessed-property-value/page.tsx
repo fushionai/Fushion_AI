@@ -52,62 +52,71 @@ const AssessedPropertyValuePage = () => {
         </section>
       </section>
 
-      <article className="flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 bg-primaryWhite">
-        <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
-          What is it?
-        </h2>
-        <div className="list-disc space-y-3 px-6 max-w-[800px]">
-          <p className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue">
-            {assessedPropertyContents.whatIsIt}
-          </p>
-        </div>
-      </article>
+      <div className="bg-primaryWhite">
+        <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
+            What is it?
+          </h2>
+          <div className="list-disc space-y-3 px-6 max-w-[800px]">
+            <p className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue">
+              {assessedPropertyContents.whatIsIt}
+            </p>
+          </div>
+        </article>
+      </div>
 
-      <article className="flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 bg-darkBlue">
-        <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
-          Information Included
-        </h2>
-        <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-          {assessedPropertyContents.assessedHeroSectionList.map(
-            (list, index) => (
-              <li
-                key={index}
-                className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
-              >
-                {list}
-              </li>
-            )
-          )}
-        </ul>
-      </article>
+      <div className="bg-darkBlue">
+        <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
+            Information Included
+          </h2>
+          <ul className="list-disc space-y-3 px-6 max-w-[800px]">
+            {assessedPropertyContents.assessedHeroSectionList.map(
+              (list, index) => (
+                <li
+                  key={index}
+                  className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
+                >
+                  {list}
+                </li>
+              )
+            )}
+          </ul>
+        </article>
+      </div>
 
-      <article className="flex flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 bg-primaryWhite">
-        <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">
-          Delivery Time:
-        </h2>
-        <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-          <li className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue ">
-            {assessedPropertyContents.assessedDeliveryTime}
-          </li>
-        </ul>
-      </article>
-      <article className="flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 bg-darkBlue">
-        <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
-          Benefits for Buyers:
-        </h2>
-        <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-          {assessedPropertyContents.assessedBenefitOfBuyer.map(
-            (list, index) => (
-              <li
-                key={index}
-                className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
-              >
-                {list}
-              </li>
-            )
-          )}
-        </ul>
-      </article>
+      <div className="bg-primaryWhite">
+        <article className="max-container flex flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">
+            Delivery Time:
+          </h2>
+          <ul className="list-disc space-y-3 px-6 max-w-[800px]">
+            <li className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue ">
+              {assessedPropertyContents.assessedDeliveryTime}
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div className="bg-darkBlue">
+        <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
+            Benefits for Buyers:
+          </h2>
+          <ul className="list-disc space-y-3 px-6 max-w-[800px]">
+            {assessedPropertyContents.assessedBenefitOfBuyer.map(
+              (list, index) => (
+                <li
+                  key={index}
+                  className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
+                >
+                  {list}
+                </li>
+              )
+            )}
+          </ul>
+        </article>
+      </div>
     </div>
   );
 };
