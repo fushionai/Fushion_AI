@@ -1,5 +1,5 @@
 import assets from "@/assets/index";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
 
 const PropertySection = () => {
@@ -34,9 +34,11 @@ const PropertySection = () => {
                 ensuring you stay competitive in the market.
               </p>
               <div className="mt-9 max-sm:mt-6 flex items-center gap-6">
-                <Button className="py-2 px-4 border border-darkBlue bg-primaryWhite font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
-                  Learn more
-                </Button>
+                <Link href="our-products/property-valuation-analysis-report">
+                  <Button className="py-2 px-4 border border-darkBlue bg-primaryWhite font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
+                    Learn more
+                  </Button>
+                </Link>
                 <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
                   Buy now &euro;50
                 </Button>

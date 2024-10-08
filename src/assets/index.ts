@@ -51,6 +51,7 @@ import propertyFingerPrint from "./icons/products-page-icons/property-fingerprin
 import prevBlack from "./icons/products-page-icons/black-prev.svg";
 import nextBlack from "./icons/products-page-icons/black-next.svg";
 import note from "./icons/products-page-icons/note.svg";
+import noteBlack from "./icons/products-page-icons/note-black.svg";
 
 const assets = {
   // NavBar icons
@@ -105,6 +106,7 @@ const assets = {
   prevBlack,
   nextBlack,
   note,
+  noteBlack,
 };
 
 export default assets;
