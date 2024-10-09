@@ -1,16 +1,54 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
 
 const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Adjust this value based on your layout
+  const initialOffset = 1800; // Example offset for the top of the accordion section
+
+  // Define scroll thresholds for each accordion
+  const thresholds = [
+    initialOffset, // For the first accordion
+    initialOffset + 300, // For the second accordion
+    initialOffset + 600, // For the third accordion
+    initialOffset + 900, // For the fourth accordion
+    initialOffset + 1200, // For the fifth accordion
+    initialOffset + 1500, // For the sixth accordion
+  ];
+
   const handleSelectionChange = (keys: any) => {
     setSelectedKeys(new Set(keys));
     setSelectedOrder(new Set(keys));
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // Determine which accordion to open based on scroll position
+      const index = thresholds.findIndex((threshold) => scrollY < threshold);
+      if (index === -1) {
+        setSelectedKeys(new Set(["6"])); // Open the last accordion if below the last threshold
+      } else {
+        setSelectedKeys(new Set([`${index + 1}`])); // Open the corresponding accordion
+      }
+
+      // Update last scroll position
+      setLastScrollY(scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <Accordion
@@ -19,6 +57,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
       showDivider={false}
       hideIndicator={true}
       disallowEmptySelection={true}
+      className=""
     >
       <AccordionItem
         key="1"
