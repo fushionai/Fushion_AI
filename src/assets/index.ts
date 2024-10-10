@@ -53,6 +53,10 @@ import nextBlack from "./icons/products-page-icons/black-next.svg";
 import note from "./icons/products-page-icons/note.svg";
 import noteBlack from "./icons/products-page-icons/note-black.svg";
 
+// About us
+
+import people from "./icons/about-us-page-icons/people.svg";
+
 const assets = {
   // NavBar icons
   menu,
@@ -107,6 +111,9 @@ const assets = {
   nextBlack,
   note,
   noteBlack,
+
+  // About us
+  people,
 };
 
 export default assets;
