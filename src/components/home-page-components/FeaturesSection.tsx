@@ -46,19 +46,23 @@ const FeaturesSection = () => {
           decisions based on accurate and up-to-date information.
         </p>
       </header>
-      <main className="mt-20 max-md:mt-10">
-        <div className="max-lg:hidden px-28 flex items-center justify-between transition-all">
-          <article className="max-w-[556px]">
-            <Accordions setSelectedOrder={setSelectedOrder} />
+      <main className="mt-20 max-md:mt-10 ">
+        <div className="max-lg:hidden px-28 flex justify-between transition-all h-[200lvh]">
+          <article className="max-w-[556px] relative">
+            <div className="sticky top-0 ">
+              <Accordions setSelectedOrder={setSelectedOrder} />
+            </div>
           </article>
-          <div className="relative  overflow-hidden">
-            <Image
-              src={currentImage}
-              alt="Our features"
-              loading="eager"
-              className="transition-opacity duration-500 ease-in-out"
-              style={{ opacity: 1 }}
-            />
+          <div className="relative">
+            <div className="sticky top-0">
+              <Image
+                src={currentImage}
+                alt="Our features"
+                loading="eager"
+                className="transition-opacity duration-500 ease-in-out"
+                style={{ opacity: 1 }}
+              />
+            </div>
           </div>
         </div>
         <div className="lg:hidden">

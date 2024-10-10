@@ -9,17 +9,15 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Adjust this value based on your layout
-  const initialOffset = 1800; // Example offset for the top of the accordion section
+  const initialOffset = 1800;
 
-  // Define scroll thresholds for each accordion
   const thresholds = [
-    initialOffset, // For the first accordion
-    initialOffset + 300, // For the second accordion
-    initialOffset + 600, // For the third accordion
-    initialOffset + 900, // For the fourth accordion
-    initialOffset + 1200, // For the fifth accordion
-    initialOffset + 1500, // For the sixth accordion
+    initialOffset,
+    initialOffset + 200,
+    initialOffset + 400,
+    initialOffset + 600,
+    initialOffset + 800,
+    initialOffset + 1000,
   ];
 
   const handleSelectionChange = (keys: any) => {
@@ -31,15 +29,13 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      // Determine which accordion to open based on scroll position
       const index = thresholds.findIndex((threshold) => scrollY < threshold);
       if (index === -1) {
-        setSelectedKeys(new Set(["6"])); // Open the last accordion if below the last threshold
+        handleSelectionChange(new Set(["6"]));
       } else {
-        setSelectedKeys(new Set([`${index + 1}`])); // Open the corresponding accordion
+        handleSelectionChange(new Set([`${index + 1}`]));
       }
 
-      // Update last scroll position
       setLastScrollY(scrollY);
     };
 
@@ -57,7 +53,6 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
       showDivider={false}
       hideIndicator={true}
       disallowEmptySelection={true}
-      className=""
     >
       <AccordionItem
         key="1"
