@@ -5,6 +5,8 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import Link from "next/link";
 
+import assets from "@/assets/index";
+
 const ProductsHeroSection = () => {
   return (
     <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
@@ -31,7 +33,7 @@ const ProductsHeroSection = () => {
 
           <div className="mt-12 max-md:mt-10 flex flex-wrap justify-center items-center  gap-6 max-md:gap-4">
             <Link
-              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              className="flex justify-center items-center max-w-[369px] h-[250px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
               href="our-products/purchase-price-info"
             >
               <article>
@@ -42,10 +44,24 @@ const ProductsHeroSection = () => {
                   Detailed purchase price information to help you understand
                   real estate market dynamics.
                 </p>
+                <div className="flex justify-center items-center  pt-5">
+                  <div
+                    className=" rounded-3xl py-2 px-4
+                  bg-transparent  bg-white
+                    bg-opacity-20  backdrop-blur-[10px] cursor-pointer
+                  "
+                  >
+                    <Image
+                      src={assets.nextArrow}
+                      alt="Next arrow"
+                      className=""
+                    />
+                  </div>
+                </div>
               </article>
             </Link>
             <Link
-              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              className="flex justify-center items-center max-w-[369px] h-[250px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
               href="our-products/assessed-property-value"
             >
               <article>
@@ -56,10 +72,24 @@ const ProductsHeroSection = () => {
                   Access the assessed value of properties to gauge market value
                   accurately.
                 </p>
+                <div className="flex justify-center items-center  pt-5">
+                  <div
+                    className=" rounded-3xl py-2 px-4
+                  bg-transparent  bg-white
+                    bg-opacity-20  backdrop-blur-[10px] cursor-pointer
+                  "
+                  >
+                    <Image
+                      src={assets.nextArrow}
+                      alt="Next arrow"
+                      className=""
+                    />
+                  </div>
+                </div>
               </article>
             </Link>
             <Link
-              className="flex justify-center items-center max-w-[369px] h-[200px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
+              className="flex justify-center items-center max-w-[369px] h-[250px] p-6 border border-primaryWhite rounded-[5px] hover:scale-[1.01] transition-all ease-in"
               href="our-products/property-report"
             >
               <article>
@@ -72,6 +102,20 @@ const ProductsHeroSection = () => {
                   Cadastre data to ensure the most reliable and comprehensive
                   insights.
                 </p>
+                <div className="flex justify-center items-center  pt-5">
+                  <div
+                    className=" rounded-3xl py-2 px-4
+                  bg-transparent  bg-white
+                    bg-opacity-20  backdrop-blur-[10px] cursor-pointer
+                  "
+                  >
+                    <Image
+                      src={assets.nextArrow}
+                      alt="Next arrow"
+                      className=""
+                    />
+                  </div>
+                </div>
               </article>
             </Link>
           </div>

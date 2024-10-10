@@ -3,7 +3,7 @@ import Image from "next/image";
 import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
-import Link from "next/link";
+
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
 
 const AboutUsPage = () => {
@@ -33,7 +33,7 @@ const AboutUsPage = () => {
               cutting-edge solutions, we aim to transform the way real estate
               professionals operate and make data-driven decisions. Our small
               but highly skilled team thrives on collaboration and creativity,
-              pushing the boundaries of what's possible in the real estate
+              pushing the boundaries of what&apos;s possible in the real estate
               market.
             </h6>
           </main>
