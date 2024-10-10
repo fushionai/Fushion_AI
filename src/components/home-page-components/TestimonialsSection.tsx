@@ -106,9 +106,6 @@ const TestimonialsSection = () => {
                     description={testimonial.testimonial}
                     fullName={testimonial.fullName}
                     position={testimonial.position}
-                    companyName={testimonial.companyName}
-                    companyLogo={testimonial.companyLogo}
-                    profile={testimonial.profile}
                   />
                 </div>
               ))}
