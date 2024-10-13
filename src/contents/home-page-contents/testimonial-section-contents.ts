@@ -1,5 +1,3 @@
-import assets from "@/assets/index";
-
 const testimonialSectionContents = [
   {
     testimonial:

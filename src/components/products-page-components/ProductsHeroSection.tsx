@@ -5,8 +5,6 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import Link from "next/link";
 
-import assets from "@/assets/index";
-
 const ProductsHeroSection = () => {
   return (
     <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">

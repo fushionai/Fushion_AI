@@ -44,7 +44,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY, thresholds]);
+  }, [lastScrollY, thresholds, handleSelectionChange]);
 
   return (
     <Accordion
