@@ -15,9 +15,6 @@ const informationIncludedList = [
   "Purchase price per m² (based on usable area)",
   "Includes asking price*, transaction date, year built, and property type",
   "Direct online delivery!",
-];
-
-const informationIncludedList2 = [
   "Transaction date, WOZ value, purchase price per m², asking price (if registered/digitalized), land area*, property volume, and year built*, as recorded in our source registers.",
   "Note: Commercial transactions (e.g., more than 5 homes) are not listed.",
 ];
@@ -34,7 +31,6 @@ const purchasePriceInfo = {
   heroSectionList,
   purchasePriceContents,
   informationIncludedList,
-  informationIncludedList2,
   deliveryTime,
   benefitOfBuyersList,
 };

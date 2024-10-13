@@ -106,7 +106,7 @@ const PropertyReportPage = () => {
       </div>
 
       <div className="bg-primaryWhite">
-        <article className="max-container flex flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
+        <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
           <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">
             Delivery Time:
           </h2>
