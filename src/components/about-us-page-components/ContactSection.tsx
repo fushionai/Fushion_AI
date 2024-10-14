@@ -1,4 +1,4 @@
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Image from "next/image";
 
 import assets from "@/assets/index";
