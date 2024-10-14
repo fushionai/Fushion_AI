@@ -1,18 +1,16 @@
-// import Image from "next/image";
+import Image from "next/image";
 
-// import TopNavBar from "@/components/layouts/TopNavBar";
+import TopNavBar from "@/components/layouts/TopNavBar";
 
-// import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 
-// import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
+import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
+import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
 
 const AboutUsPage = () => {
   return (
     <section>
-      <h1 className="text-center font-bold font-roboto py-36 text-large">
-        Page In Progress
-      </h1>
-      {/* <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
+      <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
         <Image
           src={heroBg}
           alt="Background image"
@@ -42,7 +40,8 @@ const AboutUsPage = () => {
           </main>
         </section>
       </section>
-      <AboutUsOurValues /> */}
+      <AboutUsOurValues />
+      <AboutUsLatestNews />
     </section>
   );
 };
