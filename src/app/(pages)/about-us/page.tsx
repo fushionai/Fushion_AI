@@ -6,6 +6,7 @@ import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
 import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
+import ContactSection from "@/components/about-us-page-components/ContactSection";
 
 const AboutUsPage = () => {
   return (
@@ -42,6 +43,7 @@ const AboutUsPage = () => {
       </section>
       <AboutUsOurValues />
       <AboutUsLatestNews />
+      <ContactSection />
     </section>
   );
 };

@@ -57,6 +57,7 @@ import noteBlack from "./icons/products-page-icons/note-black.svg";
 
 import people from "./icons/about-us-page-icons/people.svg";
 import rectangle from "./images/products-page-images/our-products-hero.png";
+import email from "./icons/about-us-page-icons/email.svg";
 
 const assets = {
   // NavBar icons
@@ -116,6 +117,7 @@ const assets = {
   // About us
   people,
   rectangle,
+  email,
 };
 
 export default assets;
