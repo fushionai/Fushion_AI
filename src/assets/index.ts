@@ -77,6 +77,10 @@ import assessedProperty1StyingImg from './graphics/product-page-graphics/assesse
 import assessedProperty2StyingImg from './graphics/product-page-graphics/assessed_property_2.svg'
 import assessedPropertyFooterStyingImg from './graphics/product-page-graphics/assessed_properties_footer.svg'
 import propertyReportHeroStyingImg from './graphics/product-page-graphics/property_report_hero.svg'
+import propertyReportFooterStyingImg from './graphics/product-page-graphics/property_report_footer.svg'
+import propertyReport1StyingImg from './graphics/product-page-graphics/property_report_1.svg'
+import propertyReport2StyingImg from './graphics/product-page-graphics/property_report_2.svg'
+
 
 // logo ipsum
 import logoIpsum from './icons/logoIpsum.svg' 
@@ -158,7 +162,9 @@ const assets = {
   assessedProperty2StyingImg,
   assessedPropertyFooterStyingImg,
   propertyReportHeroStyingImg,
-
+  propertyReportFooterStyingImg,
+  propertyReport1StyingImg,
+  propertyReport2StyingImg,
   // logo ipsum
   logoIpsum,
 };

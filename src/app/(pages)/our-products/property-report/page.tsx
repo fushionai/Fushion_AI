@@ -6,6 +6,7 @@ import propertyReportContents from "@/contents/our-products-contents/property-re
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 
 import assert from "@/assets/index";
+import assets from "@/assets/index";
 
 const PropertyReportPage = () => {
   return (
@@ -62,6 +63,13 @@ const PropertyReportPage = () => {
             </div>
           </main>
         </section>
+        <Image
+          src={assets.propertyReportHeroStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </section>
 
       <div className="bg-primaryWhite">
@@ -85,7 +93,15 @@ const PropertyReportPage = () => {
         </article>
       </div>
 
-      <div className="bg-[#F4F5FF] py-20">
+      <div className="bg-[#F4F5FF] py-20 relative">
+        <Image
+          src={assets.propertyReport1StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -top-2 left-0 right-0 w-full"
+        />
+
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] max-md:text-center">
             Information Included
@@ -103,6 +119,15 @@ const PropertyReportPage = () => {
             )}
           </ul>
         </article>
+
+        <Image
+          src={assets.propertyReport2StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
+
       </div>
 
       <div className="bg-primaryWhite">
@@ -116,6 +141,16 @@ const PropertyReportPage = () => {
             </li>
           </ul>
         </article>
+      </div>
+      {/* Footer Styling */}
+      <div className={`bg-[#161527] h-28 relative`}>
+        <Image
+          src={assets.propertyReportFooterStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute top-0 left-0 right-0 w-full"
+        />
       </div>
     </div>
   );
