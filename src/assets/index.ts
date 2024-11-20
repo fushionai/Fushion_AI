@@ -60,9 +60,9 @@ import rectangle from "./images/products-page-images/our-products-hero.png";
 import email from "./icons/about-us-page-icons/email.svg";
 
 // styling graphics
-import homeServiceStyingImg from './graphics/home_servcie_offer.svg'
-import homeCommitedStyingImg from './graphics/home_commited_to_success.svg'
-import homeTestimonialStyingImg from './graphics/home_testimonial.svg'
+import homeServiceStyingImg from './graphics/home-page-graphics/home_servcie_offer.svg'
+import homeCommitedStyingImg from './graphics/home-page-graphics/home_commited_to_success.svg'
+import homeTestimonialStyingImg from './graphics/home-page-graphics/home_testimonial.svg'
 
 // logo ipsum
 import logoIpsum from './icons/logoIpsum.svg' 
@@ -133,7 +133,7 @@ const assets = {
   homeTestimonialStyingImg,
 
   // logo ipsum
-  logoIpsum
+  logoIpsum,
 };
 
 export default assets;
