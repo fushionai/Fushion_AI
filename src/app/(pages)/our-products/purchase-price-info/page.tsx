@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import assets from "@/assets";
 
 const PurchasePriceInformationPage = () => {
   return (
@@ -50,6 +51,13 @@ const PurchasePriceInformationPage = () => {
             </div>
           </main>
         </section>
+        <Image
+          src={assets.purchasePriceHeroStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </section>
 
       <div className="bg-primaryWhite">
@@ -70,12 +78,28 @@ const PurchasePriceInformationPage = () => {
         </article>
       </div>
 
-      <div className="bg-[#161527] py-20">
+      <div className="bg-[#161527] py-20 relative">
+        <Image
+          src={assets.purchasePrice1StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -top-2 left-0 right-0 w-full"
+        />
+
         <article className="max-container py-10 max-md:px-4 px-10 ">
           <p className="font-roboto font-normal text-[20px] leading-[30px] text-center text-primaryWhite">
             {purchaseContents.purchasePriceContents}
           </p>
         </article>
+
+        <Image
+          src={assets.purchasePrice2StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </div>
 
       <div className="bg-[#F4F5FF] py-20">
@@ -107,6 +131,17 @@ const PurchasePriceInformationPage = () => {
             ))}
           </ul>
         </article>
+      </div>
+
+      {/* Footer Styling */}
+      <div className={`bg-[#161527] h-28 relative`}>
+        <Image
+          src={assets.purchasePriceFooterStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute top-0 left-0 right-0 w-full"
+        />
       </div>
     </div>
   );

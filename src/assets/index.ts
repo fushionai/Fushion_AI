@@ -66,6 +66,14 @@ import homeTestimonialStyingImg from './graphics/home-page-graphics/home_testimo
 // StyingImg
 import aboutUsHeroStyingImg from './graphics/about-us-page-grapgics/about_us_hero.svg'
 import aboutUsFooterStyingImg from './graphics/about-us-page-grapgics/about_us_footer.svg'
+import productHeroStyingImg from './graphics/product-page-graphics/product_hero.svg'
+import productFooterStyingImg from './graphics/product-page-graphics/product_footer.svg'
+import purchasePriceHeroStyingImg from './graphics/product-page-graphics/purchase_price_hero.svg'
+import purchasePriceFooterStyingImg from './graphics/product-page-graphics/purchase_price_footer.svg'
+import purchasePrice1StyingImg from './graphics/product-page-graphics/purchase_price_1.svg'
+import purchasePrice2StyingImg from './graphics/product-page-graphics/purchase_price_2.svg'
+
+
 // logo ipsum
 import logoIpsum from './icons/logoIpsum.svg' 
 
@@ -135,7 +143,12 @@ const assets = {
   homeTestimonialStyingImg,
   aboutUsHeroStyingImg,
   aboutUsFooterStyingImg,
-
+  productHeroStyingImg,
+  productFooterStyingImg,
+  purchasePriceHeroStyingImg,
+  purchasePriceFooterStyingImg,
+  purchasePrice1StyingImg,
+  purchasePrice2StyingImg,
   // logo ipsum
   logoIpsum,
 };

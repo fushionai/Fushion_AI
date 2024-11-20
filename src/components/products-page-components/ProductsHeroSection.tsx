@@ -4,6 +4,7 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import Link from "next/link";
+import assets from "@/assets";
 
 const ProductsHeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const ProductsHeroSection = () => {
         loading="eager"
         className="-z-10 object-cover "
       />
-      <section className="max-container">
+      <section className="max-container pb-20">
         <header>
           <TopNavBar />
         </header>
@@ -83,6 +84,13 @@ const ProductsHeroSection = () => {
             </Link>
           </div>
         </main>
+        <Image
+          src={assets.productHeroStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </section>
     </section>
   );
