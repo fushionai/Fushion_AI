@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import assessedPropertyContents from "@/contents/our-products-contents/assessed-property-value";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import assets from "@/assets";
 
 const AssessedPropertyValuePage = () => {
   return (
@@ -50,6 +51,13 @@ const AssessedPropertyValuePage = () => {
             </div>
           </main>
         </section>
+        <Image
+          src={assets.assessedPropertyHeroStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </section>
 
       <div className="bg-primaryWhite py-20">
@@ -59,14 +67,24 @@ const AssessedPropertyValuePage = () => {
           </h2>
           <div className="list-disc space-y-3 px-6 max-w-[800px]">
             <p className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue">
-              {assessedPropertyContents.whatIsIt} {" "}
-                <a href="#" className={`text-primaryBlue`}>click here.</a>
+              {assessedPropertyContents.whatIsIt}{" "}
+              <a href="#" className={`text-primaryBlue`}>
+                click here.
+              </a>
             </p>
           </div>
         </article>
       </div>
 
-      <div className="bg-[#F4F5FF] py-20">
+      <div className="bg-[#F4F5FF] py-20 relative">
+        <Image
+          src={assets.assessedProperty1StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -top-2 left-0 right-0 w-full"
+        />
+
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
             Information Included
@@ -84,6 +102,14 @@ const AssessedPropertyValuePage = () => {
             )}
           </ul>
         </article>
+
+        <Image
+          src={assets.assessedProperty2StyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -bottom-2 left-0 right-0 w-full"
+        />
       </div>
 
       <div className="bg-primaryWhite py-20">
@@ -117,6 +143,17 @@ const AssessedPropertyValuePage = () => {
             )}
           </ul>
         </article>
+      </div>
+
+      {/* Footer Styling */}
+      <div className={`bg-[#161527] h-28 relative`}>
+        <Image
+          src={assets.assessedPropertyFooterStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute -top-2 left-0 right-0 w-full"
+        />
       </div>
     </div>
   );

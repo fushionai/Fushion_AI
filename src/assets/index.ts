@@ -72,7 +72,11 @@ import purchasePriceHeroStyingImg from './graphics/product-page-graphics/purchas
 import purchasePriceFooterStyingImg from './graphics/product-page-graphics/purchase_price_footer.svg'
 import purchasePrice1StyingImg from './graphics/product-page-graphics/purchase_price_1.svg'
 import purchasePrice2StyingImg from './graphics/product-page-graphics/purchase_price_2.svg'
-
+import assessedPropertyHeroStyingImg from './graphics/product-page-graphics/assessed_property_hero.svg'
+import assessedProperty1StyingImg from './graphics/product-page-graphics/assessed_property_1.svg'
+import assessedProperty2StyingImg from './graphics/product-page-graphics/assessed_property_2.svg'
+import assessedPropertyFooterStyingImg from './graphics/product-page-graphics/assessed_properties_footer.svg'
+import propertyReportHeroStyingImg from './graphics/product-page-graphics/property_report_hero.svg'
 
 // logo ipsum
 import logoIpsum from './icons/logoIpsum.svg' 
@@ -149,6 +153,12 @@ const assets = {
   purchasePriceFooterStyingImg,
   purchasePrice1StyingImg,
   purchasePrice2StyingImg,
+  assessedPropertyHeroStyingImg,
+  assessedProperty1StyingImg,
+  assessedProperty2StyingImg,
+  assessedPropertyFooterStyingImg,
+  propertyReportHeroStyingImg,
+
   // logo ipsum
   logoIpsum,
 };
