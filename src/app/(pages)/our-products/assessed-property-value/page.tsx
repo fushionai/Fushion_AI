@@ -52,22 +52,23 @@ const AssessedPropertyValuePage = () => {
         </section>
       </section>
 
-      <div className="bg-primaryWhite">
+      <div className="bg-primaryWhite py-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
             What is it?
           </h2>
           <div className="list-disc space-y-3 px-6 max-w-[800px]">
             <p className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue">
-              {assessedPropertyContents.whatIsIt}
+              {assessedPropertyContents.whatIsIt} {" "}
+                <a href="#" className={`text-primaryBlue`}>click here.</a>
             </p>
           </div>
         </article>
       </div>
 
-      <div className="bg-darkBlue">
+      <div className="bg-[#F4F5FF] py-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
             Information Included
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
@@ -75,7 +76,7 @@ const AssessedPropertyValuePage = () => {
               (list, index) => (
                 <li
                   key={index}
-                  className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
+                  className="font-roboto font-normal text-[20px] leading-[30px] text-[#161527]"
                 >
                   {list}
                 </li>
@@ -85,30 +86,30 @@ const AssessedPropertyValuePage = () => {
         </article>
       </div>
 
-      <div className="bg-primaryWhite">
+      <div className="bg-primaryWhite py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px]">
             Delivery Time:
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-            <li className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue ">
+            <li className="font-roboto font-normal text-[20px] leading-[30px]">
               {assessedPropertyContents.assessedDeliveryTime}
             </li>
           </ul>
         </article>
       </div>
 
-      <div className="bg-darkBlue">
+      <div className="bg-[#F4F5FF] py-20">
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
             Benefits for Buyers:
           </h2>
-          <ul className="list-disc space-y-3 px-6 max-w-[800px]">
+          <ul className="list-disc space-y-3 px-6 max-w-[800px] text-[#161527]">
             {assessedPropertyContents.assessedBenefitOfBuyer.map(
               (list, index) => (
                 <li
                   key={index}
-                  className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite"
+                  className="font-roboto font-normal text-[20px] leading-[30px] text-[#161527]"
                 >
                   {list}
                 </li>

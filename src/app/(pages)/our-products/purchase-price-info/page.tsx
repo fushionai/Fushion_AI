@@ -8,7 +8,7 @@ import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 const PurchasePriceInformationPage = () => {
   return (
     <div>
-      <section className="relative pb-36 max-sm:pb-20">
+      <section className="flex items-center justify-center relative pb-36 max-sm:pb-20 min-h-[100vh]">
         <Image
           src={heroBg}
           alt="Background image"
@@ -52,14 +52,6 @@ const PurchasePriceInformationPage = () => {
         </section>
       </section>
 
-      <div className="bg-[#171359]">
-        <article className="max-container py-10 max-md:px-4 px-10 ">
-          <p className="font-roboto font-normal text-[20px] leading-[30px] text-center text-primaryWhite">
-            {purchaseContents.purchasePriceContents}
-          </p>
-        </article>
-      </div>
-
       <div className="bg-primaryWhite">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
@@ -78,13 +70,21 @@ const PurchasePriceInformationPage = () => {
         </article>
       </div>
 
-      <div className="bg-darkBlue">
+      <div className="bg-[#161527] py-20">
+        <article className="max-container py-10 max-md:px-4 px-10 ">
+          <p className="font-roboto font-normal text-[20px] leading-[30px] text-center text-primaryWhite">
+            {purchaseContents.purchasePriceContents}
+          </p>
+        </article>
+      </div>
+
+      <div className="bg-[#F4F5FF] py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite ">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px]">
             Delivery Time:
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-            <li className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite ">
+            <li className="font-roboto font-normal text-[20px] leading-[30px]">
               {purchaseContents.deliveryTime}
             </li>
           </ul>

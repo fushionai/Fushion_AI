@@ -65,7 +65,7 @@ const PropertyValuationAnalysisReportPage = () => {
                 </li>
               )
             )}
-            <div className="max-w-[547px] pt-6 flex items-center gap-4 ml-[-16px]">
+            <div className="max-w-[547px] p-3 mt-6 flex items-center gap-4 ml-[-16px] bg-[#FFF3F3] rounded">
               <Image src={assets.noteBlack} alt="note" />
               <p className="font-roboto font-normal text-[20px] leading-[22px] text-darkBlue">
                 Please note that the Neighborhood Comparative Analysis Report
@@ -77,13 +77,13 @@ const PropertyValuationAnalysisReportPage = () => {
         </article>
       </div>
 
-      <div className="bg-darkBlue">
+      <div className="bg-[#F4F5FF] py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-primaryWhite ">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] ">
             Delivery Time:
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-            <li className="font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite ">
+            <li className="font-roboto font-normal text-[20px] leading-[30px] ">
               {propertyAnalysis.propertyAnalysisDeliveryTime}
             </li>
           </ul>
