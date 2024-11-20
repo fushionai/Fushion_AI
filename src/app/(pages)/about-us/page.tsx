@@ -6,6 +6,7 @@ import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
 import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
+import assets from "@/assets";
 // import ContactSection from "@/components/about-us-page-components/ContactSection";
 
 const AboutUsPage = () => {
@@ -23,7 +24,7 @@ const AboutUsPage = () => {
           <header>
             <TopNavBar />
           </header>
-          <main className="mt-16 px-10 md:mt-20 md:px-32 max-sm:px-2">
+          <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
               About Us
             </h2>
@@ -38,12 +39,31 @@ const AboutUsPage = () => {
               pushing the boundaries of what&apos;s possible in the real estate
               market.
             </h6>
+            <Image
+              src={assets.aboutUsHeroStyingImg}
+              alt="Styling image"
+              loading="eager"
+              height={30}
+              className="absolute -bottom-2 left-0 right-0 w-full"
+            />
           </main>
         </section>
       </section>
       <AboutUsOurValues />
       <AboutUsLatestNews />
       {/* <ContactSection /> */}
+
+      {/* Footer Styling */}
+      <div className={`bg-[#161527] h-28 relative`}>
+        <Image
+          src={assets.aboutUsFooterStyingImg}
+          alt="Styling image"
+          loading="eager"
+          height={30}
+          className="absolute top-0 left-0 right-0 w-full"
+        />
+      </div>
+
     </section>
   );
 };

@@ -63,7 +63,9 @@ import email from "./icons/about-us-page-icons/email.svg";
 import homeServiceStyingImg from './graphics/home-page-graphics/home_servcie_offer.svg'
 import homeCommitedStyingImg from './graphics/home-page-graphics/home_commited_to_success.svg'
 import homeTestimonialStyingImg from './graphics/home-page-graphics/home_testimonial.svg'
-
+// StyingImg
+import aboutUsHeroStyingImg from './graphics/about-us-page-grapgics/about_us_hero.svg'
+import aboutUsFooterStyingImg from './graphics/about-us-page-grapgics/about_us_footer.svg'
 // logo ipsum
 import logoIpsum from './icons/logoIpsum.svg' 
 
@@ -131,6 +133,8 @@ const assets = {
   homeServiceStyingImg,
   homeCommitedStyingImg,
   homeTestimonialStyingImg,
+  aboutUsHeroStyingImg,
+  aboutUsFooterStyingImg,
 
   // logo ipsum
   logoIpsum,
