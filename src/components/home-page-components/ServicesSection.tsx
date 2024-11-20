@@ -99,7 +99,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="relative bg-center bg-cover bg-no-repeat  px-32 max-md:px-7 pt-32 max-md:pt-20 pb-40 max-md:pb-32">
+    <section className="relative bg-center bg-cover bg-no-repeat px-32 max-md:px-7 pt-32 max-md:pt-20 pb-60 max-md:pb-32">
       <Image
         src={heroBg}
         alt="Background image"
@@ -128,6 +128,12 @@ const ServicesSection = () => {
           </Slider>
         </article>
       </main>
+      <Image
+        src={assets.homeServiceStyingImg}
+        alt="Styling image"
+        loading="eager"
+        className="absolute -bottom-1 left-0 right-0 w-full"
+      />
     </section>
   );
 };

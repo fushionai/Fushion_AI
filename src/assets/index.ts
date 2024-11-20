@@ -59,6 +59,14 @@ import people from "./icons/about-us-page-icons/people.svg";
 import rectangle from "./images/products-page-images/our-products-hero.png";
 import email from "./icons/about-us-page-icons/email.svg";
 
+// styling graphics
+import homeServiceStyingImg from './graphics/home_servcie_offer.svg'
+import homeCommitedStyingImg from './graphics/home_commited_to_success.svg'
+import homeTestimonialStyingImg from './graphics/home_testimonial.svg'
+
+// logo ipsum
+import logoIpsum from './icons/logoIpsum.svg' 
+
 const assets = {
   // NavBar icons
   menu,
@@ -118,6 +126,14 @@ const assets = {
   people,
   rectangle,
   email,
+
+  // styling graphics
+  homeServiceStyingImg,
+  homeCommitedStyingImg,
+  homeTestimonialStyingImg,
+
+  // logo ipsum
+  logoIpsum
 };
 
 export default assets;
