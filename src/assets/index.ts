@@ -60,31 +60,11 @@ import rectangle from "./images/products-page-images/our-products-hero.png";
 import email from "./icons/about-us-page-icons/email.svg";
 
 // styling graphics
-import homeServiceStyingImg from './graphics/home-page-graphics/home_servcie_offer.svg'
-import homeCommitedStyingImg from './graphics/home-page-graphics/home_commited_to_success.svg'
-import homeTestimonialStyingImg from './graphics/home-page-graphics/home_testimonial.svg'
-// StyingImg
-import aboutUsHeroStyingImg from './graphics/about-us-page-grapgics/about_us_hero.svg'
-import aboutUsFooterStyingImg from './graphics/about-us-page-grapgics/about_us_footer.svg'
-import productHeroStyingImg from './graphics/product-page-graphics/product_hero.svg'
-import productFooterStyingImg from './graphics/product-page-graphics/product_footer.svg'
-import purchasePriceHeroStyingImg from './graphics/product-page-graphics/purchase_price_hero.svg'
-import purchasePriceFooterStyingImg from './graphics/product-page-graphics/purchase_price_footer.svg'
-import purchasePrice1StyingImg from './graphics/product-page-graphics/purchase_price_1.svg'
-import purchasePrice2StyingImg from './graphics/product-page-graphics/purchase_price_2.svg'
-import assessedPropertyHeroStyingImg from './graphics/product-page-graphics/assessed_property_hero.svg'
-import assessedProperty1StyingImg from './graphics/product-page-graphics/assessed_property_1.svg'
-import assessedProperty2StyingImg from './graphics/product-page-graphics/assessed_property_2.svg'
-import assessedPropertyFooterStyingImg from './graphics/product-page-graphics/assessed_properties_footer.svg'
-import propertyReportHeroStyingImg from './graphics/product-page-graphics/property_report_hero.svg'
-import propertyReportFooterStyingImg from './graphics/product-page-graphics/property_report_footer.svg'
-import propertyReport1StyingImg from './graphics/product-page-graphics/property_report_1.svg'
-import propertyReport2StyingImg from './graphics/product-page-graphics/property_report_2.svg'
-import propertyVisualHeroStyingImg from './graphics/product-page-graphics/property_visul_hero.svg'
-
+import aboutUsHeroStyingImg from "./graphics/about-us-page-grapgics/about_us_hero.svg";
+import productHeroStyingImg from "./graphics/product-page-graphics/product_hero.svg";
 
 // logo ipsum
-import logoIpsum from './icons/logoIpsum.svg' 
+import logoIpsum from "./icons/logoIpsum.svg";
 
 const assets = {
   // NavBar icons
@@ -146,27 +126,8 @@ const assets = {
   rectangle,
   email,
 
-  // styling graphics
-  homeServiceStyingImg,
-  homeCommitedStyingImg,
-  homeTestimonialStyingImg,
   aboutUsHeroStyingImg,
-  aboutUsFooterStyingImg,
   productHeroStyingImg,
-  productFooterStyingImg,
-  purchasePriceHeroStyingImg,
-  purchasePriceFooterStyingImg,
-  purchasePrice1StyingImg,
-  purchasePrice2StyingImg,
-  assessedPropertyHeroStyingImg,
-  assessedProperty1StyingImg,
-  assessedProperty2StyingImg,
-  assessedPropertyFooterStyingImg,
-  propertyReportHeroStyingImg,
-  propertyReportFooterStyingImg,
-  propertyReport1StyingImg,
-  propertyReport2StyingImg,
-  propertyVisualHeroStyingImg,
 
   // logo ipsum
   logoIpsum,

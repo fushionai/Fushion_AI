@@ -79,13 +79,12 @@ const TestimonialsSection = () => {
   };
   return (
     <section className=" bg-[#161527] relative py-20 pt-40 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5 overflow-x-hidden">
-
       <div className="absolute -top-1 left-0 right-0 w-full h-12 md:h-16 bg-white">
         <div
           className="absolute inset-0 w-full h-full bg-[#161527]"
           style={{
             clipPath:
-              "polygon( 100% 46.92%, 100% 99.23%, 0% 99.23%, 0% 0%, 10.2% 0%, 65.5% 0%, 68.58% 73.85%, 93.57% 73.85%, 94.88% 46.92%)",
+              "polygon( 100% 46.92%, 100% 100%, 0% 100%, 0% 0%, 10.2% 0%, 65.5% 0%, 68.58% 73.85%, 93.57% 73.85%, 94.88% 46.92%)",
           }}
         ></div>
       </div>
@@ -107,20 +106,7 @@ const TestimonialsSection = () => {
           </p>
         </header>
 
-        <div className="w-full relative mt-20 max-md:mt-12">
-          <Image
-            src={assets.homeTestimonialStyingImg}
-            alt="Styling image"
-            loading="eager"
-            className="absolute -left-28 h-full bottom-0"
-          />
-          <Image
-            src={assets.homeTestimonialStyingImg}
-            alt="Styling image"
-            loading="eager"
-            className="absolute -right-28 h-full bottom-0"
-          />
-
+        <div className="w-full relative mt-20 max-md:mt-12 before:absolute before:w-24 before:bg-white/10 before:-left-28 before:h-full before:bottom-0 after:absolute after:w-24 after:bg-white/10 after:-right-28 after:h-full after:bottom-0">
           <main className="mx-20">
             <article className="">
               <Slider {...settings}>
