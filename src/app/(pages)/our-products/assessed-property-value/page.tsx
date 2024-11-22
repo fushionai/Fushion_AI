@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import assessedPropertyContents from "@/contents/our-products-contents/assessed-property-value";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
-import assets from "@/assets";
 
 const AssessedPropertyValuePage = () => {
   return (
@@ -51,16 +50,19 @@ const AssessedPropertyValuePage = () => {
             </div>
           </main>
         </section>
-        <Image
-          src={assets.assessedPropertyHeroStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -bottom-2 left-0 right-0 w-full"
-        />
+
+        <div className="absolute -bottom-2 left-0 w-full h-12 md:h-16 bg-transparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-white"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </section>
 
-      <div className="bg-primaryWhite py-20">
+      <div className="relative bg-primaryWhite py-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
             What is it?
@@ -74,17 +76,19 @@ const AssessedPropertyValuePage = () => {
             </p>
           </div>
         </article>
+
+        <div className="absolute bottom-0 w-full h-12 md:h-16 bg-trnasparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#F4F5FF]"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </div>
 
-      <div className="bg-[#F4F5FF] py-20 relative">
-        <Image
-          src={assets.assessedProperty1StyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -top-2 left-0 right-0 w-full"
-        />
-
+      <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
             Information Included
@@ -103,13 +107,15 @@ const AssessedPropertyValuePage = () => {
           </ul>
         </article>
 
-        <Image
-          src={assets.assessedProperty2StyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -bottom-2 left-0 right-0 w-full"
-        />
+        <div className="absolute bottom-0 w-full h-12 md:h-16 bg-trnasparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-white"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </div>
 
       <div className="bg-primaryWhite py-20">
@@ -125,7 +131,17 @@ const AssessedPropertyValuePage = () => {
         </article>
       </div>
 
-      <div className="bg-[#F4F5FF] py-20">
+      <div className="relative bg-[#F4F5FF] py-20">
+        <div className="absolute -top-1 left-0 right-0 w-full h-12 md:h-16 bg-white">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#F4F5FF]"
+            style={{
+              clipPath:
+                "polygon(94.88% 46.92%, 100% 46.92%, 100% 100%, 0% 100%, 0% 0%, 10.2% 0%, 65.5% 0%, 68.58% 73.85%, 93.57% 73.85%, 94.88% 46.92%)",
+            }}
+          ></div>
+        </div>
+
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
             Benefits for Buyers:
@@ -147,13 +163,15 @@ const AssessedPropertyValuePage = () => {
 
       {/* Footer Styling */}
       <div className={`bg-[#161527] h-28 relative`}>
-        <Image
-          src={assets.assessedPropertyFooterStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -top-2 left-0 right-0 w-full"
-        />
+        <div className="absolute w-full h-12 md:h-16 bg-white">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#161527]"
+            style={{
+              clipPath:
+                "polygon(95.31% 46.92%, 100.45% 46.92%, 100.45% 100%, 0% 100%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
+            }}
+          ></div>
+        </div>
       </div>
     </div>
   );

@@ -39,6 +39,7 @@ const AboutUsPage = () => {
               pushing the boundaries of what&apos;s possible in the real estate
               market.
             </h6>
+
             <Image
               src={assets.aboutUsHeroStyingImg}
               alt="Styling image"
@@ -55,15 +56,17 @@ const AboutUsPage = () => {
 
       {/* Footer Styling */}
       <div className={`bg-[#161527] h-28 relative`}>
-        <Image
-          src={assets.aboutUsFooterStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute top-0 left-0 right-0 w-full"
-        />
+        <div className="relative w-full h-12 md:h-16 bg-white">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#161527]"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </div>
-
+      
     </section>
   );
 };

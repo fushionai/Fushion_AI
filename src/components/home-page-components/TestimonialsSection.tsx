@@ -79,12 +79,17 @@ const TestimonialsSection = () => {
   };
   return (
     <section className=" bg-[#161527] relative py-20 pt-40 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5 overflow-x-hidden">
-      <Image
-        src={assets.homeCommitedStyingImg}
-        alt="Styling image"
-        loading="eager"
-        className="absolute top-0 left-0 right-0 w-full z-50"
-      />
+
+      <div className="absolute -top-1 left-0 right-0 w-full h-12 md:h-16 bg-white">
+        <div
+          className="absolute inset-0 w-full h-full bg-[#161527]"
+          style={{
+            clipPath:
+              "polygon( 100% 46.92%, 100% 99.23%, 0% 99.23%, 0% 0%, 10.2% 0%, 65.5% 0%, 68.58% 73.85%, 93.57% 73.85%, 94.88% 46.92%)",
+          }}
+        ></div>
+      </div>
+
       <section className="max-container relative">
         <header>
           <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">

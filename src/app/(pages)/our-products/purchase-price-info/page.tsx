@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
-import assets from "@/assets";
 
 const PurchasePriceInformationPage = () => {
   return (
@@ -51,16 +50,19 @@ const PurchasePriceInformationPage = () => {
             </div>
           </main>
         </section>
-        <Image
-          src={assets.purchasePriceHeroStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -bottom-2 left-0 right-0 w-full"
-        />
+
+        <div className="absolute -bottom-2 left-0 right-0 w-full h-12 md:h-16 bg-transparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-white"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </section>
 
-      <div className="bg-primaryWhite">
+      <div className="bg-primaryWhite relative pb-16">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
           <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
             Information Included
@@ -76,30 +78,34 @@ const PurchasePriceInformationPage = () => {
             ))}
           </ul>
         </article>
+
+        <div className="absolute -bottom-2 left-0 right-0 w-full h-12 md:h-16 bg-transparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#161527]"
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </div>
 
-      <div className="bg-[#161527] py-20 relative">
-        <Image
-          src={assets.purchasePrice1StyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -top-2 left-0 right-0 w-full"
-        />
-
+      <div className="bg-[#161527] pb-20 relative">
         <article className="max-container py-10 max-md:px-4 px-10 ">
           <p className="font-roboto font-normal text-[20px] leading-[30px] text-center text-primaryWhite">
             {purchaseContents.purchasePriceContents}
           </p>
         </article>
 
-        <Image
-          src={assets.purchasePrice2StyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -bottom-2 left-0 right-0 w-full"
-        />
+        <div className="absolute -bottom-2 left-0 right-0 w-full h-12 md:h-16 bg-transparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#F4F5FF] "
+            style={{
+              clipPath:
+                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+            }}
+          ></div>
+        </div>
       </div>
 
       <div className="bg-[#F4F5FF] py-20">
@@ -134,14 +140,14 @@ const PurchasePriceInformationPage = () => {
       </div>
 
       {/* Footer Styling */}
-      <div className={`bg-[#161527] h-28 relative`}>
-        <Image
-          src={assets.purchasePriceFooterStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute top-0 left-0 right-0 w-full"
-        />
+      <div className="relative bg-white w-full h-12 md:h-16 ">
+        <div
+          className="absolute inset-0 w-full h-full bg-[#161527]"
+          style={{
+            clipPath:
+              "polygon(100.45% 46.92%, 100.45% 100%, 0% 100%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
+          }}
+        ></div>
       </div>
     </div>
   );

@@ -80,6 +80,7 @@ import propertyReportHeroStyingImg from './graphics/product-page-graphics/proper
 import propertyReportFooterStyingImg from './graphics/product-page-graphics/property_report_footer.svg'
 import propertyReport1StyingImg from './graphics/product-page-graphics/property_report_1.svg'
 import propertyReport2StyingImg from './graphics/product-page-graphics/property_report_2.svg'
+import propertyVisualHeroStyingImg from './graphics/product-page-graphics/property_visul_hero.svg'
 
 
 // logo ipsum
@@ -165,6 +166,8 @@ const assets = {
   propertyReportFooterStyingImg,
   propertyReport1StyingImg,
   propertyReport2StyingImg,
+  propertyVisualHeroStyingImg,
+
   // logo ipsum
   logoIpsum,
 };
