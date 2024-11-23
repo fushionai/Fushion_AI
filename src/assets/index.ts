@@ -42,6 +42,10 @@ import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";
 import twitter from "./icons/twitter.svg";
 
+// Contact page icons
+import emailIcon from './icons/contact-page-icon/email.svg'
+import phoneIcon from './icons/contact-page-icon/phone.svg'
+
 // Our products images and Icons
 import productsHero from "./images/products-page-images/our-products-hero.png";
 import propertyRobot from "./icons/products-page-icons/property-robot.svg";
@@ -124,6 +128,10 @@ const assets = {
 
   // logo ipsum
   logoIpsum,
+
+  // Contact Page
+  emailIcon,
+  phoneIcon
 };
 
 export default assets;

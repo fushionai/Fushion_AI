@@ -97,7 +97,7 @@ const TopNavBar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="" href="#">
+          <Link className="" href="/contact">
             <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-[16px]">
               Contact
             </Button>
