@@ -56,7 +56,7 @@ const PurchasePriceInformationPage = () => {
             className="absolute inset-0 w-full h-full bg-white"
             style={{
               clipPath:
-                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+                "polygon(100.45% 46.92%, 100.45% 100%, 0% 100%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
             }}
           ></div>
         </div>
@@ -108,7 +108,7 @@ const PurchasePriceInformationPage = () => {
         </div>
       </div>
 
-      <div className="bg-[#F4F5FF] py-20">
+      <div className="relative bg-[#F4F5FF] py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
           <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px]">
             Delivery Time:
@@ -119,6 +119,16 @@ const PurchasePriceInformationPage = () => {
             </li>
           </ul>
         </article>
+
+        <div className="absolute -bottom-2 left-0 right-0 w-full h-12 md:h-16 bg-transparent">
+          <div
+            className="absolute inset-0 w-full h-full bg-white"
+            style={{
+              clipPath:
+                "polygon(100.45% 46.92%, 100.45% 100%, 0% 100%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
+            }}
+          ></div>
+        </div>
       </div>
 
       <div className="bg-primaryWhite">
