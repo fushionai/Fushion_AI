@@ -59,10 +59,6 @@ import people from "./icons/about-us-page-icons/people.svg";
 import rectangle from "./images/products-page-images/our-products-hero.png";
 import email from "./icons/about-us-page-icons/email.svg";
 
-// styling graphics
-import aboutUsHeroStyingImg from "./graphics/about-us-page-grapgics/about_us_hero.svg";
-import productHeroStyingImg from "./graphics/product-page-graphics/product_hero.svg";
-
 // logo ipsum
 import logoIpsum from "./icons/logoIpsum.svg";
 
@@ -125,9 +121,6 @@ const assets = {
   people,
   rectangle,
   email,
-
-  aboutUsHeroStyingImg,
-  productHeroStyingImg,
 
   // logo ipsum
   logoIpsum,
