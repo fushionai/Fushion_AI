@@ -4,7 +4,6 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import Link from "next/link";
-import assets from "@/assets";
 
 const ProductsHeroSection = () => {
   return (
@@ -84,13 +83,28 @@ const ProductsHeroSection = () => {
             </Link>
           </div>
         </main>
-        <Image
-          src={assets.productHeroStyingImg}
-          alt="Styling image"
-          loading="eager"
-          height={30}
-          className="absolute -bottom-2 left-0 right-0 w-full"
-        />
+
+        <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">
+          {/* transparent */}
+          <div
+            className="absolute inset-0 w-full h-full bg-white/50"
+            style={{
+              clipPath:
+                "polygon(94.95% 47.92%, 100% 47.92%, 100% 89.58%, 0% 99.58%, 0% 0%, 10.17% 0%, 57.5% 0%, 58.64% 20%, 93.98% 20%, 94.95% 47.92%)",
+            }}
+          ></div>
+
+          {/* bold white */}
+          <div className="absolute -bottom-2 left-0 w-full h-12 md:h-16 bg-transparent">
+            <div
+              className="absolute inset-0 w-full h-full bg-white"
+              style={{
+                clipPath:
+                  "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+              }}
+            ></div>
+          </div>
+        </div>
       </section>
     </section>
   );
