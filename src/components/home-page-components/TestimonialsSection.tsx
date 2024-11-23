@@ -78,8 +78,18 @@ const TestimonialsSection = () => {
     },
   };
   return (
-    <section className=" bg-[#161527] py-20 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5">
-      <section className="max-container">
+    <section className=" bg-[#161527] relative py-20 pt-40 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5 overflow-x-hidden">
+      <div className="absolute -top-1 left-0 right-0 w-full h-12 md:h-16 bg-white">
+        <div
+          className="absolute inset-0 w-full h-full bg-[#161527]"
+          style={{
+            clipPath:
+              "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
+          }}
+        ></div>
+      </div>
+
+      <section className="max-container relative">
         <header>
           <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
             <h1 className="text-primaryWhite md:text-nowrap max-md:text-center ">
@@ -96,22 +106,24 @@ const TestimonialsSection = () => {
           </p>
         </header>
 
-        <main>
-          <article className="pt-20 max-md:pt-12">
-            <Slider {...settings}>
-              {testimonialSectionContents.map((testimonial, index) => (
-                <div key={index}>
-                  <Testimonial
-                    key={index}
-                    description={testimonial.testimonial}
-                    fullName={testimonial.fullName}
-                    position={testimonial.position}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </article>{" "}
-        </main>
+        <div className="w-full relative mt-20 max-md:mt-12 before:absolute before:w-24 before:bg-white/10 before:-left-28 before:h-full before:bottom-0 after:absolute after:w-24 after:bg-white/10 after:-right-28 after:h-full after:bottom-0">
+          <main className="mx-20">
+            <article className="">
+              <Slider {...settings}>
+                {testimonialSectionContents.map((testimonial, index) => (
+                  <div key={index}>
+                    <Testimonial
+                      key={index}
+                      description={testimonial.testimonial}
+                      fullName={testimonial.fullName}
+                      position={testimonial.position}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </article>{" "}
+          </main>
+        </div>
       </section>
     </section>
   );

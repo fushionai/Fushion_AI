@@ -3,12 +3,10 @@ import Image from "next/image";
 import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import ContactForm from "@/components/contact-us-page-components/ContactForm";
+import ContactInformation from "@/components/contact-us-page-components/ContactInformation";
 
-import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
-import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
-// import ContactSection from "@/components/about-us-page-components/ContactSection";
-
-const AboutUsPage = () => {
+const page = () => {
   return (
     <section>
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
@@ -25,19 +23,8 @@ const AboutUsPage = () => {
           </header>
           <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
-              About Us
+              Contact Us
             </h2>
-            <h6 className="max-w-[1158px] mx-auto mt-5 sm:mt-10 font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite text-center">
-              We are a rapidly growing tech startup specializing in artificial
-              intelligence solutions for the real estate sector. Our young and
-              dynamic team is dedicated to revolutionizing the industry through
-              innovative AI-driven technologies. With a focus on delivering
-              cutting-edge solutions, we aim to transform the way real estate
-              professionals operate and make data-driven decisions. Our small
-              but highly skilled team thrives on collaboration and creativity,
-              pushing the boundaries of what&apos;s possible in the real estate
-              market.
-            </h6>
 
             <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">
               {/* transparent */}
@@ -52,7 +39,7 @@ const AboutUsPage = () => {
               {/* bold white */}
               <div className="absolute -bottom-2 left-0 w-full h-12 md:h-16 bg-transparent">
                 <div
-                  className="absolute inset-0 w-full h-full bg-white"
+                  className="absolute inset-0 w-full h-full bg-[#EDEEF9]"
                   style={{
                     clipPath:
                       "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
@@ -63,24 +50,15 @@ const AboutUsPage = () => {
           </main>
         </section>
       </section>
-      <AboutUsOurValues />
-      <AboutUsLatestNews />
-      {/* <ContactSection /> */}
 
-      {/* Footer Styling */}
-      <div className={`bg-[#161527] h-28 relative`}>
-        <div className="relative w-full h-12 md:h-16 bg-white">
-          <div
-            className="absolute inset-0 w-full h-full bg-[#161527]"
-            style={{
-              clipPath:
-                "polygon(0% 47.69%, 0% 100%, 100% 100%, 100% 0.77%, 89.8% 0.77%, 34.5% 0.77%, 31.42% 74.62%, 6.43% 74.62%, 5.12% 47.69%)",
-            }}
-          ></div>
+      <section className="w-full bg-[#EDEEF9] px-4 py-12 md:py-16">
+        <div className="mx-auto p-10 max-w-6xl flex gap-8 md:items-center flex-col md:flex-row bg-white">
+          <ContactInformation />
+          <ContactForm />
         </div>
-      </div>
+      </section>
     </section>
   );
 };
 
-export default AboutUsPage;
+export default page;

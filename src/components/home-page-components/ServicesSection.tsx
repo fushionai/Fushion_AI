@@ -99,7 +99,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="relative bg-center bg-cover bg-no-repeat  px-32 max-md:px-7 pt-32 max-md:pt-20 pb-40 max-md:pb-32">
+    <section className="relative bg-center bg-cover bg-no-repeat px-32 max-md:px-7 pt-32 max-md:pt-20 pb-60 max-md:pb-32">
       <Image
         src={heroBg}
         alt="Background image"
@@ -128,6 +128,17 @@ const ServicesSection = () => {
           </Slider>
         </article>
       </main>
+
+      <div className="absolute -bottom-1 left-0 right-0 w-full h-12 md:h-16 bg-transparent">
+        <div
+          className="absolute inset-0 w-full h-full bg-white"
+          style={{
+            clipPath:
+              "polygon(95.31% 46.92%, 100.45% 46.92%, 100.45% 99.23%, 0% 99.23%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
+          }}
+        ></div>
+      </div>
+      
     </section>
   );
 };
