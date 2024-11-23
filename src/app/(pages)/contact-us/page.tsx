@@ -52,7 +52,7 @@ const page = () => {
       </section>
 
       <section className="w-full bg-[#EDEEF9] px-4 py-12 md:py-16">
-        <div className="mx-auto p-10 max-w-6xl grid gap-8 md:grid-cols-2 md:gap-12 bg-white">
+        <div className="mx-auto p-10 max-w-6xl flex gap-8 md:items-center flex-col md:flex-row bg-white">
           <ContactInformation />
           <ContactForm />
         </div>

@@ -1,6 +1,6 @@
 const ContactInformation = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 md:w-1/2">
       <h2 className="text-2xl font-semibold font-roboto">Contact info:</h2>
 
       <div className="space-y-4">
