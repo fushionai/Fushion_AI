@@ -50,9 +50,11 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <Button className="mt-9 max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
-              Contact Us
-            </Button>
+            <Link className="" href="/contact">
+              <Button className="mt-9 max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
 
