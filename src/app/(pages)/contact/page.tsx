@@ -57,6 +57,19 @@ const page = () => {
           <ContactForm />
         </div>
       </section>
+
+      {/* Footer Styling */}
+      <div className={`bg-[#161527] h-28 relative`}>
+        <div className="absolute w-full h-12 md:h-16 bg-[#EDEEF9]">
+          <div
+            className="absolute inset-0 w-full h-full bg-[#161527]"
+            style={{
+              clipPath:
+                "polygon(95.31% 46.92%, 100.45% 46.92%, 100.45% 100%, 0% 100%, 0% 0%, 10.24% 0%, 65.8% 0%, 68.89% 73.85%, 93.99% 73.85%, 95.31% 46.92%)",
+            }}
+          ></div>
+        </div>
+      </div>
     </section>
   );
 };
