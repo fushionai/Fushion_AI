@@ -1,9 +1,11 @@
 "use client";
+import { sendContactForm } from "@/lib/api";
 import React from "react";
 
 import { Button } from "@nextui-org/react";
 
-const ContactForm = () => {
+const ContactForm = ({ setToast }: any) => {
+  const [isLoading, setIsLoading] = React.useState(false);
   const [formState, setFormState] = React.useState({
     firstName: "",
     lastName: "",
@@ -76,13 +78,36 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // console.log(formState);
-      // Send form data to the server
-      // Send email
-      // Clear form fields
+      setIsLoading(true);
+      try {
+        const response = await sendContactForm(formState);
+        setToast({
+          showToast: true,
+          message: response.message,
+          variant: "success",
+        });
+        // clear form
+        setIsLoading(false);
+        setFormState({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        });
+      } catch (error) {
+        console.log(error);
+        setToast({
+          showToast: true,
+          message: "failed to send email, please try again",
+          variant: "error",
+        });
+        setIsLoading(false);
+      }
     }
   };
 
@@ -181,8 +206,14 @@ const ContactForm = () => {
           <div className="text-sm text-red-500">{errorMessages.message}</div>
         )}
       </div>
-      <Button className="w-full px-4 py-2 text-white bg-[#3300FF] rounded-md hover:bg-[#2600CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-roboto font-semibold">
-        Send
+      <Button
+        type="submit"
+        disabled={isLoading}
+        className={`w-full px-4 py-2 text-white bg-[#3300FF] ${
+          isLoading ? "opacity-[0.6]" : ""
+        }rounded-md hover:bg-[#2600CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-roboto font-semibold`}
+      >
+        {isLoading ? "Sending..." : "Send"}
       </Button>
     </form>
   );

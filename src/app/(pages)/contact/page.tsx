@@ -1,14 +1,41 @@
+"use client";
+
 import Image from "next/image";
-
 import TopNavBar from "@/components/layouts/TopNavBar";
-
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import ContactForm from "@/components/contact-us-page-components/ContactForm";
 import ContactInformation from "@/components/contact-us-page-components/ContactInformation";
+import Toast from "@/components/layouts/Toast";
+import React from "react";
 
-const page = () => {
+type toastProp = {
+  showToast: boolean;
+  message: string;
+  variant: "success" | "error";
+};
+const Page = () => {
+  const [toast, setToast] = React.useState<toastProp>({
+    showToast: false,
+    message: "",
+    variant: "success",
+  });
+
+  React.useEffect(() => {
+    const timerId = setTimeout(() => {
+      setToast({
+        showToast: false,
+        message: "",
+        variant: "success",
+      });
+    }, 3000);
+    return () => clearTimeout(timerId);
+  }, [toast]);
+
   return (
-    <section>
+    <section className="relative">
+      {toast?.showToast && (
+        <Toast variant={toast?.variant} message={toast?.message} />
+      )}
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
         <Image
           src={heroBg}
@@ -54,7 +81,7 @@ const page = () => {
       <section className="w-full bg-[#EDEEF9] px-4 py-12 md:py-16">
         <div className="mx-auto p-10 max-w-6xl flex gap-8 md:items-center flex-col md:flex-row bg-white">
           <ContactInformation />
-          <ContactForm />
+          <ContactForm setToast={setToast} />
         </div>
       </section>
 
@@ -74,4 +101,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
