@@ -2,8 +2,6 @@
 import { sendContactForm } from "@/lib/api";
 import React from "react";
 
-import { Button } from "@nextui-org/react";
-
 const ContactForm = ({ setToast }: any) => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [formState, setFormState] = React.useState({
@@ -122,7 +120,7 @@ const ContactForm = ({ setToast }: any) => {
             placeholder="First Name"
             value={formState.firstName}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+            className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
           />
           {errorMessages.firstName && (
             <div className="text-sm text-red-500">
@@ -139,7 +137,7 @@ const ContactForm = ({ setToast }: any) => {
             placeholder="Last Name"
             value={formState.lastName}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+            className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
           />
           {errorMessages.lastName && (
             <div className="text-sm text-red-500">{errorMessages.lastName}</div>
@@ -154,7 +152,7 @@ const ContactForm = ({ setToast }: any) => {
             placeholder="Email"
             value={formState.email}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+            className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
           />
           {errorMessages.email && (
             <div className="text-sm text-red-500">{errorMessages.email}</div>
@@ -169,7 +167,7 @@ const ContactForm = ({ setToast }: any) => {
             placeholder="Phone (Optional)"
             value={formState.phone}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+            className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
           />
           {errorMessages.phone && (
             <div className="text-sm text-red-500">{errorMessages.phone}</div>
@@ -185,7 +183,7 @@ const ContactForm = ({ setToast }: any) => {
           placeholder="Company name"
           value={formState.company}
           onChange={handleInputChange}
-          className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+          className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
         />
         {errorMessages.company && (
           <div className="text-sm text-red-500">{errorMessages.company}</div>
@@ -200,21 +198,18 @@ const ContactForm = ({ setToast }: any) => {
           value={formState.message}
           onChange={handleInputChange}
           rows={6}
-          className="w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto"
+          className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
         ></textarea>
         {errorMessages.message && (
           <div className="text-sm text-red-500">{errorMessages.message}</div>
         )}
       </div>
-      <Button
-        type="submit"
-        disabled={isLoading}
-        className={`w-full px-4 py-2 text-white bg-[#3300FF] ${
-          isLoading ? "opacity-[0.6]" : ""
-        }rounded-md hover:bg-[#2600CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-roboto font-semibold`}
+      <button
+        type={"submit"}
+        className="w-full px-4 py-4  text-2xl font-bold text-white bg-[#3300FF] rounded-none hover:bg-[#2600CC]  font-roboto "
       >
-        {isLoading ? "Sending..." : "Send"}
-      </Button>
+        {isLoading ? "Sending" : "Send"}
+      </button>
     </form>
   );
 };

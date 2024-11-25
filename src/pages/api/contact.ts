@@ -12,7 +12,7 @@ const Contact = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     try {
-      // Send email asynchronously (queue it or use a background task system)
+      // Send email asynchronously
       const sendEmailPromise = transporter.sendMail({
         ...mailOptions,
         subject: "New Contact Form Submission",
@@ -43,9 +43,13 @@ const Contact = async (req: NextApiRequest, res: NextApiResponse) => {
         data?.message,
       ];
 
-      const dbQueryPromise = pool.query(query, values);
-      await dbQueryPromise;
-      sendEmailPromise.catch((err) => {
+      // Fire-and-forget pattern for DB insertion
+      pool.query(query, values).catch((err) => {
+        console.error("Failed to store message in database:", err);
+      });
+
+      // Wait for the email to be sent
+      await sendEmailPromise.catch((err) => {
         console.error("Failed to send email:", err);
       });
 
