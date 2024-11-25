@@ -3,6 +3,7 @@ import Image from "next/image";
 import assets from "@/assets/index";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
+import logo from "@/assets/icons/logo.svg";
 
 const Footer = () => {
   return (
@@ -10,9 +11,15 @@ const Footer = () => {
       <section className="max-container">
         <div className="flex max-[1200px]:flex-col items-start justify-between">
           <div>
-            <h2 className="font-istok font-bold text-[20px] leading-[28px] text-primaryWhite">
+            <div className="flex items-center gap-4 ">
+              <Image src={logo} alt="Logo" />
+              <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
+                FUSHION AI
+              </p>
+            </div>
+            {/* <h2 className="font-istok font-bold text-[20px] leading-[28px] text-primaryWhite">
               Let&apos;s talk
-            </h2>
+            </h2> */}
             <div className="mt-4 flex items-center gap-[36px] ">
               <Link href="#" target="_blank">
                 <Image src={assets.facebook} alt="Our Facebook" />
@@ -24,11 +31,8 @@ const Footer = () => {
                 <Image src={assets.twitter} alt="Our Twitter" />
               </Link>
             </div>
-            <p className="mt-4 font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
-              Innovating Real Estate with AI Precision
-            </p>
           </div>
-          <div className="flex max-md:flex-col items-center gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
+          <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link
               href="#"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
@@ -49,9 +53,9 @@ const Footer = () => {
               Projects
             </Link>
           </div>
-          <div>
+          <div className="flex items-start">
             <Link className="" href="/contact">
-              <Button className="mt-9 max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+              <Button className="max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
                 Contact Us
               </Button>
             </Link>
@@ -59,10 +63,15 @@ const Footer = () => {
         </div>
 
         <div className="mt-14 h-[1px] bg-primaryWhite opacity-[17%]"></div>
+        <div className="flex flex-col gap-4 mt-6">
+          <p className="font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
+            Innovating Real Estate with AI Precision
+          </p>
 
-        <p className="mt-10 font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
-          Fushion AI 2024 (c) All rights reserved | Privacy Policy
-        </p>
+          <p className=" font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
+            Fushion AI 2024 (c) All rights reserved | Privacy Policy
+          </p>
+        </div>
       </section>
     </footer>
   );

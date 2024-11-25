@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 
@@ -22,9 +22,11 @@ const UpFooter = () => {
           Contact us and try it now
         </p>
         <div className="max-md:flex justify-center">
-          <Button className="mt-9 max-md:mt-6 w-[150px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button className="mt-9 max-md:mt-6 w-[150px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </main>
     </section>

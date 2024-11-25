@@ -75,7 +75,7 @@ const TopNavBar = () => {
         <NavbarItem isActive>
           <Link
             className={`${
-              pathname.includes("/our-products")
+              pathname?.includes("/our-products")
                 ? "text-primaryWhite"
                 : "text-secondaryGray"
             } font-roboto font-bold text-[16px]`}
@@ -87,7 +87,7 @@ const TopNavBar = () => {
         <NavbarItem>
           <Link
             className={`${
-              pathname.includes("/about-us")
+              pathname?.includes("/about-us")
                 ? "text-primaryWhite"
                 : "text-secondaryGray"
             } font-roboto font-bold text-[16px]`}
@@ -131,7 +131,7 @@ const TopNavBar = () => {
                   ? pathname === "/"
                     ? "text-primaryWhite"
                     : "text-secondaryGray"
-                  : pathname.includes(item.link)
+                  : pathname?.includes(item.link)
                   ? "text-primaryWhite"
                   : "text-secondaryGray"
               } font-roboto font-bold text-[24px]`}
