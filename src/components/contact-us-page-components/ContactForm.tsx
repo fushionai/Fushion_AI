@@ -208,7 +208,7 @@ const ContactForm = ({ setToast }: any) => {
         type={"submit"}
         className="w-full px-4 py-4  text-2xl font-bold text-white bg-[#3300FF] rounded-none hover:bg-[#2600CC]  font-roboto "
       >
-        {isLoading ? "Sending" : "Send"}
+        {isLoading ? "Sending..." : "Send"}
       </button>
     </form>
   );
