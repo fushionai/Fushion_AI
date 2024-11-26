@@ -1,15 +1,17 @@
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 const ProductsOurService = ({
   price,
   title,
   description,
   lists,
+  goToLink,
 }: {
   price: string;
   title: string;
   description: string;
   lists?: string[];
+  goToLink?: string;
 }) => {
   return (
     <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[352px] max-[800px]:max-w-[95%] max-[800px]:mx-auto">
@@ -44,12 +46,16 @@ const ProductsOurService = ({
       </main>
       <footer>
         <div className="mt-9 max-sm:mt-6 flex items-center gap-6">
-          <Button className="py-4 px-6 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
-            Learn more
-          </Button>
-          <Button className="py-4 px-6 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-            Buy now
-          </Button>
+          <Link href={goToLink}>
+            <Button className="py-4 px-6 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
+              Learn more
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button className="py-4 px-6 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
+              Buy now
+            </Button>
+          </Link>
         </div>
       </footer>
     </section>

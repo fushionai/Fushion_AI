@@ -39,9 +39,11 @@ const PropertySection = () => {
                     Learn more
                   </Button>
                 </Link>
-                <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                  Buy now &euro;50
-                </Button>
+                <Link href="/contact">
+                  <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
+                    Buy now &euro;50
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -60,9 +62,11 @@ const PropertySection = () => {
                     Learn more
                   </Button>
                 </Link>
-                <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                  Buy now &euro;80
-                </Button>
+                <Link href="/contact">
+                  <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
+                    Buy now &euro;80
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="bg-[#EDEEF9] rounded-[16px] p-12">

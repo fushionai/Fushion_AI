@@ -93,17 +93,20 @@ const ProductsOurServices = () => {
             title="Purchase Price Information"
             description="Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties"
             lists={purchaseInfo}
+            goToLink="/our-products/purchase-price-info"
           />
           <ProductsOurService
             price="24.95"
             title="Assessed Property Value"
             description="Ideal for accurately estimating the value of a property."
             lists={assessed}
+            goToLink="/our-products/assessed-property-value"
           />
           <ProductsOurService
             price="29.95"
             title="Property Report"
             description="The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing."
+            goToLink="/our-products/property-report"
           />
         </Slider>
       </section>
@@ -117,17 +120,20 @@ const ProductsOurServices = () => {
             title="Purchase Price Information"
             description="Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties"
             lists={purchaseInfo}
+            goToLink="/our-products/purchase-price-info"
           />
           <ProductsOurService
             price="24.95"
             title="Assessed Property Value"
             description="Ideal for accurately estimating the value of a property."
             lists={assessed}
+            goToLink="/our-products/assessed-property-value"
           />
           <ProductsOurService
             price="29.95"
             title="Property Report"
             description="The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing."
+            goToLink="/our-products/property-report"
           />
         </div>
       </main>
