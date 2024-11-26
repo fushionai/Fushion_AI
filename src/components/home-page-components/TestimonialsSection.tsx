@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
         </header>
 
         <div className="w-full relative mt-20 max-md:mt-12 before:absolute before:w-24 before:bg-white/10 before:-left-28 before:h-full before:bottom-0 after:absolute after:w-24 after:bg-white/10 after:-right-28 after:h-full after:bottom-0">
-          <main className="mx-20">
+          <main className="max-sm:mx-0 mx-20">
             <article className="">
               <Slider {...settings}>
                 {testimonialSectionContents.map((testimonial, index) => (

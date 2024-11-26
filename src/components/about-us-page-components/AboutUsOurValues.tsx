@@ -12,7 +12,7 @@ const AboutUsOurValues = () => {
           </h2>
 
           <main className="mt-12 max-md:mt-6">
-            <div className="flex flex-wrap justify-center gap-4 max-sm:gap-5">
+            <div className="flex max-lg:flex-wrap justify-center gap-4 max-sm:gap-5">
               <AboutValue
                 icon={aboutUsValues[0].icon}
                 title={aboutUsValues[0].title}

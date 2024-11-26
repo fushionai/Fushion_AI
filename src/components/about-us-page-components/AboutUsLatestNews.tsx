@@ -74,7 +74,7 @@ const AboutUsLatestNews = () => {
 
           <main className="mt-12 max-md:mt-6">
             {/* For large screens */}
-            <div className="max-[800px]:hidden flex flex-wrap justify-center gap-4 max-sm:gap-5">
+            <div className="max-sm:hidden flex flex-wrap justify-center gap-4 max-sm:gap-5">
               <LatestNew
                 date="1 week ago"
                 title="Lorem ipsun dolor sit amrnt consectur"
@@ -97,7 +97,7 @@ const AboutUsLatestNews = () => {
           </main>
 
           {/* For small screens */}
-          <section className="hidden max-[800px]:block  max-w-[700px] mx-auto">
+          <section className="hidden max-sm:block  max-w-[700px] mx-auto">
             <Slider {...settings}>
               <LatestNew
                 date="1 week ago"
