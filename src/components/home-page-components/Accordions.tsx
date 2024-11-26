@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
@@ -11,19 +11,25 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
 
   const initialOffset = 1800;
 
-  const thresholds = [
-    initialOffset,
-    initialOffset + 200,
-    initialOffset + 400,
-    initialOffset + 600,
-    initialOffset + 800,
-    initialOffset + 1000,
-  ];
+  const thresholds = useMemo(
+    () => [
+      initialOffset,
+      initialOffset + 200,
+      initialOffset + 400,
+      initialOffset + 600,
+      initialOffset + 800,
+      initialOffset + 1000,
+    ],
+    [initialOffset]
+  );
 
-  const handleSelectionChange = (keys: any) => {
-    setSelectedKeys(new Set(keys));
-    setSelectedOrder(new Set(keys));
-  };
+  const handleSelectionChange = useCallback(
+    (keys: any) => {
+      setSelectedKeys(new Set(keys));
+      setSelectedOrder(new Set(keys));
+    },
+    [setSelectedOrder]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
