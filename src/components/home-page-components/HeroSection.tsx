@@ -8,7 +8,7 @@ import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28 h-[100vh]">
+    <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28 md:h-[100vh]">
       <Image
         src={heroBg}
         alt="Background image"

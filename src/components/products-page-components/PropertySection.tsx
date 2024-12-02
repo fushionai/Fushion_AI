@@ -41,7 +41,7 @@ const PropertySection = () => {
                 </Link>
                 <Link href="/contact">
                   <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                    Buy now &euro;50
+                    Contact Us
                   </Button>
                 </Link>
               </div>
@@ -64,7 +64,7 @@ const PropertySection = () => {
                 </Link>
                 <Link href="/contact">
                   <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                    Buy now &euro;80
+                    Contact Us
                   </Button>
                 </Link>
               </div>

@@ -22,8 +22,8 @@ const UpFooter = () => {
           Contact us and try it now
         </p>
         <div className="max-md:flex justify-center">
-          <Link href="/contact">
-            <Button className="mt-9 max-md:mt-6 w-[150px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+          <Link href="/contact" className="max-md:w-full">
+            <Button className="mt-9 max-md:mt-6 w-[150px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
               Contact Us
             </Button>
           </Link>

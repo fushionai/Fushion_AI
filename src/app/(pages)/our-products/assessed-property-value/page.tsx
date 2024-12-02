@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import assessedPropertyContents from "@/contents/our-products-contents/assessed-property-value";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import Link from "next/link";
 
 const AssessedPropertyValuePage = () => {
   return (
@@ -44,9 +45,11 @@ const AssessedPropertyValuePage = () => {
               </ul>
             </div>
             <div className="max-md:flex justify-center items-center">
-              <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
-                Buy now &euro;24.95
-              </Button>
+              <Link href="/contact">
+                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </main>
         </section>

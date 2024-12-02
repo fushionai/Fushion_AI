@@ -51,9 +51,9 @@ const Footer = () => {
               Our Products
             </Link>
           </div>
-          <div className="flex items-start">
-            <Link className="" href="/contact">
-              <Button className="max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] leading-[28px] text-center">
+          <div className="flex items-start max-md:w-full">
+            <Link className="max-md:w-full" href="/contact">
+              <Button className="max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
                 Contact Us
               </Button>
             </Link>

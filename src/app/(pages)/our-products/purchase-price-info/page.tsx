@@ -4,11 +4,12 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import Link from "next/link";
 
 const PurchasePriceInformationPage = () => {
   return (
     <div>
-      <section className="flex items-center justify-center relative pb-36 max-sm:pb-20 min-h-[100vh]">
+      <section className="relative pb-36 max-sm:pb-20">
         <Image
           src={heroBg}
           alt="Background image"
@@ -44,9 +45,11 @@ const PurchasePriceInformationPage = () => {
               </ul>
             </div>
             <div className="max-md:flex justify-center items-center">
-              <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
-                Buy now &euro;34.95
-              </Button>
+              <Link href="/contact">
+                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </main>
         </section>
