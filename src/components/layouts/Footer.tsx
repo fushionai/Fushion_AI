@@ -42,6 +42,11 @@ const Footer = () => {
               You can reach our customer service via WhatsApp:
               <span className="text-nowrap"> + 1 (31) 36- 2036297 </span>
             </div>
+
+            <div className="mt-5 max-md:mt-6 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
+              Our business bank account:
+              <span className="text-nowrap"> 1000872289 </span>
+            </div>
           </div>
           <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link
