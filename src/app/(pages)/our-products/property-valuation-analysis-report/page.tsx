@@ -5,6 +5,7 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import propertyAnalysis from "@/contents/our-products-contents/property-analysis";
 import assets from "@/assets/index";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import Link from "next/link";
 
 const PropertyValuationAnalysisReportPage = () => {
   return (
@@ -41,9 +42,11 @@ const PropertyValuationAnalysisReportPage = () => {
               </div>
             </div>
             <div className="max-[1200px]:flex justify-center items-center">
-              <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
-                Buy now &euro;50.00
-              </Button>
+              <Link href="/contact">
+                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </main>
         </section>

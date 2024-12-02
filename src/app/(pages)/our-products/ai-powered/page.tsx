@@ -5,6 +5,7 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import aiPoweredContents from "@/contents/our-products-contents/ai-powered-valuation";
 import assets from "@/assets/index";
 import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import Link from "next/link";
 
 const AIPoweredValuationPage = () => {
   return (
@@ -41,9 +42,11 @@ const AIPoweredValuationPage = () => {
               </div>
             </div>
             <div className="max-[1200px]:flex justify-center items-center">
-              <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
-                Buy now &euro;80.00
-              </Button>
+              <Link href="/contact">
+                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </main>
         </section>

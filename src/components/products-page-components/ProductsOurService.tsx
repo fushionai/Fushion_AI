@@ -14,7 +14,7 @@ const ProductsOurService = ({
   goToLink?: string;
 }) => {
   return (
-    <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[352px] max-[800px]:max-w-[95%] max-[800px]:mx-auto">
+    <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[382px] max-[800px]:max-w-[95%] max-[800px]:mx-auto">
       <header className="h-[320px]">
         <h2 className="relative w-fit mx-auto font-ubuntu font-bold text-[64px] leading-[73px] text-primaryBlue text-center">
           {price}
@@ -53,7 +53,7 @@ const ProductsOurService = ({
           </Link>
           <Link href="/contact">
             <Button className="py-4 px-6 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-              Buy now
+              Contact Us
             </Button>
           </Link>
         </div>
