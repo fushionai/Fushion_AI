@@ -18,7 +18,7 @@ const Footer = () => {
               </p>
             </Link>
 
-            <div className=" mt-4 flex items-center gap-6 ">
+            <div className=" mt-5 flex items-center gap-6 ">
               <div className="flex items-center gap-[36px] ">
                 <Link href="#" target="_blank">
                   <Image src={assets.facebook} alt="Our Facebook" />
@@ -36,6 +36,11 @@ const Footer = () => {
               <p className="font-ubuntu font-normal text-base leading-[18px] text-primaryWhite">
                 info@fushionai.com
               </p>
+            </div>
+
+            <div className="mt-5 max-md:mt-9 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
+              You can reach our customer service via WhatsApp:
+              <span className="text-nowrap"> + 1 (31) 36- 2036297 </span>
             </div>
           </div>
           <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">

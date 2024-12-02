@@ -27,12 +27,9 @@ const ContactInformation = () => {
 
       <div className="space-y-4">
         <p className="text-secondaryGray font-semibold font-roboto">
-          You can reach our customer service team by phone at
+          You can reach our customer service via WhatsApp
         </p>
-        <a
-          href="tel:+1(31)36-2036297"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
-        >
+        <a className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
           <Image src={assets.phoneIcon} alt="Our Phone" />
 
           <span className="text-darkBlue font-semibold font-ubuntu">
