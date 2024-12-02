@@ -18,16 +18,24 @@ const Footer = () => {
               </p>
             </Link>
 
-            <div className="mt-4 flex items-center gap-[36px] ">
-              <Link href="#" target="_blank">
-                <Image src={assets.facebook} alt="Our Facebook" />
-              </Link>
-              <Link href="#" target="_blank">
-                <Image src={assets.instagram} alt="Our Instagram " />
-              </Link>
-              <Link href="#" target="_blank">
-                <Image src={assets.twitter} alt="Our Twitter" />
-              </Link>
+            <div className=" mt-4 flex items-center gap-6 ">
+              <div className="flex items-center gap-[36px] ">
+                <Link href="#" target="_blank">
+                  <Image src={assets.facebook} alt="Our Facebook" />
+                </Link>
+                <Link href="#" target="_blank">
+                  <Image src={assets.instagram} alt="Our Instagram " />
+                </Link>
+                <Link href="#" target="_blank">
+                  <Image src={assets.twitter} alt="Our Twitter" />
+                </Link>
+              </div>
+
+              <div className="bg-white w-[1px] h-4"></div>
+
+              <p className="font-ubuntu font-normal text-base leading-[18px] text-primaryWhite">
+                info@fushionai.com
+              </p>
             </div>
           </div>
           <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
