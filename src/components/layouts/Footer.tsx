@@ -11,12 +11,12 @@ const Footer = () => {
       <section className="max-container">
         <div className="flex max-[1200px]:flex-col items-start justify-between">
           <div>
-            <div className="flex items-center gap-4 ">
+            <Link href="/" className="flex items-center gap-4 ">
               <Image src={logo} alt="Logo" />
               <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
                 FUSHION AI
               </p>
-            </div>
+            </Link>
 
             <div className="mt-4 flex items-center gap-[36px] ">
               <Link href="#" target="_blank">
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link
-              href="#/about-us"
+              href="/about-us"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
             >
               About Us
@@ -45,10 +45,10 @@ const Footer = () => {
               Services
             </Link>
             <Link
-              href="#"
+              href="/our-products"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
             >
-              Projects
+              Our Products
             </Link>
           </div>
           <div className="flex items-start">
