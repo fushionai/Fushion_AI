@@ -50,7 +50,7 @@ export default function LoginPage() {
             </Button>
           </form>
           <div className="mt-4 text-center">
-            <Link href="/forgot-password" color="primary">
+            <Link href="forgot-password" color="primary">
               Forgot password?
             </Link>
           </div>
