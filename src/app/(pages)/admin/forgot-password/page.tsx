@@ -19,7 +19,10 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4">
+      <Link href="/" className="absolute left-5 top-5">
+        <Button> Back To Home</Button>
+      </Link>
       <Card className="w-full max-w-md">
         <CardHeader className="flex flex-col items-center pb-0 pt-6">
           <h1 className="text-3xl font-bold text-primaryBlack">
@@ -41,7 +44,7 @@ export default function ForgotPasswordPage() {
           </form>
 
           <div className="mt-4 text-center">
-            <Link href="/login" color="primary">
+            <Link href="/admin/login" color="primary">
               Back to Login
             </Link>
           </div>
