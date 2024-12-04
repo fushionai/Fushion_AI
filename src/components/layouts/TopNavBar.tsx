@@ -17,9 +17,18 @@ import {
 import logo from "@/assets/icons/logo.svg";
 import Image from "next/image";
 import assets from "@/assets/index";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/react";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const menuItems = [
     {
@@ -98,6 +107,12 @@ const TopNavBar = () => {
             About Us
           </Link>
         </NavbarItem>
+        <button
+          onClick={onOpen}
+          className="font-roboto font-bold text-[16px] leading-[18px] text-secondaryGray"
+        >
+          Our projects
+        </button>
         <NavbarItem>
           <Link className="" href="/contact">
             <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-[16px]">
@@ -151,6 +166,31 @@ const TopNavBar = () => {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Coming Soon: Exciting New Projects!
+              </ModalHeader>
+              <ModalBody>
+                <p>
+                  Big things are on the way! We’re gearing up to launch a series
+                  of innovative projects designed to inspire and impress. From
+                  cutting-edge technology to fresh, bold ideas, there’s
+                  something for everyone. Stay tuned for updates, we cant wait
+                  to share whats next!
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </Navbar>
   );
 };
