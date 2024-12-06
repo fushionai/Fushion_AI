@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
-  Button,
   Table,
   TableHeader,
   TableColumn,
@@ -11,14 +10,48 @@ import {
   TableRow,
   TableCell,
   Pagination,
-  Checkbox,
 } from "@nextui-org/react";
 
-import dummyContacts from "@/data/dummyContacts";
 import HeaderDropDown from "@/components/layouts/HeaderDropDown";
-import { label } from "framer-motion/client";
+import { useToken } from "@/context/TokenContext";
+import { getContactMessages } from "@/lib/api";
+import useAuth from "@/app/hooks/useAuth";
+
+const formatDate = (isoDate: string) => {
+  const date = new Date(isoDate);
+
+  // Get the date in a simple format (e.g., "November 25, 2024")
+  return date.toLocaleDateString();
+};
 
 const AdminDashboardContactsData = () => {
+  useAuth();
+  const { token } = useToken();
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([
+    {
+      id: 0,
+      created_at: "",
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+    },
+  ]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const response = await getContactMessages(token || "");
+      setData(response.messages);
+      setIsLoading(false);
+      // Handle the response if needed
+    };
+    fetchData();
+  }, [token]);
+
   const viewOptions = [
     {
       key: "10",
@@ -62,17 +95,26 @@ const AdminDashboardContactsData = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(dummyContacts.length / rowsPerPage);
+  const pages = Math.ceil(data?.length / rowsPerPage);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentData, setCurrentData] = useState<any>();
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(dummyContacts.slice(start, end));
-    return dummyContacts.slice(start, end);
-  }, [page, dummyContacts, viewValue, rowsPerPage]);
+    setCurrentData(data?.slice(start, end));
+    return data?.slice(start, end);
+  }, [page, data, viewValue, rowsPerPage]);
+
+  if (isLoading) {
+    return (
+      <div className="w-full h-[100vh] flex justify-center items-center">
+        isLoading...
+      </div>
+    );
+  }
 
   return (
     <section>
@@ -133,23 +175,19 @@ const AdminDashboardContactsData = () => {
               <TableColumn>Phone</TableColumn>
               <TableColumn>Company name</TableColumn>
               <TableColumn>Message</TableColumn>
-              <TableColumn>Detail</TableColumn>
             </TableHeader>
             <TableBody>
               {items.map((row) => (
                 <TableRow key={row.id} className="border-b-1">
                   <TableCell>{row.id + 1}</TableCell>
-                  <TableCell>02/12/2024</TableCell>
-                  <TableCell>{row.firstName}</TableCell>
-                  <TableCell>{row.lastName}</TableCell>
+                  <TableCell>{formatDate(row.created_at)}</TableCell>
+                  <TableCell>{row.first_name}</TableCell>
+                  <TableCell>{row.last_name}</TableCell>
                   <TableCell>{row.email}</TableCell>
                   <TableCell>{row.phone}</TableCell>
-                  <TableCell>{row.companyName}</TableCell>
+                  <TableCell>{row.company}</TableCell>
                   <TableCell className="max-w-[300px] text-nowrap overflow-hidden text-ellipsis">
                     {row.message}
-                  </TableCell>
-                  <TableCell className="text-primaryBlue underline cursor-pointer">
-                    Detail
                   </TableCell>
                 </TableRow>
               ))}

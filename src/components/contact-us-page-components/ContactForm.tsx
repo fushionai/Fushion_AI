@@ -98,7 +98,6 @@ const ContactForm = ({ setToast }: any) => {
           message: "",
         });
       } catch (error) {
-        console.log(error);
         setToast({
           showToast: true,
           message: "failed to send email, please try again",
