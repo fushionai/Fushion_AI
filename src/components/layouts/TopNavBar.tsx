@@ -40,6 +40,10 @@ const TopNavBar = () => {
       link: "/our-products",
     },
     {
+      title: "Our Projects",
+      link: "/",
+    },
+    {
       title: "About Us",
       link: "/about-us",
     },
@@ -135,36 +139,45 @@ const TopNavBar = () => {
       />
 
       <NavbarMenu className="bg-[#161527] pt-20 gap-12 ">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            key={`${item}-${index}`}
-            className={`flex flex-col items-center ${
-              index === 3 ? "bg-primaryBlue" : ""
-            }`}
-          >
-            <Link
-              className={`${
-                index == 0
-                  ? pathname === "/"
+        {menuItems.map((item, index) => {
+          return (
+            <NavbarMenuItem
+              key={`${item}-${index}`}
+              className={`flex flex-col items-center ${
+                index === 3 ? "bg-primaryBlue" : ""
+              }`}
+            >
+              <Link
+                className={`${
+                  index == 0
+                    ? pathname === "/"
+                      ? "text-primaryWhite"
+                      : "text-secondaryGray"
+                    : pathname?.includes(item.link)
                     ? "text-primaryWhite"
                     : "text-secondaryGray"
-                  : pathname?.includes(item.link)
-                  ? "text-primaryWhite"
-                  : "text-secondaryGray"
-              } font-roboto font-bold text-[24px]`}
-              href={item.link}
-              size="lg"
-            >
-              {index === 3 ? (
-                <Button className="h-[69px]  rounded-none font-roboto bg-primaryBlue  text-primaryWhite font-bold text-[24px]">
-                  Contact
-                </Button>
-              ) : (
-                item.title
-              )}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+                } font-roboto font-bold text-[24px]`}
+                href={item.link}
+                size="lg"
+              >
+                {index === 4 ? (
+                  <Button className="h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
+                    Contact
+                  </Button>
+                ) : item.title === "Our Projects" ? (
+                  <Button
+                    className="font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
+                    onClick={onOpen}
+                  >
+                    Our Projects
+                  </Button>
+                ) : (
+                  item.title
+                )}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>

@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { sendContactForm } from "@/lib/api";
 import React from "react";
+import { toast } from "react-toastify";
 
 const ContactForm = ({ setToast }: any) => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -81,12 +83,8 @@ const ContactForm = ({ setToast }: any) => {
     if (validateForm()) {
       setIsLoading(true);
       try {
-        const response = await sendContactForm(formState);
-        setToast({
-          showToast: true,
-          message: response.message,
-          variant: "success",
-        });
+        await sendContactForm(formState);
+        toast.success("Email sent successfully");
         // clear form
         setIsLoading(false);
         setFormState({
@@ -98,11 +96,7 @@ const ContactForm = ({ setToast }: any) => {
           message: "",
         });
       } catch (error) {
-        setToast({
-          showToast: true,
-          message: "failed to send email, please try again",
-          variant: "error",
-        });
+        toast.error("failed to send email, please try again");
         setIsLoading(false);
       }
     }

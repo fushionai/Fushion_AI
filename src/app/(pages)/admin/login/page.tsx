@@ -3,13 +3,25 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Button, Link, Card, CardBody, CardHeader } from "@nextui-org/react";
-import { login } from "@/lib/api";
-import { useToken } from "@/context/TokenContext";
+import { authSelector } from "@/redux/store";
+import { login } from "@/redux/auth/authSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { toast } from "react-toastify";
+import { isTokenExpired } from "@/utils/checkToken";
+import { redirect } from "next/navigation";
 
 const LoginPage = () => {
+  React.useLayoutEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token && !isTokenExpired()) {
+      redirect("/admin/contacts-data");
+    }
+  }, []);
+
+  const { isLoading } = useAppSelector(authSelector);
+  const dispatch = useAppDispatch();
+
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
-  const { saveToken } = useToken();
   const [responseError, setResponseError] = useState(false);
   const [responseErrorMessage, setResponseErrorMessage] = useState("");
 
@@ -64,38 +76,27 @@ const LoginPage = () => {
     }));
   };
 
-  let response: any;
-
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (validateForm()) {
-      setIsLoading(true);
-
       try {
-        response = await login(formState);
-
-        if (response?.token) {
-          saveToken(response.token);
-          router.push("/admin/contacts-data");
-          setIsLoading(false);
-          setFormState({
-            email: "",
-            password: "",
-          });
-        } else {
-          setIsLoading(false);
-          setResponseError(true);
-        }
+        const response = await dispatch(login(formState));
+        router.push("/admin/contacts-data");
+        toast.success("user have successfully logged in");
+        setFormState({
+          email: "",
+          password: "",
+        });
       } catch (error: any) {
+        setResponseError(true);
         const errorMessage =
           error?.response?.data?.error ||
           error?.message ||
           "An error occurred during login.";
-
-        setIsLoading(false);
         setResponseError(true);
         setResponseErrorMessage(errorMessage);
+        toast.error("Invalid email or password");
       }
     }
   };
@@ -145,8 +146,13 @@ const LoginPage = () => {
                 </div>
               )}
             </div>
-            <Button type="submit" color="primary" className="w-full">
-              {isLoading ? "Loading..." : "Login"}
+            <Button
+              type="submit"
+              color="primary"
+              disabled={isLoading}
+              className={`w-full ${isLoading ? "opacity-50" : ""}`}
+            >
+              {isLoading ? "Logging In..." : "Login"}
             </Button>
           </form>
           <div className="mt-4 text-center">

@@ -5,7 +5,6 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import ContactForm from "@/components/contact-us-page-components/ContactForm";
 import ContactInformation from "@/components/contact-us-page-components/ContactInformation";
-import Toast from "@/components/layouts/Toast";
 import React from "react";
 
 type toastProp = {
@@ -33,9 +32,6 @@ const Page = () => {
 
   return (
     <section className="relative">
-      {toast?.showToast && (
-        <Toast variant={toast?.variant} message={toast?.message} />
-      )}
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
         <Image
           src={heroBg}

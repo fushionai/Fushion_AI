@@ -9,7 +9,10 @@ import { NextUIProvider } from "@nextui-org/react";
 // };
 
 import Footer from "@/components/layouts/Footer";
-import { TokenProvider } from "@/context/TokenContext";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function RootLayout({
   children,
@@ -20,10 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased`}>
         <NextUIProvider>
-          <TokenProvider>
-            {children}
+          <Provider store={store}>
+            <ToastContainer />
+            <div className="w-full min-h-[100vh] h-auto">{children}</div>
             <Footer />
-          </TokenProvider>
+          </Provider>
         </NextUIProvider>
       </body>
     </html>
