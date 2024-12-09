@@ -19,6 +19,7 @@ const useAuth = () => {
       const decoded = JSON.parse(atob(token.split(".")[1])); // Decode JWT token
       const expirationTime = decoded.exp * 1000; // Expiry is in seconds, convert to milliseconds
       return Date.now() > expirationTime; // Check if token has expired
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       return true; // If the token is invalid, consider it expired
     }
