@@ -51,6 +51,7 @@ const Contact = async (req: NextApiRequest, res: NextApiResponse) => {
       // Wait for the email to be sent
       await sendEmailPromise.catch((err) => {
         console.error("Failed to send email:", err);
+        return res.status(500).json({ error: "Failed to process request" });
       });
 
       return res

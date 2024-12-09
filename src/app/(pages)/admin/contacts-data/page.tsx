@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
-  Button,
   Table,
   TableHeader,
   TableColumn,
@@ -11,14 +10,89 @@ import {
   TableRow,
   TableCell,
   Pagination,
-  Checkbox,
+  Button,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
 } from "@nextui-org/react";
 
-import dummyContacts from "@/data/dummyContacts";
 import HeaderDropDown from "@/components/layouts/HeaderDropDown";
-import { label } from "framer-motion/client";
+// import { useToken } from "@/context/TokenContext";
+import { deleteMessage } from "@/lib/api";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { authSelector, contactsSelector } from "@/redux/store";
+import { toast } from "react-toastify";
+import {
+  deleteContactMessage,
+  getContactMessages,
+} from "@/redux/contacts/contactSlice";
+import { isTokenExpired } from "@/utils/checkToken";
+import { redirect } from "next/navigation";
+import LoadingScreen from "@/components/LoadingScreen";
+import { create } from "domain";
+
+const formatDate = (isoDate: string) => {
+  const date = new Date(isoDate);
+  return date.toLocaleDateString();
+};
 
 const AdminDashboardContactsData = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [deletingRowId, setDeletingRowId] = useState<any>("");
+  const { token } = useAppSelector(authSelector);
+  const { isLoading, data } = useAppSelector(contactsSelector);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [selectedItem, setSelectedItem] = useState({
+    id: 0,
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+    created_at: "",
+  });
+  const dispatch = useAppDispatch();
+
+  React.useLayoutEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token && isTokenExpired()) {
+      redirect("/admin/login");
+    }
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await dispatch(getContactMessages(token));
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (error) {
+        toast.error("something went wrong, please refresh your page");
+      }
+    };
+    fetchData();
+  }, [token, dispatch]);
+
+  const handleDelete = async (id: number | string) => {
+    try {
+      setDeletingRowId(id);
+      setIsDeleting(true);
+      await deleteMessage({ id: id });
+      dispatch(deleteContactMessage(id));
+      setIsDeleting(false);
+      toast.success("Message deleted successfully");
+      setDeletingRowId("");
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      setIsDeleting(false);
+      setDeletingRowId("");
+      toast.error("something went wrong, please try again");
+    }
+  };
+
   const viewOptions = [
     {
       key: "10",
@@ -62,17 +136,26 @@ const AdminDashboardContactsData = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(dummyContacts.length / rowsPerPage);
+  const pages = Math.ceil(data?.length / rowsPerPage);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentData, setCurrentData] = useState<any>();
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(dummyContacts.slice(start, end));
-    return dummyContacts.slice(start, end);
-  }, [page, dummyContacts, viewValue, rowsPerPage]);
+    setCurrentData(data?.slice(start, end));
+    return data?.slice(start, end);
+  }, [page, data, viewValue, rowsPerPage]);
+
+  if (isLoading) {
+    return (
+      <div className="w-full h-[100vh] flex justify-center items-center">
+        <LoadingScreen />
+      </div>
+    );
+  }
 
   return (
     <section>
@@ -133,23 +216,42 @@ const AdminDashboardContactsData = () => {
               <TableColumn>Phone</TableColumn>
               <TableColumn>Company name</TableColumn>
               <TableColumn>Message</TableColumn>
-              <TableColumn>Detail</TableColumn>
+              <TableColumn>Actions</TableColumn>
             </TableHeader>
             <TableBody>
-              {items.map((row) => (
+              {items?.map((row) => (
                 <TableRow key={row.id} className="border-b-1">
                   <TableCell>{row.id + 1}</TableCell>
-                  <TableCell>02/12/2024</TableCell>
-                  <TableCell>{row.firstName}</TableCell>
-                  <TableCell>{row.lastName}</TableCell>
+                  <TableCell>{formatDate(row.created_at)}</TableCell>
+                  <TableCell>{row.first_name}</TableCell>
+                  <TableCell>{row.last_name}</TableCell>
                   <TableCell>{row.email}</TableCell>
                   <TableCell>{row.phone}</TableCell>
-                  <TableCell>{row.companyName}</TableCell>
+                  <TableCell>{row.company}</TableCell>
                   <TableCell className="max-w-[300px] text-nowrap overflow-hidden text-ellipsis">
                     {row.message}
                   </TableCell>
-                  <TableCell className="text-primaryBlue underline cursor-pointer">
-                    Detail
+                  <TableCell className="text-primaryBlue   cursor-pointer">
+                    <div className="flex gap-2">
+                      <Button
+                        className="bg-blue-600 text-white "
+                        onClick={() => {
+                          setSelectedItem(row);
+                          onOpen();
+                        }}
+                      >
+                        Detail
+                      </Button>
+                      <Button
+                        disabled={isDeleting}
+                        className={`bg-red-500 text-white ${
+                          deletingRowId === row.id ? "opacity-50" : ""
+                        }`}
+                        onClick={() => handleDelete(row?.id)}
+                      >
+                        {deletingRowId === row.id ? "Deleting..." : "Delete"}
+                      </Button>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}
@@ -157,6 +259,32 @@ const AdminDashboardContactsData = () => {
           </Table>
         </article>
       </main>
+
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Contact message details
+              </ModalHeader>
+              <ModalBody>
+                <p>Frist name: {selectedItem?.first_name}</p>
+                <p>Last name: {selectedItem?.last_name}</p>
+                <p>Email: {selectedItem?.email}</p>
+                <p>Phone: {selectedItem?.phone}</p>
+                <p>Company: {selectedItem?.company}</p>
+                <p>Message: {selectedItem?.message}</p>
+                <p>Date: {formatDate(selectedItem?.created_at)}</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </section>
   );
 };
