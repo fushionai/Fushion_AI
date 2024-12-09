@@ -43,8 +43,8 @@ import instagram from "./icons/instagram.svg";
 import twitter from "./icons/twitter.svg";
 
 // Contact page icons
-import emailIcon from './icons/contact-page-icon/email.svg'
-import phoneIcon from './icons/contact-page-icon/phone.svg'
+import emailIcon from "./icons/contact-page-icon/email.svg";
+import phoneIcon from "./icons/contact-page-icon/phone.svg";
 
 // Our products images and Icons
 import productsHero from "./images/products-page-images/our-products-hero.png";
@@ -65,6 +65,8 @@ import email from "./icons/about-us-page-icons/email.svg";
 
 // logo ipsum
 import logoIpsum from "./icons/logoIpsum.svg";
+
+import exportExcel from "./export.svg";
 
 const assets = {
   // NavBar icons
@@ -131,7 +133,9 @@ const assets = {
 
   // Contact Page
   emailIcon,
-  phoneIcon
+  phoneIcon,
+
+  exportExcel,
 };
 
 export default assets;

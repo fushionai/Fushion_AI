@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import {
   Table,
@@ -18,6 +18,9 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import Image from "next/image";
+
+import { DownloadTableExcel } from "react-export-table-to-excel";
 
 import HeaderDropDown from "@/components/layouts/HeaderDropDown";
 // import { useToken } from "@/context/TokenContext";
@@ -32,7 +35,7 @@ import {
 import { isTokenExpired } from "@/utils/checkToken";
 import { redirect } from "next/navigation";
 import LoadingScreen from "@/components/LoadingScreen";
-import { create } from "domain";
+import assets from "@/assets";
 
 const formatDate = (isoDate: string) => {
   const date = new Date(isoDate);
@@ -40,6 +43,7 @@ const formatDate = (isoDate: string) => {
 };
 
 const AdminDashboardContactsData = () => {
+  const tableRef = useRef(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [deletingRowId, setDeletingRowId] = useState<any>("");
   const { token } = useAppSelector(authSelector);
@@ -180,6 +184,16 @@ const AdminDashboardContactsData = () => {
               styles="w-[139px] "
               mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
             />
+            <DownloadTableExcel
+              filename="users table"
+              sheet="users"
+              currentTableRef={tableRef.current}
+            >
+              <button className="flex items-center justify-center gap-1 text-nowrap bg-blueGr text-white font-medium text-base py-2  px-8 rounded-md">
+                <p> Export excel</p>
+                <Image src={assets.exportExcel} alt="export excel" />
+              </button>
+            </DownloadTableExcel>
           </div>
         </div>
 
@@ -187,6 +201,7 @@ const AdminDashboardContactsData = () => {
           <Table
             aria-label="Data Table"
             shadow="none"
+            ref={tableRef}
             classNames={{
               th: [
                 "font-normal text-[16px] bg-[#EEEEEE] text-[#A1A9A3] h-[48px]  text-center",
@@ -219,7 +234,7 @@ const AdminDashboardContactsData = () => {
               <TableColumn>Actions</TableColumn>
             </TableHeader>
             <TableBody>
-              {items?.map((row) => (
+              {items?.map((row: any) => (
                 <TableRow key={row.id} className="border-b-1">
                   <TableCell>{row.id + 1}</TableCell>
                   <TableCell>{formatDate(row.created_at)}</TableCell>
@@ -260,21 +275,52 @@ const AdminDashboardContactsData = () => {
         </article>
       </main>
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        className="w-full"
+        classNames={{
+          base: "min-w-[80%]",
+        }}
+      >
+        <ModalContent className="w-full">
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
                 Contact message details
               </ModalHeader>
               <ModalBody>
-                <p>Frist name: {selectedItem?.first_name}</p>
-                <p>Last name: {selectedItem?.last_name}</p>
-                <p>Email: {selectedItem?.email}</p>
-                <p>Phone: {selectedItem?.phone}</p>
-                <p>Company: {selectedItem?.company}</p>
-                <p>Message: {selectedItem?.message}</p>
-                <p>Date: {formatDate(selectedItem?.created_at)}</p>
+                <div className="flex items-center gap-7">
+                  <div>
+                    <p className="font-semibold">Frist name</p>
+                    <p>{selectedItem?.first_name}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Last name</p>
+                    <p>{selectedItem?.last_name}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="font-semibold">Email</p>
+                  <p>{selectedItem?.email}</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Phone</p>
+                  <p>{selectedItem?.phone}</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Company</p>
+                  <p>{selectedItem?.company}</p>
+                </div>
+                <div>
+                  <p className="font-semibold">Message</p>
+                  <p>{selectedItem?.message}</p>
+                </div>
+                <p>
+                  <span className="font-semibold">Date:</span>{" "}
+                  {formatDate(selectedItem?.created_at)}
+                </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>

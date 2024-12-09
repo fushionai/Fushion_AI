@@ -59,20 +59,19 @@ const Footer = () => {
               <span className="text-nowrap"> 1000872289 </span>
             </div>
           </div>
-          <div className="flex max-md:flex-col items-center pt-2 gap-36 max-md:gap-10 max-[1200px]:mt-[32px]">
+          <div className="flex max-md:flex-col items-center pt-2 gap-24 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link
               href="/about-us"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
             >
               About Us
             </Link>
-
-            <Link
+            {/* <Link
               href="/our-products"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
             >
               Services
-            </Link>
+            </Link> */}
             <Link
               href="/our-products"
               className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
