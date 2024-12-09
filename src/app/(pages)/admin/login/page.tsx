@@ -81,6 +81,7 @@ const LoginPage = () => {
 
     if (validateForm()) {
       try {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const response = await dispatch(login(formState));
         router.push("/admin/contacts-data");
         toast.success("user have successfully logged in");

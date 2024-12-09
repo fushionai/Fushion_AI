@@ -151,7 +151,7 @@ const AdminDashboardContactsData = () => {
 
     setCurrentData(data?.slice(start, end));
     return data?.slice(start, end);
-  }, [page, data, viewValue, rowsPerPage]);
+  }, [page, data, rowsPerPage]);
 
   if (isLoading) {
     return (

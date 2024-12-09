@@ -76,6 +76,7 @@ export default function ChangePassword({ params }: any) {
           confirmPassword: "",
         });
         toast.success(response?.message);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         toast.error("something went wrong, please try again");
       }

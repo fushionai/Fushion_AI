@@ -1,6 +1,5 @@
 "use client";
 
-import LoadingScreen from "@/components/LoadingScreen";
 import { isTokenExpired } from "@/utils/checkToken";
 import { redirect } from "next/navigation";
 import { useLayoutEffect } from "react";
