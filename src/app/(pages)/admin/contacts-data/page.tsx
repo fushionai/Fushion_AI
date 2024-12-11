@@ -36,6 +36,7 @@ import { isTokenExpired } from "@/utils/checkToken";
 import { redirect } from "next/navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 import assets from "@/assets";
+import WarningIcon from "@/assets/icons/error.svg";
 
 const formatDate = (isoDate: string) => {
   const date = new Date(isoDate);
@@ -45,6 +46,12 @@ const formatDate = (isoDate: string) => {
 const AdminDashboardContactsData = () => {
   const tableRef = useRef(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const {
+    isOpen: isOpenDeleteModal,
+    onOpen: onOpenDeleteModal,
+    onOpenChange: onOpenChangeDeleteModal,
+  } = useDisclosure();
+
   const [deletingRowId, setDeletingRowId] = useState<any>("");
   const { token } = useAppSelector(authSelector);
   const { isLoading, data } = useAppSelector(contactsSelector);
@@ -72,20 +79,18 @@ const AdminDashboardContactsData = () => {
     const fetchData = async () => {
       try {
         await dispatch(getContactMessages(token));
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (error) {
+      } catch {
         toast.error("something went wrong, please refresh your page");
       }
     };
     fetchData();
   }, [token, dispatch]);
 
-  const handleDelete = async (id: number | string) => {
+  const handleDelete = async () => {
     try {
-      setDeletingRowId(id);
       setIsDeleting(true);
-      await deleteMessage({ id: id });
-      dispatch(deleteContactMessage(id));
+      await deleteMessage({ id: deletingRowId });
+      dispatch(deleteContactMessage(deletingRowId));
       setIsDeleting(false);
       toast.success("Message deleted successfully");
       setDeletingRowId("");
@@ -152,6 +157,22 @@ const AdminDashboardContactsData = () => {
     setCurrentData(data?.slice(start, end));
     return data?.slice(start, end);
   }, [page, data, rowsPerPage]);
+
+  const getSortedData = (data: any) => {
+    if (sortValue === "latest") {
+      const sortedData = [...data].sort(
+        (a, b) =>
+          new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+      );
+      return sortedData;
+    } else if (sortValue === "oldest") {
+      const sortedData = [...data].sort(
+        (a, b) =>
+          new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      );
+      return sortedData;
+    }
+  };
 
   if (isLoading) {
     return (
@@ -234,7 +255,7 @@ const AdminDashboardContactsData = () => {
               <TableColumn>Actions</TableColumn>
             </TableHeader>
             <TableBody>
-              {items?.map((row: any) => (
+              {(getSortedData(items) || []).map((row: any) => (
                 <TableRow key={row.id} className="border-b-1">
                   <TableCell>{row.id + 1}</TableCell>
                   <TableCell>{formatDate(row.created_at)}</TableCell>
@@ -262,7 +283,11 @@ const AdminDashboardContactsData = () => {
                         className={`bg-red-500 text-white ${
                           deletingRowId === row.id ? "opacity-50" : ""
                         }`}
-                        onClick={() => handleDelete(row?.id)}
+                        // onClick={() => handleDelete(row?.id)}
+                        onClick={() => {
+                          setDeletingRowId(row.id);
+                          onOpenDeleteModal();
+                        }}
                       >
                         {deletingRowId === row.id ? "Deleting..." : "Delete"}
                       </Button>
@@ -324,6 +349,60 @@ const AdminDashboardContactsData = () => {
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+
+      <Modal
+        isOpen={isOpenDeleteModal}
+        onOpenChange={onOpenChangeDeleteModal}
+        classNames={{
+          base: "max-w-[50%]",
+        }}
+      >
+        <ModalContent className="w-full">
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex justify-center items-center">
+                <Image
+                  width={35}
+                  height={35}
+                  src={WarningIcon}
+                  alt={"warning-icon"}
+                />
+              </ModalHeader>
+              <ModalBody>
+                <div className="flex flex-col gap-2 justify-center items-center">
+                  <p className="font-semibold text-[18px]">
+                    Are you sure you want to delete
+                  </p>
+                  <p className="ali">
+                    This will permanently delete the message
+                  </p>
+                </div>
+              </ModalBody>
+              <ModalFooter className="flex justify-center items-center">
+                <Button
+                  color="danger"
+                  variant="light"
+                  className="bg-red-200"
+                  onPress={async () => {
+                    await handleDelete();
+                    onClose();
+                  }}
+                >
+                  {isDeleting ? "Deleting..." : "Delete"}
+                </Button>
+                <Button
+                  onPress={() => {
+                    onClose();
+                    setDeletingRowId("");
+                  }}
+                >
                   Close
                 </Button>
               </ModalFooter>

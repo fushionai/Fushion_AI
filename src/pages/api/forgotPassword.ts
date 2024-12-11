@@ -19,8 +19,8 @@ const ForgetPassword = async (req: NextApiRequest, res: NextApiResponse) => {
       text: "this is a test string",
       html: `<div>
               <h1>change password request</h1>
-               <p>please </p>
-              <p>First name: ${url}/${token}</p>
+               <p>please use the link below to change your password</p>
+              <p> <a href="${url}/${token}">Click here</a></p>
             </div>`,
     });
 
