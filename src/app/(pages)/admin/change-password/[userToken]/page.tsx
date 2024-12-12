@@ -6,7 +6,6 @@ import { changePassword } from "@/lib/api";
 import { toast } from "react-toastify";
 
 export default function ChangePassword({ params }: any) {
-  console.log(params?.userToken);
   const [formState, setFormState] = useState({
     newPassword: "",
     confirmPassword: "",

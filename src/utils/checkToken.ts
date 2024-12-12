@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 export function isTokenExpired() {
   const token: any = localStorage.getItem("token");
-  console.log("token", token);
+
   // Decode the token without verifying the signature
   const decoded = jwt.decode(token);
 

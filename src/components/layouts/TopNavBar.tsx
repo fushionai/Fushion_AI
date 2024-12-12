@@ -167,7 +167,10 @@ const TopNavBar = () => {
                 ) : item.title === "Our Projects" ? (
                   <Button
                     className="font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
-                    onClick={onOpen}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onOpen();
+                    }}
                   >
                     Our Projects
                   </Button>
@@ -179,6 +182,7 @@ const TopNavBar = () => {
           );
         })}
       </NavbarMenu>
+      {/* details modal */}
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (

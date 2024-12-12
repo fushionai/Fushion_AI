@@ -23,7 +23,6 @@ const changePassword = async (req: NextApiRequest, res: NextApiResponse) => {
       WHERE email = $1;
     `;
 
-      console.log("decoded email", decoded);
       const user = await pool.query(query, [decoded?.email]).catch((err) => {
         console.error("Failed to store message in database:", err);
       });
