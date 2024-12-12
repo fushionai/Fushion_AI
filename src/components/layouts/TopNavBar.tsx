@@ -143,9 +143,7 @@ const TopNavBar = () => {
           return (
             <NavbarMenuItem
               key={`${item}-${index}`}
-              className={`flex flex-col items-center ${
-                index === 3 ? "bg-primaryBlue" : ""
-              }`}
+              className={`flex flex-col items-center`}
             >
               <Link
                 className={`${
@@ -156,17 +154,17 @@ const TopNavBar = () => {
                     : pathname?.includes(item.link)
                     ? "text-primaryWhite"
                     : "text-secondaryGray"
-                } font-roboto font-bold text-[24px]`}
+                } w-full font-roboto font-bold text-[24px]`}
                 href={item.link}
                 size="lg"
               >
                 {index === 4 ? (
-                  <Button className="h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
+                  <Button className="w-full h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
                     Contact
                   </Button>
                 ) : item.title === "Our Projects" ? (
                   <Button
-                    className="font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
+                    className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
                     onClick={(e) => {
                       e.preventDefault();
                       onOpen();
@@ -175,7 +173,7 @@ const TopNavBar = () => {
                     Our Projects
                   </Button>
                 ) : (
-                  item.title
+                  <p className="text-center mx-auto">{item.title}</p>
                 )}
               </Link>
             </NavbarMenuItem>
