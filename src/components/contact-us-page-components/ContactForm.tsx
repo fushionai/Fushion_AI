@@ -199,7 +199,10 @@ const ContactForm = ({ setToast }: any) => {
       </div>
       <button
         type={"submit"}
-        className="w-full px-4 py-4  text-2xl font-bold text-white bg-[#3300FF] rounded-none hover:bg-[#2600CC]  font-roboto "
+        className={`w-full px-4 py-4  text-2xl font-bold text-white ${
+          isLoading ? "bg-slate-300" : "bg-[#3300FF]"
+        }  rounded-none ${isLoading ? "" : "hover:bg-[#2600CC]"}  font-roboto `}
+        disabled={isLoading}
       >
         {isLoading ? "Sending..." : "Send"}
       </button>

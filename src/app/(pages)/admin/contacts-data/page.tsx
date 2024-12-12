@@ -91,13 +91,13 @@ const AdminDashboardContactsData = () => {
       setIsDeleting(true);
       await deleteMessage({ id: deletingRowId });
       dispatch(deleteContactMessage(deletingRowId));
-      setIsDeleting(false);
       toast.success("Message deleted successfully");
       setDeletingRowId("");
+      setIsDeleting(false);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      setIsDeleting(false);
       setDeletingRowId("");
+      setIsDeleting(false);
       toast.error("something went wrong, please try again");
     }
   };
@@ -289,7 +289,7 @@ const AdminDashboardContactsData = () => {
                           onOpenDeleteModal();
                         }}
                       >
-                        {deletingRowId === row.id ? "Deleting..." : "Delete"}
+                        Delete
                       </Button>
                     </div>
                   </TableCell>
@@ -386,25 +386,29 @@ const AdminDashboardContactsData = () => {
                 </div>
               </ModalBody>
               <ModalFooter className="flex justify-center items-center">
-                <Button
+                <button
                   color="danger"
-                  variant="light"
-                  className="bg-red-200"
-                  onPress={async () => {
+                  // variant="light"
+                  className={`${
+                    isDeleting ? "bg-slate-300" : "bg-red-400"
+                  } py-2 px-4 rounded-md text-white`}
+                  onClick={async () => {
                     await handleDelete();
                     onClose();
                   }}
+                  disabled={isDeleting}
                 >
                   {isDeleting ? "Deleting..." : "Delete"}
-                </Button>
-                <Button
-                  onPress={() => {
+                </button>
+                <button
+                  className="bg-blue-200 py-2 px-4 rounded-md text-white"
+                  onClick={() => {
                     onClose();
                     setDeletingRowId("");
                   }}
                 >
                   Close
-                </Button>
+                </button>
               </ModalFooter>
             </>
           )}
