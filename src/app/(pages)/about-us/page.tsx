@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
@@ -7,8 +8,32 @@ import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
 import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
 // import ContactSection from "@/components/about-us-page-components/ContactSection";
+import Parser from "rss-parser";
+import { useEffect, useState } from "react";
 
 const AboutUsPage = () => {
+  const parser = new Parser();
+  const [feed, setFeed] = useState<any>();
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      const response = await fetch(
+        "https://api.allorigins.win/get?url=" +
+          encodeURIComponent(
+            "https://www.iamexpat.nl/rss/news-netherlands/news"
+          )
+      );
+      const data = await response.json();
+      const feeds = await parser.parseString(data.contents);
+      setFeed(feeds);
+    };
+    fetchNews();
+  }, []);
+
+  useEffect(() => {
+    console.log(feed);
+  }, [feed]);
+
   return (
     <section>
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
