@@ -37,6 +37,8 @@ import { redirect } from "next/navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 import assets from "@/assets";
 import WarningIcon from "@/assets/icons/error.svg";
+import Link from "next/link";
+import { logout } from "@/redux/auth/authSlice";
 
 const formatDate = (isoDate: string) => {
   const date = new Date(isoDate);
@@ -53,7 +55,7 @@ const AdminDashboardContactsData = () => {
   } = useDisclosure();
 
   const [deletingRowId, setDeletingRowId] = useState<any>("");
-  const { token } = useAppSelector(authSelector);
+  const { token: tokenState } = useAppSelector(authSelector);
   const { isLoading, data } = useAppSelector(contactsSelector);
   const [isDeleting, setIsDeleting] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
@@ -67,24 +69,24 @@ const AdminDashboardContactsData = () => {
     created_at: "",
   });
   const dispatch = useAppDispatch();
+  const token = localStorage.getItem("token");
 
   React.useLayoutEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token && isTokenExpired()) {
+    if ((token && isTokenExpired()) || !token) {
       redirect("/admin/login");
     }
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await dispatch(getContactMessages(token));
+        await dispatch(getContactMessages(tokenState));
       } catch {
         toast.error("something went wrong, please refresh your page");
       }
     };
     fetchData();
-  }, [token, dispatch]);
+  }, [tokenState, dispatch]);
 
   const handleDelete = async () => {
     try {
@@ -174,6 +176,12 @@ const AdminDashboardContactsData = () => {
     }
   };
 
+  const handleLogOut = () => {
+    dispatch(logout());
+
+    redirect("/admin/login");
+  };
+
   if (isLoading) {
     return (
       <div className="w-full h-[100vh] flex justify-center items-center">
@@ -183,11 +191,18 @@ const AdminDashboardContactsData = () => {
   }
 
   return (
-    <section>
+    <section className="p-4">
+      <div className="flex flex-row gap-4 w-full items-end justify-end mr-8">
+        <Link href="/" className=" ">
+          <Button> Back To Home</Button>
+        </Link>
+        <Button onClick={handleLogOut} className="bg-red-400">
+          Log Out
+        </Button>
+      </div>
       <main className="rounded-[20px] bg-white py-6 px-5 mt-6 ">
         <div className="flex items-center justify-between">
           <p className="font-bold text-[16px] text-mainBlack">Contacts data</p>
-
           <div className="flex justify-center items-center gap-5">
             <HeaderDropDown
               options={viewOptions}
