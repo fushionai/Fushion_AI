@@ -69,7 +69,8 @@ const AdminDashboardContactsData = () => {
     created_at: "",
   });
   const dispatch = useAppDispatch();
-  const token = localStorage.getItem("token");
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   React.useLayoutEffect(() => {
     if ((token && isTokenExpired()) || !token) {
