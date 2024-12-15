@@ -162,13 +162,13 @@ const AdminDashboardContactsData = () => {
   }, [page, data, rowsPerPage]);
 
   const getSortedData = (data: any) => {
-    if (sortValue === "latest") {
+    if (sortValue === "oldest") {
       const sortedData = [...data].sort(
         (a, b) =>
           new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
       );
       return sortedData;
-    } else if (sortValue === "oldest") {
+    } else if (sortValue === "latest") {
       const sortedData = [...data].sort(
         (a, b) =>
           new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
@@ -235,84 +235,90 @@ const AdminDashboardContactsData = () => {
         </div>
 
         <article className="mt-5">
-          <Table
-            aria-label="Data Table"
-            shadow="none"
-            ref={tableRef}
-            classNames={{
-              th: [
-                "font-normal text-[16px] bg-[#EEEEEE] text-[#A1A9A3] h-[48px]  text-center",
-              ],
-              td: ["px-6  text-center font-normal text-base text-[#363941] "],
-            }}
-            bottomContent={
-              <div className="flex w-full justify-center  mt-8">
-                <Pagination
-                  isCompact
-                  showControls
-                  showShadow
-                  color="secondary"
-                  page={page}
-                  total={pages}
-                  onChange={(page) => setPage(page)}
-                />
-              </div>
-            }
-          >
-            <TableHeader>
-              <TableColumn>No</TableColumn>
-              <TableColumn>Date</TableColumn>
-              <TableColumn>First name</TableColumn>
-              <TableColumn>Last name</TableColumn>
-              <TableColumn>Email</TableColumn>
-              <TableColumn>Phone</TableColumn>
-              <TableColumn>Company name</TableColumn>
-              <TableColumn>Message</TableColumn>
-              <TableColumn>Actions</TableColumn>
-            </TableHeader>
-            <TableBody>
-              {(getSortedData(items) || []).map((row: any) => (
-                <TableRow key={row.id} className="border-b-1">
-                  <TableCell>{row.id + 1}</TableCell>
-                  <TableCell>{formatDate(row.created_at)}</TableCell>
-                  <TableCell>{row.first_name}</TableCell>
-                  <TableCell>{row.last_name}</TableCell>
-                  <TableCell>{row.email}</TableCell>
-                  <TableCell>{row.phone}</TableCell>
-                  <TableCell>{row.company}</TableCell>
-                  <TableCell className="max-w-[300px] text-nowrap overflow-hidden text-ellipsis">
-                    {row.message}
-                  </TableCell>
-                  <TableCell className="text-primaryBlue   cursor-pointer">
-                    <div className="flex gap-2">
-                      <Button
-                        className="bg-blue-600 text-white "
-                        onClick={() => {
-                          setSelectedItem(row);
-                          onOpen();
-                        }}
-                      >
-                        Detail
-                      </Button>
-                      <Button
-                        disabled={isDeleting}
-                        className={`bg-red-500 text-white ${
-                          deletingRowId === row.id ? "opacity-50" : ""
-                        }`}
-                        // onClick={() => handleDelete(row?.id)}
-                        onClick={() => {
-                          setDeletingRowId(row.id);
-                          onOpenDeleteModal();
-                        }}
-                      >
-                        Delete
-                      </Button>
-                    </div>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          {(items?.length > 0 && (
+            <Table
+              aria-label="Data Table"
+              shadow="none"
+              ref={tableRef}
+              classNames={{
+                th: [
+                  "font-normal text-[16px] bg-[#EEEEEE] text-[#A1A9A3] h-[48px]  text-center",
+                ],
+                td: ["px-6  text-center font-normal text-base text-[#363941] "],
+              }}
+              bottomContent={
+                <div className="flex w-full justify-center  mt-8">
+                  <Pagination
+                    isCompact
+                    showControls
+                    showShadow
+                    color="secondary"
+                    page={page}
+                    total={pages}
+                    onChange={(page) => setPage(page)}
+                  />
+                </div>
+              }
+            >
+              <TableHeader>
+                <TableColumn>No</TableColumn>
+                <TableColumn>Date</TableColumn>
+                <TableColumn>First name</TableColumn>
+                <TableColumn>Last name</TableColumn>
+                <TableColumn>Email</TableColumn>
+                <TableColumn>Phone</TableColumn>
+                <TableColumn>Company name</TableColumn>
+                <TableColumn>Message</TableColumn>
+                <TableColumn>Actions</TableColumn>
+              </TableHeader>
+              <TableBody>
+                {(getSortedData(items) || []).map((row: any) => (
+                  <TableRow key={row.id} className="border-b-1">
+                    <TableCell>{row.id + 1}</TableCell>
+                    <TableCell>{formatDate(row.created_at)}</TableCell>
+                    <TableCell>{row.first_name}</TableCell>
+                    <TableCell>{row.last_name}</TableCell>
+                    <TableCell>{row.email}</TableCell>
+                    <TableCell>{row.phone}</TableCell>
+                    <TableCell>{row.company}</TableCell>
+                    <TableCell className="max-w-[300px] text-nowrap overflow-hidden text-ellipsis">
+                      {row.message}
+                    </TableCell>
+                    <TableCell className="text-primaryBlue   cursor-pointer">
+                      <div className="flex gap-2">
+                        <Button
+                          className="bg-blue-600 text-white "
+                          onClick={() => {
+                            setSelectedItem(row);
+                            onOpen();
+                          }}
+                        >
+                          Detail
+                        </Button>
+                        <Button
+                          disabled={isDeleting}
+                          className={`bg-red-500 text-white ${
+                            deletingRowId === row.id ? "opacity-50" : ""
+                          }`}
+                          // onClick={() => handleDelete(row?.id)}
+                          onClick={() => {
+                            setDeletingRowId(row.id);
+                            onOpenDeleteModal();
+                          }}
+                        >
+                          Delete
+                        </Button>
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          )) || (
+            <div className="flex justify-center items-center h-[200px]">
+              <p className="text-[18px] font-semibold">No data available</p>
+            </div>
+          )}
         </article>
       </main>
 
@@ -377,7 +383,7 @@ const AdminDashboardContactsData = () => {
         isOpen={isOpenDeleteModal}
         onOpenChange={onOpenChangeDeleteModal}
         classNames={{
-          base: "max-w-[50%]",
+          base: "max-w-[30%]",
         }}
       >
         <ModalContent className="w-full">
