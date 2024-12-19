@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         setIsLoading(false);
-        toast.error("something went wrong, please try again");
+        toast.error("Email not found, please try again");
       }
     }
   };
