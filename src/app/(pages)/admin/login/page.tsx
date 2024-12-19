@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { toast } from "react-toastify";
 import { isTokenExpired } from "@/utils/checkToken";
 import { redirect } from "next/navigation";
+import { Eye, EyeOff } from "lucide-react";
 
 const LoginPage = () => {
   React.useLayoutEffect(() => {
@@ -17,6 +18,12 @@ const LoginPage = () => {
       redirect("/admin/contacts-data");
     }
   }, []);
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const { isLoading } = useAppSelector(authSelector);
   const dispatch = useAppDispatch();
@@ -136,14 +143,30 @@ const LoginPage = () => {
               )}
             </div>
             <div className="flex flex-col gap-2">
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={formState?.password}
-                onChange={handleInputChange}
-                className="w-full text-black px-3 py-2 border border-gray-300 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  name="password"
+                  value={formState?.password}
+                  onChange={handleInputChange}
+                  className="w-full text-black px-3 py-2 border border-gray-300 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px] pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                >
+                  {showPassword ? (
+                    <EyeOff className="h-5 w-5" aria-hidden="true" />
+                  ) : (
+                    <Eye className="h-5 w-5" aria-hidden="true" />
+                  )}
+                  <span className="sr-only">
+                    {showPassword ? "Hide password" : "Show password"}
+                  </span>
+                </button>
+              </div>
               {errorMessages.password && (
                 <div className="text-sm text-red-500">
                   {errorMessages.password}
