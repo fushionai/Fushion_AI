@@ -272,9 +272,9 @@ const AdminDashboardContactsData = () => {
                 <TableColumn>Actions</TableColumn>
               </TableHeader>
               <TableBody>
-                {(getSortedData(items) || []).map((row: any) => (
+                {(getSortedData(items) || []).map((row: any, index: number) => (
                   <TableRow key={row.id} className="border-b-1">
-                    <TableCell>{row.id + 1}</TableCell>
+                    <TableCell>{index + 1}</TableCell>
                     <TableCell>{formatDate(row.created_at)}</TableCell>
                     <TableCell>{row.first_name}</TableCell>
                     <TableCell>{row.last_name}</TableCell>
