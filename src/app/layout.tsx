@@ -35,6 +35,13 @@ export default function RootLayout({
           gtag('config', 'G-890ZT6SCEL');
         `}
       </Script>
+      <head>
+        <title>Fushion AI</title>
+        <meta
+          name="description"
+          content="Transform real estate with the power of data"
+        />
+      </head>
       <body className={`antialiased`}>
         <NextUIProvider>
           <Provider store={store}>
