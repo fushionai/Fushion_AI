@@ -4,10 +4,17 @@ import { NextApiRequest, NextApiResponse } from "next";
 const KEY = process.env.JWT_CHANGE_PASSWORD_SECRET as string;
 const senderEmail = process.env.EMAIL;
 const url = process.env.CHANGE_PASSWORD_URL;
+import pool from "@/config/db";
 
 const ForgetPassword = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const data = req?.body;
+    const users = await pool.query("SELECT * FROM users WHERE email = $1", [
+      data,
+    ]);
+    if (users.rows.length === 0)
+      return res.status(401).json({ error: "Email not found" });
+
     const token = jwt.sign({ email: data }, KEY, {
       expiresIn: "1h",
     });
