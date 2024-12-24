@@ -86,7 +86,7 @@ const ProductsOurServices = () => {
       </header>
 
       {/* For small screens */}
-      <section className="hidden max-[800px]:block px-2 max-w-[700px] mx-auto">
+      <section className="hidden max-[1149px]:block px-2 max-w-[700px] mx-auto">
         <Slider {...settings}>
           <ProductsOurService
             price="34.95"
@@ -114,7 +114,7 @@ const ProductsOurServices = () => {
       <main className="flex justify-center items-center">
         {/* For large screens */}
 
-        <div className="max-[800px]:hidden flex flex-wrap justify-center items-center gap-12">
+        <div className="max-[1149px]:hidden flex max-[1150px]:flex-wrap justify-center items-center gap-12">
           <ProductsOurService
             price="34.95"
             title="Purchase Price Information"

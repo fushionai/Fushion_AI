@@ -19,7 +19,7 @@ const ProductsHeroSection = () => {
         <header>
           <TopNavBar />
         </header>
-        <main className="mt-16 px-10 md:mt-20 md:px-32 max-sm:px-2">
+        <main className="mt-16 px-10 md:mt-20 xl:px-32   max-sm:px-2">
           <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
             Our Products
           </h2>
@@ -29,9 +29,9 @@ const ProductsHeroSection = () => {
             and more to make informed decisions.
           </h6>
 
-          <div className="mt-12 max-md:mt-10 flex flex-wrap justify-center items-center  gap-6 max-md:gap-4">
+          <div className="mt-12 max-md:mt-10 flex max-lg:flex-wrap justify-center items-center  gap-6 max-md:gap-4">
             <Link
-              className="flex justify-center items-center max-w-[369px] h-[250px] p-6 border-[2px] border-primaryWhite rounded-[5px] hover:scale-[1.06] transition-all ease-in
+              className="flex justify-center items-center max-w-[369px]  h-[250px] p-6 border-[2px] border-primaryWhite rounded-[5px] hover:scale-[1.06] transition-all ease-in
               hover:bg-blue-950 hover:text-primaryBlue
               "
               href="our-products/purchase-price-info"
