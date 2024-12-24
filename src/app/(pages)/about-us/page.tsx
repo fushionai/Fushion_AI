@@ -83,7 +83,7 @@ const AboutUsPage = () => {
         </section>
       </section>
       <AboutUsOurValues />
-      <AboutUsLatestNews />
+      {/* <AboutUsLatestNews /> */}
       {/* <ContactSection /> */}
 
       {/* Footer Styling */}

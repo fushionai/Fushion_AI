@@ -18,7 +18,7 @@ const Footer = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <footer className="bg-[#161527] py-[40px] px-[143px] max-md:py-[40px] max-md:px-[16px]">
+    <footer className="bg-[#161527] py-[40px] px-[143px] max-xl:px-[40px] max-md:py-[40px] max-md:px-[16px]">
       <section className="max-container">
         <div className="flex max-[1200px]:flex-col items-start justify-between">
           <div>
@@ -41,68 +41,65 @@ const Footer = () => {
                   <Image src={assets.twitter} alt="Our Twitter" />
                 </Link>
               </div>
-
-              <div className="bg-white w-[1px] h-4"></div>
-
-              <p className="font-ubuntu font-normal text-base leading-[18px] text-primaryWhite">
-                info@fushionai.com
-              </p>
             </div>
 
-            <div className="mt-5 max-md:mt-9 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
-              You can reach our customer service via WhatsApp:
-              <span className="text-nowrap"> + 31 (0) 6 1099 1835</span>
+            <p className="mt-7 max-md:mt-9   font-ubuntu font-normal text-base leading-[18px] text-primaryWhite">
+              Email: info@fushionai.com
+            </p>
+
+            <div className="mt-5  font-ubuntu font-normal text-base leading-6 text-primaryWhite">
+              <span className="text-nowrap">WhatsApp: +31 (0)6 1099 1835</span>
             </div>
 
-            <div className="mt-5 max-md:mt-6 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
+            {/* <div className="mt-5 max-md:mt-6 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
               Our business bank account:
               <span className="text-nowrap"> NL03 INGB 0000 7651 02 </span>
-            </div>
+            </div> */}
           </div>
-          <div className="flex max-md:flex-col items-center pt-2 gap-24 max-md:gap-10 max-[1200px]:mt-[32px]">
+          <div className="max-md:w-full flex max-md:flex-col items-center pt-2 gap-24 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link
               href="/about-us"
-              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+              className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               About Us
             </Link>
-            {/* <Link
-              href="/our-products"
-              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
-            >
-              Services
-            </Link> */}
             <Link
               href="/our-products"
-              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+              className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               Our Products
             </Link>
             <button
               onClick={onOpen}
-              className="font-roboto font-bold text-[16px] leading-[18px] text-[#AFAFAF]"
+              className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               Our projects
             </button>
-          </div>
-          <div className="flex items-start max-md:w-full">
-            <Link className="max-md:w-full" href="/contact">
-              <Button className="max-[1200px]:mt-[32px] w-[153px] h-[46px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
-                Contact Us
-              </Button>
-            </Link>
+            <div className="flex max-md:w-full">
+              <Link className="max-md:w-full" href="/contact">
+                <Button className=" w-[110px] h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="mt-14 h-[1px] bg-primaryWhite opacity-[17%]"></div>
         <div className="flex flex-col gap-4 mt-6">
-          <p className="font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
+          <p className="font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
             Innovating Real Estate with AI Precision
           </p>
 
-          <p className=" font-ubuntu font-normal text-[12px] leading-[18px] text-primaryWhite">
-            Fushion AI 2024 (c) All rights reserved | Privacy Policy
-          </p>
+          <div className="flex flex-wrap items-center gap-2 font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
+            <p> Fushion AI 2024 (c) All rights reserved</p>
+            <p>|</p>
+            <button>Privacy Policy</button>
+            <p>|</p>
+            <button>Terms and Conditions</button>
+            <p>|</p>
+            <button>Cookie Policy</button>
+          </div>
         </div>
       </section>
 
