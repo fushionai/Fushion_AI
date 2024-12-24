@@ -6,7 +6,7 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
-import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
+// import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
 // import ContactSection from "@/components/about-us-page-components/ContactSection";
 
 import { useEffect } from "react";

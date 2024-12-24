@@ -12,7 +12,7 @@ const useAuth = () => {
     if (!token || isTokenExpired(token)) {
       router.push("/admin/login"); // Redirect to login page if no token or token expired
     }
-  }, [router]);
+  }, [router, token]);
 
   const isTokenExpired = (token: string) => {
     try {
