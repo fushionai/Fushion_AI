@@ -15,6 +15,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
+import { CookieConsent } from "@/components/cookie-consent";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +48,10 @@ export default function RootLayout({
         <NextUIProvider>
           <Provider store={store}>
             <ToastContainer />
-            <div className="w-full min-h-[100vh] h-auto">{children}</div>
+            <div className="w-full min-h-[100vh] h-auto">
+              {children}
+              <CookieConsent />
+            </div>
             <Footer />
           </Provider>
         </NextUIProvider>
