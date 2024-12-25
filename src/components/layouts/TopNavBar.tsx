@@ -163,7 +163,7 @@ const TopNavBar = () => {
                     Contact
                   </Button>
                 ) : item.title === "Our Projects" ? (
-                  <Button
+                  <button
                     className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
                     onClick={(e) => {
                       e.preventDefault();
@@ -171,7 +171,7 @@ const TopNavBar = () => {
                     }}
                   >
                     Our Projects
-                  </Button>
+                  </button>
                 ) : (
                   <p className="text-center mx-auto">{item.title}</p>
                 )}
