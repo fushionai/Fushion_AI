@@ -159,9 +159,11 @@ const TopNavBar = () => {
                 size="lg"
               >
                 {index === 4 ? (
-                  <Button className="w-full h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
-                    Contact
-                  </Button>
+                  <Link href="/contact" className="w-full">
+                    <button className="w-full h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
+                      Contact
+                    </button>
+                  </Link>
                 ) : item.title === "Our Projects" ? (
                   <button
                     className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
