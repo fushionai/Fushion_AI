@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Button, Link } from "@nextui-org/react";
 
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 
 const UpFooter = () => {
   return (

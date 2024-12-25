@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 import propertyReportContents from "@/contents/our-products-contents/property-report";
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 
 import assert from "@/assets/index";
 import Link from "next/link";

@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import Link from "next/link";
 
 const PurchasePriceInformationPage = () => {

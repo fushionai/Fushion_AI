@@ -11,7 +11,7 @@ import Image from "next/image";
 
 import servicesSectionContents from "@/contents/home-page-contents/services-section-contents";
 import Service from "./Service";
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 
 const ServicesSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -138,7 +138,6 @@ const ServicesSection = () => {
           }}
         ></div>
       </div>
-      
     </section>
   );
 };

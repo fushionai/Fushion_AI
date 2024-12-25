@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 import aiPoweredContents from "@/contents/our-products-contents/ai-powered-valuation";
 import assets from "@/assets/index";
-import heroBg from "@/assets/images/home-page-images/hero_bg.jpg";
+import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import Link from "next/link";
 
 const AIPoweredValuationPage = () => {
