@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 
-import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import heroBg from "@/assets/images/products-page-images/our-products-hero.svg";
 import Link from "next/link";
 
 const ProductsHeroSection = () => {
