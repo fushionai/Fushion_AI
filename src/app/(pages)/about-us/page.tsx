@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 
-import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
+import heroBg from "@/assets/images/products-page-images/our-products-hero.svg";
 
 import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurValues";
 // import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
