@@ -83,14 +83,21 @@ const ProductsHeroSection = () => {
             </Link>
           </div>
 
-          <div>
-            <p className="text-center mt-12 md:mt-14 max-w-[1158px] mx-auto font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite border-[3px] border-primaryWhite p-6">
+          <Link
+            href="our-products/consultancy"
+            className="block mt-12 md:mt-14 max-w-[1158px] mx-auto border-[3px] border-primaryWhite p-6 hover:scale-[1.03] transition-all ease-in
+              hover:bg-blue-950 hover:cursor-pointer"
+          >
+            <h3 className="py-1 font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite border-b border-secondaryGray">
+              Consultancy
+            </h3>
+            <p className="mt-2 text-center  font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite ">
               Our AI-powered consultancy services empower real estate
               professionals with data-driven insights to make smarter, faster
               decisions. Tailored to your needs, we revolutionize the way you
               navigate the real estate market.
             </p>
-          </div>
+          </Link>
         </main>
 
         <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">
