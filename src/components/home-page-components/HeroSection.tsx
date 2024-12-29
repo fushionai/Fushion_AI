@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button, Link } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 
