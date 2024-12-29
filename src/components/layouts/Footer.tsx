@@ -40,6 +40,9 @@ const Footer = () => {
                 <Link href="#" target="_blank">
                   <Image src={assets.twitter} alt="Our Twitter" />
                 </Link>
+                <Link href="#" target="_blank">
+                  <Image src={assets.linkedin} alt="Our Twitter" />
+                </Link>
               </div>
             </div>
 
@@ -50,11 +53,6 @@ const Footer = () => {
             <div className="mt-5  font-ubuntu font-normal text-base leading-6 text-primaryWhite">
               <span className="text-nowrap">WhatsApp: +31 (0)6 1099 1835</span>
             </div>
-
-            {/* <div className="mt-5 max-md:mt-6 font-ubuntu font-normal text-base leading-6 text-primaryWhite">
-              Our business bank account:
-              <span className="text-nowrap"> NL03 INGB 0000 7651 02 </span>
-            </div> */}
           </div>
           <div className="max-md:w-full flex max-md:flex-col items-center pt-2 gap-24 max-md:gap-10 max-[1200px]:mt-[32px]">
             <Link

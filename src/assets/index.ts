@@ -41,6 +41,7 @@ import team from "./images/home-page-images/team.png";
 import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";
 import twitter from "./icons/twitter.svg";
+import linkedin from "./icons/linkedin.svg";
 
 // Contact page icons
 import emailIcon from "./icons/contact-page-icon/email.svg";
@@ -111,6 +112,7 @@ const assets = {
   facebook,
   instagram,
   twitter,
+  linkedin,
 
   // Our products images and Icons
   productsHero,
