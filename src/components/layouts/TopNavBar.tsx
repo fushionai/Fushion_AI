@@ -81,7 +81,7 @@ const TopNavBar = () => {
           <Link
             className={`${
               pathname === "/" ? "text-primaryWhite" : "text-secondaryGray"
-            } font-roboto font-bold text-[16px]`}
+            } font-roboto font-bold text-xl`}
             href="/"
           >
             Home
@@ -93,7 +93,7 @@ const TopNavBar = () => {
               pathname?.includes("/our-products")
                 ? "text-primaryWhite"
                 : "text-secondaryGray"
-            } font-roboto font-bold text-[16px]`}
+            } font-roboto font-bold text-xl`}
             href="/our-products"
           >
             Our Products
@@ -105,7 +105,7 @@ const TopNavBar = () => {
               pathname?.includes("/about-us")
                 ? "text-primaryWhite"
                 : "text-secondaryGray"
-            } font-roboto font-bold text-[16px]`}
+            } font-roboto font-bold text-xl`}
             href="/about-us"
           >
             About Us
@@ -113,13 +113,13 @@ const TopNavBar = () => {
         </NavbarItem>
         <button
           onClick={onOpen}
-          className="font-roboto font-bold text-[16px] leading-[18px] text-secondaryGray"
+          className="font-roboto font-bold text-xl leading-[18px] text-secondaryGray"
         >
           Our projects
         </button>
         <NavbarItem>
           <Link className="" href="/contact">
-            <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-[16px]">
+            <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-xl">
               Contact
             </Button>
           </Link>
