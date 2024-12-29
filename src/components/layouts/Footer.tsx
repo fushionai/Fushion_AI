@@ -17,6 +17,16 @@ import {
 const Footer = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  const downloadPdf = (filename: string) => {
+    const pdfUrl = `/${filename}.pdf`;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = `${filename}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer className="bg-[#161527] py-[40px] px-[143px] max-xl:px-[40px] max-md:py-[40px] max-md:px-[16px]">
       <section className="max-container">
@@ -92,11 +102,17 @@ const Footer = () => {
           <div className="flex flex-wrap items-center gap-2 font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
             <p> Fushion AI 2024 (c) All rights reserved</p>
             <p>|</p>
-            <button>Privacy Policy</button>
+            <button onClick={() => downloadPdf("Privacy policy")}>
+              Privacy Policy
+            </button>
             <p>|</p>
-            <button>Terms and Conditions</button>
+            <button onClick={() => downloadPdf("Terms and conditions")}>
+              Terms and Conditions
+            </button>
             <p>|</p>
-            <button>Cookie Policy</button>
+            <button onClick={() => downloadPdf("Cookie policy")}>
+              Cookie Policy
+            </button>
           </div>
         </div>
       </section>
