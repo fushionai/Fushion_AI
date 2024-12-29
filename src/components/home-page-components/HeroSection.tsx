@@ -29,14 +29,14 @@ const HeroSection = () => {
           </h6>
           <div className="flex items-center gap-6 mt-20 max-sm:flex-col w-full">
             <Link href="/our-products" className="max-sm:w-full ">
-              <Button className="h-[60px] w-[185px] max-sm:w-full bg-primaryBlue text-primaryWhite rounded-none font-bold text-2xl leading-[28px] font-roboto">
+              <button className="h-[60px] w-[185px] max-sm:w-full bg-primaryBlue text-primaryWhite rounded-none font-bold text-2xl leading-[28px] font-roboto">
                 Discover More
-              </Button>
+              </button>
             </Link>
             <Link href="/contact" className="max-sm:w-full ">
-              <Button className="h-[60px] w-[185px] max-sm:w-full bg-primaryWhite text-darkBlue rounded-none font-bold text-2xl leading-[28px] font-roboto ">
+              <button className="h-[60px] w-[185px] max-sm:w-full bg-primaryWhite text-darkBlue rounded-none font-bold text-2xl leading-[28px] font-roboto ">
                 Contact Us
-              </Button>
+              </button>
             </Link>
           </div>
         </main>
