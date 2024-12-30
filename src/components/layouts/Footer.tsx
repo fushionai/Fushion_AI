@@ -41,16 +41,25 @@ const Footer = () => {
 
             <div className=" mt-5 flex items-center gap-6 ">
               <div className="flex items-center gap-[36px] ">
-                <Link href="#" target="_blank">
+                {/* <Link href="#" target="_blank">
                   <Image src={assets.facebook} alt="Our Facebook" />
-                </Link>
-                <Link href="#" target="_blank">
+                </Link> */}
+                <Link
+                  href="https://www.instagram.com/fushionai?igsh=cXJ2MnZ1bTNmZGQ5"
+                  target="_blank"
+                >
                   <Image src={assets.instagram} alt="Our Instagram " />
                 </Link>
-                <Link href="#" target="_blank">
+                <Link
+                  href="https://x.com/fushionai?t=fU36xZWVL43L7oycp72Ojw&s=08"
+                  target="_blank"
+                >
                   <Image src={assets.twitter} alt="Our Twitter" />
                 </Link>
-                <Link href="#" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/company/fushion-ai/"
+                  target="_blank"
+                >
                   <Image src={assets.linkedin} alt="Our Twitter" />
                 </Link>
               </div>
