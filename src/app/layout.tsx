@@ -16,6 +16,30 @@ import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
 import { CookieConsent } from "@/components/cookie-consent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fushion AI",
+  description:
+    "",
+  themeColor: "#2B00FF",
+
+  openGraph: {
+    type: "website",
+    url: "https://fushionai.com/",
+    title: "Fushion AI",
+    description:
+      "",
+    images: [
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/huwaa-app.appspot.com/o/656c3ab56c327de48fab9093%2FEDit-Logo.png?alt=media&token=cc2debed-9bdd-4a2e-b14e-5bc0c9ea5711",
+        width: 800,
+        height: 630,
+        alt: "FushionAI Logo",
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
