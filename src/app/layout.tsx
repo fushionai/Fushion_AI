@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     alternateLocale: "nl_NL",
     images: [
       {
-        url: "/Logo.png",
+        url: Favicon.src,
         width: 800,
         height: 630,
         alt: "FushionAI Logo",
