@@ -6,6 +6,8 @@ Allow: /
 Disallow: /admin
 Disallow: /admin/login
 Disallow: /admin/contacts-data
+Disallow: /admin/change-password
+Disallow: /admin/forgot-password
 
 # Host
 Host: https://fushionai.com

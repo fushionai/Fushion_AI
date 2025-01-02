@@ -22,14 +22,18 @@ import Favicon from "./favicon.ico";
 
 export const metadata: Metadata = {
   title: "Fushion AI",
-  description: "",
+  description: "Fushion AI - Transform real estate with the power of data",
   themeColor: "#2B00FF",
   icons: [{ rel: "icon", url: Favicon.src }],
+  keywords: ["Fushion", "AI", "FushionAI", "real estate", "AI real estate"],
   openGraph: {
     type: "website",
-    url: "https://fushionai.com/",
+    url: "https://fushionai.com",
+    siteName: "Fushion AI",
     title: "Fushion AI",
-    description: "",
+    description: "Fushion AI - Transform real estate with the power of data",
+    locale: "en_US",
+    alternateLocale: "nl_NL",
     images: [
       {
         url: "/Logo.png",
