@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 // import type { Metadata } from "next";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
+// import { NextUIProvider } from "@nextui-org/react";
 
 // export const metadata: Metadata = {
 //   title: "Fushion AI",
@@ -9,30 +9,30 @@ import { NextUIProvider } from "@nextui-org/react";
 // };
 
 import Footer from "@/components/layouts/Footer";
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
-import { ToastContainer } from "react-toastify";
+// import { Provider } from "react-redux";
+// import { store } from "@/redux/store";
+// import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
-import { CookieConsent } from "@/components/cookie-consent";
+// import { CookieConsent } from "@/components/cookie-consent";
 import { Metadata } from "next";
+import AppProviders from "./AppProviders";
+import Favicon from "./favicon.ico";
 
 export const metadata: Metadata = {
   title: "Fushion AI",
-  description:
-    "",
+  description: "",
   themeColor: "#2B00FF",
-
+  icons: [{ rel: "icon", url: Favicon.src }],
   openGraph: {
     type: "website",
     url: "https://fushionai.com/",
     title: "Fushion AI",
-    description:
-      "",
+    description: "",
     images: [
       {
-        url: "https://firebasestorage.googleapis.com/v0/b/huwaa-app.appspot.com/o/656c3ab56c327de48fab9093%2FEDit-Logo.png?alt=media&token=cc2debed-9bdd-4a2e-b14e-5bc0c9ea5711",
+        url: "/Logo.png",
         width: 800,
         height: 630,
         alt: "FushionAI Logo",
@@ -69,7 +69,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased`}>
-        <NextUIProvider>
+        {/* <NextUIProvider>
           <Provider store={store}>
             <ToastContainer />
             <div className="w-full min-h-[100vh] h-auto">
@@ -78,7 +78,11 @@ export default function RootLayout({
             </div>
             <Footer />
           </Provider>
-        </NextUIProvider>
+        </NextUIProvider> */}
+        <AppProviders>
+          {children}
+          <Footer />
+        </AppProviders>
       </body>
     </html>
   );
