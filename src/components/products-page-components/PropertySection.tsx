@@ -1,13 +1,13 @@
 "use client";
 import assets from "@/assets/index";
-import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
-import { useContext } from "react";
 
 const PropertySection = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   return (
     <section className="p-[120px] max-md:px-[16px] max-md:py-[40px] bg-primaryWhite">

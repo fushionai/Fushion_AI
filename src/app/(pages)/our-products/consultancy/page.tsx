@@ -6,12 +6,12 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import { Button, Link } from "@nextui-org/react";
 import { ArrowRight } from "lucide-react";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
 import { localization } from "@/data/localization";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 const Consultancy = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   return (
     <section>

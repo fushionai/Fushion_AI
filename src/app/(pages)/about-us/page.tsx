@@ -9,12 +9,13 @@ import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurVa
 // import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
 // import ContactSection from "@/components/about-us-page-components/ContactSection";
 
-import { useContext, useEffect } from "react";
-import { useAppDispatch } from "@/redux/hooks";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { toast } from "react-toastify";
 import { getNews } from "@/redux/news/newsSlice";
-import { LanguageContext } from "@/context/useLanguage";
+
 import { localization } from "@/data/localization";
+import { langSelector } from "@/redux/store";
 
 const AboutUsPage = () => {
   const dispatch = useAppDispatch();
@@ -30,7 +31,7 @@ const AboutUsPage = () => {
     fetchNews();
   }, [dispatch]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   return (
     <section>

@@ -10,11 +10,11 @@ import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import assert from "@/assets/index";
 import Link from "next/link";
 import { localization } from "@/data/localization";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 const PropertyReportPage = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   const propertyHeroContent =
     localization.ProductsPropertyReport.subtitle[language];

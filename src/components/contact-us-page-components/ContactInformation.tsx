@@ -2,12 +2,12 @@
 import Image from "next/image";
 
 import assets from "@/assets";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 const ContactInformation = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   return (
     <div className="space-y-6 md:w-1/2">

@@ -5,9 +5,10 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import ContactForm from "@/components/contact-us-page-components/ContactForm";
 import ContactInformation from "@/components/contact-us-page-components/ContactInformation";
-import React, { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
+import React from "react";
 import { localization } from "@/data/localization";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 type toastProp = {
   showToast: boolean;
@@ -32,7 +33,7 @@ const Page = () => {
     return () => clearTimeout(timerId);
   }, [toast]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   return (
     <section className="relative">

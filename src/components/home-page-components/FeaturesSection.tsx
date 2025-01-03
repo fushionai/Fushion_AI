@@ -1,13 +1,14 @@
 "use client";
-import { useState, useEffect, useMemo, useContext } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import Image from "next/image";
 
 import Accordions from "./Accordions";
 import SlidingAccordion from "./AccordionsSmallScreen";
 import assets from "@/assets/index";
-import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 const FeaturesSection = () => {
   const [selectedOrder, setSelectedOrder] = useState(new Set(["1"]));
@@ -33,7 +34,9 @@ const FeaturesSection = () => {
     }
   }, [selectedOrder, imageMap]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as {
+    language: "en" | "nl";
+  };
 
   return (
     <section className="max-container bg-primaryWhite py-20 max-md:pb-0">

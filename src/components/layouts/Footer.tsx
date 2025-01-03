@@ -14,11 +14,11 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { localization } from "@/data/localization";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
+import { useAppSelector } from "@/redux/hooks";
+import { langSelector } from "@/redux/store";
 
 const Footer = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
