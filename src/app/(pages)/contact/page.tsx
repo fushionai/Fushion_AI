@@ -5,7 +5,9 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import ContactForm from "@/components/contact-us-page-components/ContactForm";
 import ContactInformation from "@/components/contact-us-page-components/ContactInformation";
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 
 type toastProp = {
   showToast: boolean;
@@ -30,6 +32,8 @@ const Page = () => {
     return () => clearTimeout(timerId);
   }, [toast]);
 
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   return (
     <section className="relative">
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
@@ -46,7 +50,8 @@ const Page = () => {
           </header>
           <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
-              Contact Us
+              {/* Contact Us */}
+              {localization.UpFooter.buttons.contactUs[language]}
             </h2>
 
             <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">

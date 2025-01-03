@@ -7,7 +7,7 @@ interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType>({
-  language: "en",
+  language: "",
   changeLanguage: () => {},
 });
 interface LanguageProviderProps {
@@ -16,7 +16,11 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<string>("en");
+  const [language, setLanguage] = useState<string>(
+    window != undefined && localStorage.getItem("preferredLanguage") !== null
+      ? localStorage.getItem("preferredLanguage") as string
+      : "en"
+  );
 
   useEffect(() => {
     if (window != undefined) {

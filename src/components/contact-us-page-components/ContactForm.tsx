@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 import { sendContactForm } from "@/lib/api";
-import React from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 
 const ContactForm = ({ setToast }: any) => {
@@ -24,6 +26,8 @@ const ContactForm = ({ setToast }: any) => {
     message: "",
   });
 
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   const validateForm = () => {
     let isValid = true;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -37,30 +41,46 @@ const ContactForm = ({ setToast }: any) => {
     };
 
     if (!formState.firstName) {
-      errors.firstName = "First Name is required";
+      errors.firstName =
+        // "First Name is required"
+        localization.Contact.Form.errorMessage.firstName[language];
       isValid = false;
     }
 
     if (!formState.lastName) {
-      errors.lastName = "Last Name is required";
+      errors.lastName =
+        // "Last Name is required"
+        localization.Contact.Form.errorMessage.lastName[language];
       isValid = false;
     }
 
     if (!formState.email) {
-      errors.email = "Email is required";
+      errors.email =
+        // "Email is required";
+        localization.Contact.Form.errorMessage.email[language];
+
       isValid = false;
     } else if (!emailPattern.test(formState.email)) {
-      errors.email = "Please enter a valid email address";
+      errors.email =
+        // "Please enter a valid email address";
+        localization.Contact.Form.errorMessage.validEmail[language];
+
       isValid = false;
     }
 
     if (!formState.company) {
-      errors.company = "Company is required";
+      errors.company =
+        // "Company is required";
+        localization.Contact.Form.errorMessage.company[language];
+
       isValid = false;
     }
 
     if (!formState.message) {
-      errors.message = "Message is required";
+      errors.message =
+        // "Message is required";
+        localization.Contact.Form.errorMessage.message[language];
+
       isValid = false;
     }
 
@@ -110,7 +130,9 @@ const ContactForm = ({ setToast }: any) => {
             type="text"
             id="firstName"
             name="firstName"
-            placeholder="First Name"
+            placeholder={
+              localization.Contact.Form.firstNamePlaceholder[language]
+            } // "First Name"
             value={formState.firstName}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
@@ -127,7 +149,9 @@ const ContactForm = ({ setToast }: any) => {
             type="text"
             id="lastName"
             name="lastName"
-            placeholder="Last Name"
+            placeholder={
+              localization.Contact.Form.lastNamePlaceholder[language]
+            } // "Last Name"
             value={formState.lastName}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
@@ -142,7 +166,7 @@ const ContactForm = ({ setToast }: any) => {
             // type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder={localization.Contact.Form.emailPlaceholder[language]} // "Email"
             value={formState.email}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
@@ -157,7 +181,7 @@ const ContactForm = ({ setToast }: any) => {
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Phone (Optional)"
+            placeholder={localization.Contact.Form.phonePlaceholder[language]} // "Phone (optional)"
             value={formState.phone}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
@@ -173,7 +197,7 @@ const ContactForm = ({ setToast }: any) => {
           type="text"
           id="company"
           name="company"
-          placeholder="Company name"
+          placeholder={localization.Contact.Form.companyName[language]} // "Company Name"
           value={formState.company}
           onChange={handleInputChange}
           className="w-full px-3 py-2 border border-gray-100 rounded-[3px] shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 placeholder:font-roboto placeholder:text-[#77818A] placeholder:text-[18px]"
@@ -187,7 +211,7 @@ const ContactForm = ({ setToast }: any) => {
         <textarea
           id="message"
           name="message"
-          placeholder="Message"
+          placeholder={localization.Contact.Form.messagePlaceholder[language]} // "Message"
           value={formState.message}
           onChange={handleInputChange}
           rows={6}
@@ -204,7 +228,10 @@ const ContactForm = ({ setToast }: any) => {
         }  rounded-none ${isLoading ? "" : "hover:bg-[#2600CC]"}  font-roboto `}
         disabled={isLoading}
       >
-        {isLoading ? "Sending..." : "Send"}
+        {/* {isLoading ? "Sending..." : "Send"} */}
+        {isLoading
+          ? localization.Contact.Form.sendingButton[language]
+          : localization.Contact.Form.sendButton[language]}
       </button>
     </form>
   );

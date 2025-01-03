@@ -6,9 +6,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import testimonialSectionContents from "@/contents/home-page-contents/testimonial-section-contents";
+// import testimonialSectionContents from "@/contents/home-page-contents/testimonial-section-contents";
 import assets from "@/assets/index";
 import Testimonial from "./Testimonial";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 
 const TestimonialsSection = () => {
   const CustomPrevArrow = (props: any) => {
@@ -77,6 +80,36 @@ const TestimonialsSection = () => {
       );
     },
   };
+
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
+  const testimonialSectionContents = [
+    {
+      testimonial:
+        localization.Testimonials.testimonials[0].testimonial[language],
+      fullName: localization.Testimonials.testimonials[0].fullName[language],
+      position: localization.Testimonials.testimonials[0].position[language],
+    },
+    {
+      testimonial:
+        localization.Testimonials.testimonials[1].testimonial[language],
+      fullName: localization.Testimonials.testimonials[1].fullName[language],
+      position: localization.Testimonials.testimonials[1].position[language],
+    },
+    {
+      testimonial:
+        localization.Testimonials.testimonials[2].testimonial[language],
+      fullName: localization.Testimonials.testimonials[2].fullName[language],
+      position: localization.Testimonials.testimonials[2].position[language],
+    },
+    {
+      testimonial:
+        localization.Testimonials.testimonials[3].testimonial[language],
+      fullName: localization.Testimonials.testimonials[3].fullName[language],
+      position: localization.Testimonials.testimonials[3].position[language],
+    },
+  ];
+
   return (
     <section className=" bg-[#161527] relative py-20 pt-40 pb-32 max-md:py-12 max-md:pb-20 px-20 max-md:px-5 overflow-x-hidden">
       <div className="absolute -top-1 left-0 right-0 w-full h-12 md:h-16 bg-white">
@@ -93,16 +126,18 @@ const TestimonialsSection = () => {
         <header>
           <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
             <h1 className="text-primaryWhite md:text-nowrap max-md:text-center ">
-              Committed to Your Success
+              {/* Committed to Your Success */}
+              {localization.Testimonials.title[language]}
             </h1>
             <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
           </div>
           <p className="max-w-[1154px] mt-10 max-md:mt-8 font-roboto font-normal text-[20px] text-primaryWhite leading-[30px] max-md:text-center">
-            At Fushion AI, your success is our priority. We are dedicated to
+            {/* At Fushion AI, your success is our priority. We are dedicated to
             delivering high-quality services that help you make smart,
             data-driven decisions. Whether you are a consumer, real estate
             agent, or real estate professional, we are here to support you with
-            our expertise.
+            our expertise. */}
+            {localization.Testimonials.description[language]}
           </p>
         </header>
 

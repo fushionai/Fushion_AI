@@ -1,4 +1,7 @@
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 import { Button, Link } from "@nextui-org/react";
+import { useContext } from "react";
 
 const ProductsOurService = ({
   price,
@@ -13,6 +16,8 @@ const ProductsOurService = ({
   lists?: string[];
   goToLink?: string;
 }) => {
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   return (
     <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[382px] max-xl:max-w-[360px] max-[1149px]:max-w-[95%] max-[1149px]:mx-auto">
       <header className="h-[320px]">
@@ -52,7 +57,8 @@ const ProductsOurService = ({
             max-xl:text-base max-xl:px-4
             "
             >
-              Learn more
+              {/* Learn more */}
+              {localization.ProductsOurServices.buttons?.learnMore[language]}
             </Button>
           </Link>
           <Link href="/contact">
@@ -61,7 +67,8 @@ const ProductsOurService = ({
                max-xl:text-base max-xl:px-4
             "
             >
-              Contact Us
+              {/* Contact Us */}
+              {localization.ProductsOurServices.buttons?.contactUs[language]}
             </Button>
           </Link>
         </div>

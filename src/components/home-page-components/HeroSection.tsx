@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 
@@ -10,12 +10,11 @@ import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 
 import { useContext } from "react";
 
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
 
-import { LanguageContext } from "@/context/useLanguage";
-
 const HeroSection = () => {
-  const { language } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28 md:h-[100vh]">

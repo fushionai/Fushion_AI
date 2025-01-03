@@ -13,8 +13,13 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import { localization } from "@/data/localization";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const downloadPdf = (filename: string) => {
@@ -78,24 +83,28 @@ const Footer = () => {
               href="/about-us"
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
-              About Us
+              {/* About Us */}
+              {localization.AboutUs.title[language]}
             </Link>
             <Link
               href="/our-products"
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
-              Our Products
+              {/* Our Products */}
+              {localization.Project.title[language]}
             </Link>
             <button
               onClick={onOpen}
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
-              Our projects
+              {/* Our projects */}
+              {localization.Project.title[language]}
             </button>
             <div className="flex max-md:w-full">
               <Link className="max-md:w-full" href="/contact">
                 <Button className=" w-[110px] h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
-                  Contact Us
+                  {/* Contact Us */}
+                  {localization.UpFooter.buttons.contactUs[language]}
                 </Button>
               </Link>
             </div>
@@ -105,22 +114,26 @@ const Footer = () => {
         <div className="mt-14 h-[1px] bg-primaryWhite opacity-[17%]"></div>
         <div className="flex flex-col gap-4 mt-6">
           <p className="font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
-            Innovating Real Estate with AI Precision
+            {/* Innovating Real Estate with AI Precision */}
+            {localization.Footer.heading[language]}
           </p>
 
           <div className="flex flex-wrap items-center gap-2 font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
-            <p> Fushion AI 2024 (c) All rights reserved</p>
+            <p> Fushion AI 2024 (c) {localization.Footer.rights[language]} </p>
             <p>|</p>
             <button onClick={() => downloadPdf("Privacy policy")}>
-              Privacy Policy
+              {/* Privacy Policy */}
+              {localization.Footer.privacyPolicy[language]}{" "}
             </button>
             <p>|</p>
             <button onClick={() => downloadPdf("Terms and conditions")}>
-              Terms and Conditions
+              {/* Terms and Conditions */}
+              {localization.Footer.termsAndConditions[language]}{" "}
             </button>
             <p>|</p>
             <button onClick={() => downloadPdf("Cookie policy")}>
-              Cookie Policy
+              {/* Cookie Policy */}
+              {localization.Footer.CookiePolicy[language]}{" "}
             </button>
           </div>
         </div>
@@ -131,20 +144,23 @@ const Footer = () => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                Coming Soon: Exciting New Projects!
+                {/* Coming Soon: Exciting New Projects! */}
+                {localization.ProjectModal.Header[language]}
               </ModalHeader>
               <ModalBody>
                 <p>
-                  Big things are on the way! We’re gearing up to launch a series
+                  {/* Big things are on the way! We’re gearing up to launch a series
                   of innovative projects designed to inspire and impress. From
                   cutting-edge technology to fresh, bold ideas, there’s
                   something for everyone. Stay tuned for updates, we cant wait
-                  to share whats next!
+                  to share whats next! */}
+                  {localization.ProjectModal.Body[language]}
                 </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
+                  {/* Close */}
+                  {localization.ProjectModal.Footer.CloseButton[language]}
                 </Button>
               </ModalFooter>
             </>

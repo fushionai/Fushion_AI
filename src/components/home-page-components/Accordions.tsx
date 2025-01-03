@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useContext } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 
 const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
@@ -52,6 +54,8 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
     };
   }, [lastScrollY, thresholds, handleSelectionChange]);
 
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   return (
     <Accordion
       selectedKeys={selectedKeys}
@@ -87,7 +91,8 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            Unmatched Expertise in{" "}
+            {/* Unmatched Expertise in{" "} */}
+            {localization.Features.accordion.order1.titlePart1[language]}
             <span
               className={`${
                 selectedKeys.has("1")
@@ -95,9 +100,11 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                   : "text-secondaryGray"
               }`}
             >
-              AI
+              {/* AI */}
+              {localization.Features.accordion.order1.titleColored1[language]}
             </span>{" "}
-            and{" "}
+            {/* and{" "} */}
+            {localization.Features.accordion.order1.titlePart2[language]}
             <span
               className={`text-nowrap ${
                 selectedKeys.has("1")
@@ -105,13 +112,15 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                   : "text-secondaryGray"
               }`}
             >
-              Real Estate
+              {/* Real Estate */}
+              {localization.Features.accordion.order1.titleColored2[language]}
             </span>
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[0].description}
+          {/* {featuresSectionContent[0].description} */}
+          {localization.Features.accordion.order1.description[language]}
         </p>
       </AccordionItem>
       <AccordionItem
@@ -141,7 +150,8 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            Comprehensive
+            {/* Comprehensive */}
+            {localization.Features.accordion.order2.title[language]}
             <span
               className={`${
                 selectedKeys.has("2")
@@ -150,13 +160,15 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
               }`}
             >
               {" "}
-              Data Analysis
+              {/* Data Analysis */}
+              {localization.Features.accordion.order2.titleColored1[language]}
             </span>{" "}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[1].description}
+          {/* {featuresSectionContent[1].description} */}
+          {localization.Features.accordion.order2.description[language]}
         </p>
       </AccordionItem>
 
@@ -187,12 +199,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            {featuresSectionContent[2].title}
+            {/* {featuresSectionContent[2].title} */}
+            {localization.Features.accordion.order3.title[language]}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[2].description}
+          {/* {featuresSectionContent[2].description} */}
+          {localization.Features.accordion.order3.description[language]}
         </p>
       </AccordionItem>
 
@@ -223,12 +237,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            {featuresSectionContent[3].title}
+            {/* {featuresSectionContent[3].title} */}
+            {localization.Features.accordion.order4.title[language]}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[3].description}
+          {/* {featuresSectionContent[3].description} */}
+          {localization.Features.accordion.order4.description[language]}
         </p>
       </AccordionItem>
 
@@ -259,12 +275,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            {featuresSectionContent[4].title}
+            {/* {featuresSectionContent[4].title} */}
+            {localization.Features.accordion.order5.title[language]}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[4].description}
+          {/* {featuresSectionContent[4].description} */}
+          {localization.Features.accordion.order5.description[language]}
         </p>
       </AccordionItem>
 
@@ -295,12 +313,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                 : "font-medium text-[24px] leading-[36px] text-secondaryGray"
             }`}
           >
-            {featuresSectionContent[5].title}
+            {/* {featuresSectionContent[5].title} */}
+            {localization.Features.accordion.order6.title[language]}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
-          {featuresSectionContent[5].description}
+          {/* {featuresSectionContent[5].description} */}
+          {localization.Features.accordion.order6.description[language]}
         </p>
       </AccordionItem>
     </Accordion>
