@@ -51,10 +51,10 @@ const ProductsOurService = ({
         )}
       </main>
       <footer>
-        <div className="mt-9 max-sm:mt-6 flex items-center justify-center gap-6">
+        <div className="mt-9 max-sm:mt-6 flex items-center justify-center gap-2">
           <Link href={goToLink}>
             <Button
-              className="py-4 px-6 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none
+              className="py-4 px-2 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none
             max-xl:text-base max-xl:px-4
             "
             >
@@ -64,7 +64,7 @@ const ProductsOurService = ({
           </Link>
           <Link href="/contact">
             <Button
-              className="py-4 px-6 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none
+              className="py-4 px-2 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none
                max-xl:text-base max-xl:px-4
             "
             >
