@@ -1,17 +1,25 @@
+"use client";
 import assets from "@/assets/index";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
+import { useContext } from "react";
 
 const PropertySection = () => {
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   return (
     <section className="p-[120px] max-md:px-[16px] max-md:py-[40px] bg-primaryWhite">
       <header>
         <h2 className="font-ubuntu font-bold text-[40px] leading-[45px] text-center text-darkBlue">
-          Property Valuation
+          {/* Property Valuation */}
+          {localization.PropertySection.title[language]}
         </h2>
         <p className="mt-6 font-roboto font-normal text-[20px] leading-[30px] text-center text-darkBlue">
-          Our Property Valuation product leverages advanced technology to
-          provide accurate property value assessments.
+          {/* Our Property Valuation product leverages advanced technology to
+          provide accurate property value assessments. */}
+          {localization.PropertySection.description[language]}
         </p>
       </header>
 
@@ -27,21 +35,35 @@ const PropertySection = () => {
             </div>
             <div className="max-w-[473px]">
               <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue">
-                Property Valuation Analysis
+                {/* Property Valuation Analysis */}
+                {localization.PropertySection.sections["0"].title[language]}
               </h2>
               <p className="mt-9 max-sm:mt-6 font-roboto font-normal text-[20px] leading-[30px] text-secondaryGray">
-                Compare similar properties to determine accurate pricing,
-                ensuring you stay competitive in the market.
+                {/* Compare similar properties to determine accurate pricing,
+                ensuring you stay competitive in the market. */}
+                {
+                  localization.PropertySection.sections["0"].description[
+                    language
+                  ]
+                }
               </p>
               <div className="mt-9 max-sm:mt-6 flex items-center gap-6">
                 <Link href="our-products/property-valuation-analysis-report">
                   <Button className="py-2 px-4 border border-darkBlue bg-primaryWhite font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
-                    Learn more
+                    {/* Learn more */}
+                    {
+                      localization.PropertySection.sections["0"].buttons
+                        ?.learnMore[language]
+                    }
                   </Button>
                 </Link>
                 <Link href="/contact">
                   <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                    Contact Us
+                    {/* Contact Us */}
+                    {
+                      localization.PropertySection.sections["0"].buttons
+                        ?.contactUs[language]
+                    }
                   </Button>
                 </Link>
               </div>
@@ -50,21 +72,35 @@ const PropertySection = () => {
           <div className="flex max-sm:flex-col-reverse items-center gap-6">
             <div className="max-w-[473px]">
               <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue">
-                AI-Powered Valuation and Predictions
+                {/* AI-Powered Valuation and Predictions */}
+                {localization.PropertySection.sections["1"].title[language]}
               </h2>
               <p className="mt-9 max-sm:mt-6 font-roboto font-normal text-[20px] leading-[30px] text-secondaryGray">
-                Compare similar properties to determine accurate pricing,
-                ensuring you stay competitive in the market.
+                {/* Compare similar properties to determine accurate pricing,
+                ensuring you stay competitive in the market. */}
+                {
+                  localization.PropertySection.sections["1"].description[
+                    language
+                  ]
+                }
               </p>
               <div className="mt-9 max-sm:mt-6 flex items-center gap-6">
                 <Link href="our-products/ai-powered">
                   <Button className="py-2 px-4 border border-darkBlue bg-primaryWhite font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none">
-                    Learn more
+                    {/* Learn more */}
+                    {
+                      localization.PropertySection.sections["1"].buttons
+                        ?.learnMore[language]
+                    }
                   </Button>
                 </Link>
                 <Link href="/contact">
                   <Button className="py-2 px-4 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none">
-                    Contact Us
+                    {/* Contact Us */}
+                    {
+                      localization.PropertySection.sections["1"].buttons
+                        ?.contactUs[language]
+                    }
                   </Button>
                 </Link>
               </div>
@@ -87,28 +123,40 @@ const PropertySection = () => {
             </div>
             <div className="max-w-[473px]">
               <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue">
-                Dashboard (Launching Soon)
+                {/* Dashboard (Launching Soon) */}
+                {localization.PropertySection.sections["2"].title[language]}
               </h2>
               <p className="mt-9 max-sm:mt-6 font-roboto font-normal text-[20px] leading-[30px] text-secondaryGray">
-                Stay ahead with our intuitive dashboard, designed to bring raw
-                data and actionable insights right to your fingertips.
+                {/* Stay ahead with our intuitive dashboard, designed to bring raw
+                data and actionable insights right to your fingertips. */}
+                {
+                  localization.PropertySection.sections["2"].description[
+                    language
+                  ]
+                }
               </p>
             </div>
           </div>
           <div className="flex max-sm:flex-col-reverse items-center gap-6">
             <div className="max-w-[473px]">
               <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue">
-                Data at Your Fingertips
+                {/* Data at Your Fingertips */}
+                {localization.PropertySection.sections["3"].title[language]}
               </h2>
               <p className="mt-9 max-sm:mt-6 font-roboto font-normal text-[20px] leading-[30px] text-secondaryGray">
-                Access raw data and insights effortlessly, allowing you to make
-                data-driven decisions quickly and efficiently.
+                {/* Access raw data and insights effortlessly, allowing you to make
+                data-driven decisions quickly and efficiently. */}
+                {
+                  localization.PropertySection.sections["3"].description[
+                    language
+                  ]
+                }
               </p>
             </div>
             <div className="bg-[#EDEEF9] rounded-[16px] p-12">
               <Image
                 src={assets.propertyFingerPrint}
-                alt="Property Valuation"
+                alt={localization.PropertySection.title[language]}
                 loading="eager"
               />
             </div>

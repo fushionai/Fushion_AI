@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,9 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 import assets from "@/assets/index";
 import Image from "next/image";
 
-import servicesSectionContents from "@/contents/home-page-contents/services-section-contents";
+// import servicesSectionContents from "@/contents/home-page-contents/services-section-contents";
 import Service from "./Service";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
+import { localization } from "@/data/localization";
+import { LanguageContext } from "@/context/useLanguage";
 
 const ServicesSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -98,6 +100,32 @@ const ServicesSection = () => {
     },
   };
 
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
+  const servicesSectionContents = [
+    {
+      icon: assets.insights,
+      title: localization.Services.slider.items[`0`].title[language],
+      description: localization.Services.slider.items[`0`].description[language],
+    },
+
+    {
+      icon: assets.bulb,
+      title: localization.Services.slider.items[`1`].title[language],
+      description: localization.Services.slider.items[`1`].description[language],
+    },
+    {
+      icon: assets.certificate,
+      title: localization.Services.slider.items[`2`].title[language],
+      description: localization.Services.slider.items[`2`].description[language],
+    },
+    {
+      icon: assets.reach,
+      title: localization.Services.slider.items[`3`].title[language],
+      description: localization.Services.slider.items[`3`].description[language],
+    },
+  ];
+
   return (
     <section className="relative bg-center bg-cover bg-no-repeat px-32 max-md:px-7 pt-32 max-md:pt-20 pb-60 max-md:pb-32">
       <Image
@@ -110,7 +138,10 @@ const ServicesSection = () => {
       <div className="-z-10 before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[#161527] before:opacity-[80%]"></div>
       <main className="max-container relative z-20 ">
         <div className="flex items-center max-md:justify-center gap-20 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
-          <h1 className="text-primaryWhite text-nowrap">Service We Offer</h1>
+          <h1 className="text-primaryWhite text-nowrap">
+            {/* Service We Offer */}
+            {localization.Services.title[language]}
+          </h1>
           <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
         </div>
 

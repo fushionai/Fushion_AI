@@ -1,11 +1,17 @@
+"use client";
 import Image from "next/image";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.svg";
 import Link from "next/link";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
+import { localization } from "@/data/localization";
 
 const ProductsHeroSection = () => {
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+
   return (
     <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
       <Image
@@ -21,12 +27,14 @@ const ProductsHeroSection = () => {
         </header>
         <main className="mt-16 px-10 md:mt-20 xl:px-32   max-sm:px-2">
           <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
-            Our Products
+            {/* Our Products */}
+            {localization.ProductsHeroSection.title[language]}
           </h2>
           <h6 className="max-w-[1158px] mx-auto mt-5 sm:mt-10 font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite text-center">
-            Unlock comprehensive market information with our Market Info
+            {/* Unlock comprehensive market information with our Market Info
             package. Get detailed insights into market trends, property values,
-            and more to make informed decisions.
+            and more to make informed decisions. */}
+            {localization.ProductsHeroSection.subheading[language]}
           </h6>
 
           <div className="mt-12 max-md:mt-10 flex max-lg:flex-wrap justify-center items-center  gap-6 max-md:gap-4">
@@ -38,11 +46,20 @@ const ProductsHeroSection = () => {
             >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite ">
-                  Purchase Price Information
+                  {/* Purchase Price Information */}
+                  {
+                    localization.ProductsHeroSection.buttons.purchasePriceInfo[
+                      language
+                    ]
+                  }
                 </h3>
                 <p className="mt-4 font-roboto font-normal text-[16px] leading-[24px] text-center text-primaryWhite opacity-[80%]">
-                  Detailed purchase price information to help you understand
-                  real estate market dynamics.
+                  {/* Detailed purchase price information to help you understand
+                  real estate market dynamics. */}
+                  {
+                    localization.ProductsHeroSection.buttons
+                      .purchasePriceInfoDescription[language]
+                  }
                 </p>
               </article>
             </Link>
@@ -55,11 +72,19 @@ const ProductsHeroSection = () => {
             >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite">
-                  Assessed Property Value
+                  {/* Assessed Property Value */}
+                  {
+                    localization.ProductsHeroSection.buttons
+                      .assessedPropertyValue[language]
+                  }
                 </h3>
                 <p className="mt-4 font-roboto font-normal text-[16px] leading-[24px] text-center text-primaryWhite opacity-[80%]">
-                  Access the assessed value of properties to gauge market value
-                  accurately.
+                  {/* Access the assessed value of properties to gauge market value
+                  accurately. */}
+                  {
+                    localization.ProductsHeroSection.buttons
+                      .assessedPropertyValueDescription[language]
+                  }
                 </p>
               </article>
             </Link>
@@ -71,13 +96,22 @@ const ProductsHeroSection = () => {
             >
               <article>
                 <h3 className="font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite">
-                  Property Report
+                  {/* Property Report */}
+                  {
+                    localization.ProductsHeroSection.buttons.propertyReport[
+                      language
+                    ]
+                  }
                 </h3>
                 <p className="mt-4 font-roboto font-normal text-[16px] leading-[24px] text-center text-primaryWhite opacity-[80%]">
-                  An extensive property report combining purchase price info,
+                  {/* An extensive property report combining purchase price info,
                   assessed value, mortgage details, and more. We also include
                   Cadastre data to ensure the most reliable and comprehensive
-                  insights.
+                  insights. */}
+                  {
+                    localization.ProductsHeroSection.buttons
+                      .propertyReportDescription[language]
+                  }
                 </p>
               </article>
             </Link>
@@ -89,13 +123,19 @@ const ProductsHeroSection = () => {
               hover:bg-blue-950 hover:cursor-pointer"
           >
             <h3 className="py-1 font-ubuntu font-bold text-[24px] leading-[36px] text-center text-primaryWhite border-b border-secondaryGray">
-              Consultancy
+              {/* Consultancy */}
+              {localization.ProductsHeroSection.buttons.consultancy[language]}
             </h3>
             <p className="mt-2 text-center  font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite ">
-              Our AI-powered consultancy services empower real estate
+              {/* Our AI-powered consultancy services empower real estate
               professionals with data-driven insights to make smarter, faster
               decisions. Tailored to your needs, we revolutionize the way you
-              navigate the real estate market.
+              navigate the real estate market. */}
+              {
+                localization.ProductsHeroSection.buttons.consultancyDescription[
+                  language
+                ]
+              }
             </p>
           </Link>
         </main>

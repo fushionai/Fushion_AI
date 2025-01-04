@@ -18,6 +18,7 @@ import Script from "next/script";
 // import { CookieConsent } from "@/components/cookie-consent";
 import { Metadata } from "next";
 import AppProviders from "./AppProviders";
+import { LanguageProvider } from "@/context/useLanguage";
 import Favicon from "./favicon.ico";
 
 export const metadata: Metadata = {
@@ -75,12 +76,14 @@ export default function RootLayout({
       <body className={`antialiased`}>
         {/* <NextUIProvider>
           <Provider store={store}>
-            <ToastContainer />
-            <div className="w-full min-h-[100vh] h-auto">
-              {children}
-              <CookieConsent />
-            </div>
-            <Footer />
+            <LanguageProvider>
+              <ToastContainer />
+              <div className="w-full min-h-[100vh] h-auto">
+                {children}
+                <CookieConsent />
+              </div>
+              <Footer />
+            </LanguageProvider>
           </Provider>
         </NextUIProvider> */}
         <AppProviders>
