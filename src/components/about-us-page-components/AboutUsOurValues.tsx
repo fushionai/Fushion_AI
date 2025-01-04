@@ -1,3 +1,5 @@
+"use client";
+
 import aboutUsValues from "@/contents/about-us-contents/about-us-values";
 
 import AboutValue from "./AboutValue";

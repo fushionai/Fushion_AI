@@ -86,10 +86,12 @@ export default function RootLayout({
             </LanguageProvider>
           </Provider>
         </NextUIProvider> */}
-        <AppProviders>
-          {children}
-          <Footer />
-        </AppProviders>
+        <LanguageProvider>
+          <AppProviders>
+            {children}
+            <Footer />
+          </AppProviders>
+        </LanguageProvider>
       </body>
     </html>
   );

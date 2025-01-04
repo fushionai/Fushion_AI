@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactNode, createContext, useEffect, useState } from "react";
 
 interface LanguageContextType {
