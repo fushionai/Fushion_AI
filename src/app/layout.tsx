@@ -16,6 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
 import { CookieConsent } from "@/components/cookie-consent";
+import { LanguageProvider } from "@/context/useLanguage";
 
 export default function RootLayout({
   children,
@@ -47,12 +48,14 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <NextUIProvider>
           <Provider store={store}>
-            <ToastContainer />
-            <div className="w-full min-h-[100vh] h-auto">
-              {children}
-              <CookieConsent />
-            </div>
-            <Footer />
+            <LanguageProvider>
+              <ToastContainer />
+              <div className="w-full min-h-[100vh] h-auto">
+                {children}
+                <CookieConsent />
+              </div>
+              <Footer />
+            </LanguageProvider>
           </Provider>
         </NextUIProvider>
       </body>

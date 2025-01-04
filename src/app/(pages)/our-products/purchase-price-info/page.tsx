@@ -7,12 +7,12 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 // import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import Link from "next/link";
+import { LanguageContext } from "@/context/useLanguage";
+import { useContext } from "react";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const PurchasePriceInformationPage = () => {
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   const heroSectionList = [
     localization.ProductsPurchasePriceInformation.list[language][0],

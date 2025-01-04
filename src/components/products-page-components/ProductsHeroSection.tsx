@@ -5,12 +5,12 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.svg";
 import Link from "next/link";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const ProductsHeroSection = () => {
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">

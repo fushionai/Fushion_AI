@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
 import { sendContactForm } from "@/lib/api";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
-import React from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 
 const ContactForm = ({ setToast }: any) => {
@@ -28,7 +26,7 @@ const ContactForm = ({ setToast }: any) => {
     message: "",
   });
 
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   const validateForm = () => {
     let isValid = true;

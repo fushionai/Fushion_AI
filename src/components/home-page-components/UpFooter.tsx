@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Button, Link } from "@nextui-org/react";
 
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
+import { LanguageContext } from "@/context/useLanguage";
+import { useContext } from "react";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const UpFooter = () => {
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <section className="relative py-[120px] px-[143px] max-md:py-[40px] max-[950px]:px-[20px] max-md:px-[16px]">

@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useContext } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
@@ -55,7 +54,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
     };
   }, [lastScrollY, thresholds, handleSelectionChange]);
 
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <Accordion

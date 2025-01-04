@@ -9,9 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 // import testimonialSectionContents from "@/contents/home-page-contents/testimonial-section-contents";
 import assets from "@/assets/index";
 import Testimonial from "./Testimonial";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const TestimonialsSection = () => {
   const CustomPrevArrow = (props: any) => {
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
     },
   };
 
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   const testimonialSectionContents = [
     {

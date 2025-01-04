@@ -1,12 +1,12 @@
 import aboutUsValues from "@/contents/about-us-contents/about-us-values";
 
 import AboutValue from "./AboutValue";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
 
 const AboutUsOurValues = () => {
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <section className="bg-primaryWhite">

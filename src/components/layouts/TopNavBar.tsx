@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   Navbar,
@@ -25,11 +25,8 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
-import { useDispatch } from "react-redux";
-import { changeLanguage } from "@/redux/langauage/LangSlice";
-import { langSelector } from "@/redux/store";
-import { useAppSelector } from "@/redux/hooks";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,12 +57,12 @@ const TopNavBar = () => {
 
   const pathname = usePathname();
 
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
-  const dispatch = useDispatch();
+  const { changeLanguage } = useContext(LanguageContext);
 
-  const handleLanguageChange = (newLanguage: "en" | "nl") => {
-    dispatch(changeLanguage(newLanguage));
+  const handleLanguageChange = (lang: string) => {
+    changeLanguage(lang);
   };
 
   return (

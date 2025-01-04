@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,8 +13,7 @@ import Image from "next/image";
 import Service from "./Service";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import { localization } from "@/data/localization";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
+import { LanguageContext } from "@/context/useLanguage";
 
 const ServicesSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -101,7 +100,7 @@ const ServicesSection = () => {
     },
   };
 
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   const servicesSectionContents = [
     {

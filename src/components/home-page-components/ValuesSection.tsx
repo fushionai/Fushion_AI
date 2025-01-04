@@ -3,11 +3,11 @@
 import { localization } from "@/data/localization";
 import Value from "./Value";
 import valuesSectionContent from "@/contents/home-page-contents/values-section-content";
-import { useAppSelector } from "@/redux/hooks";
-import { langSelector } from "@/redux/store";
+import { LanguageContext } from "@/context/useLanguage";
+import { useContext } from "react";
 
 const ValuesSection = () => {
-  const { language } = useAppSelector(langSelector) as { language: "en" | "nl" };
+  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
 
   return (
     <section className="max-container bg-primaryWhite py-20 max-md:pt-14 max-sm:pt-5">
