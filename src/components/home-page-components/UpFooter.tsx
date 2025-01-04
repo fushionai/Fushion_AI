@@ -32,7 +32,7 @@ const UpFooter = () => {
         </p>
         <div className="max-md:flex justify-center">
           <Link href="/contact" className="max-md:w-full">
-            <Button className="mt-9 max-md:mt-6 flex px-[23px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
+            <Button className="mt-9 max-md:mt-6 w-[150px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
               {/* Contact Us */}
               {localization.UpFooter.buttons.contactUs[language]}
             </Button>

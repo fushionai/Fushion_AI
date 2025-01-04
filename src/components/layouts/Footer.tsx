@@ -102,7 +102,7 @@ const Footer = () => {
             </button>
             <div className="flex max-md:w-full">
               <Link className="max-md:w-full" href="/contact">
-                <Button className="flex px-5 h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
+                <Button className=" w-[110px] h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
                   {/* Contact Us */}
                   {localization.UpFooter.buttons.contactUs[language]}
                 </Button>
