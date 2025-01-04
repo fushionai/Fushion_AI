@@ -1,3 +1,5 @@
+"use client";
+
 import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
 import { Button, Link } from "@nextui-org/react";
