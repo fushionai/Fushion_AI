@@ -229,11 +229,14 @@ type LocalizationType = {
       title: { en: string; nl: string };
       description: { en: string; nl: string };
     }[];
+  };
+  AboutUsMissionVision: {
+    title: { en: string; nl: string };
     mission: {
       title: { en: string; nl: string };
       description: { en: string; nl: string };
     };
-    vission: {
+    vision: {
       title: { en: string; nl: string };
       description: { en: string; nl: string };
     };
@@ -1225,6 +1228,12 @@ export const localization: LocalizationType = {
         },
       },
     ],
+  },
+  AboutUsMissionVision: {
+    title: {
+      en: "Mission and Vision for Fushion AI",
+      nl: "Missie en Visie voor Fushion AI",
+    },
     mission: {
       title: {
         en: "Mission",
@@ -1235,7 +1244,7 @@ export const localization: LocalizationType = {
         nl: "Bij Fushion AI is het onze missie om de vastgoedsector te revolutioneren door innovatieve, AI-gedreven oplossingen te leveren die professionals in staat stellen data-gedreven beslissingen te nemen. Wij streven ernaar om vastgoedprocessen te vereenvoudigen en te verbeteren, en zo groei en efficiëntie te bevorderen door middel van baanbrekende technologie.",
       },
     },
-    vission: {
+    vision: {
       title: {
         en: "Vision",
         nl: "Visie",

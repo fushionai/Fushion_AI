@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
 import { getNews } from "@/redux/news/newsSlice";
 import { LanguageContext } from "@/context/useLanguage";
 import { localization } from "@/data/localization";
+import AboutUsMissionVision from "@/components/about-us-page-components/AboutUsMissionVision";
 
 const AboutUsPage = () => {
   const dispatch = useAppDispatch();
@@ -89,6 +90,7 @@ const AboutUsPage = () => {
         </section>
       </section>
       <AboutUsOurValues />
+      <AboutUsMissionVision />
       {/* <AboutUsLatestNews /> */}
       {/* <ContactSection /> */}
 
