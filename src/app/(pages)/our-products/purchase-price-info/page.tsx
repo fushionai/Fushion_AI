@@ -144,7 +144,7 @@ const PurchasePriceInformationPage = () => {
 
       <div className="bg-primaryWhite relative pb-16">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
             {/* Information Included */}
             {
               localization.ProductsPurchasePriceInformation.InformationIncluded
@@ -194,7 +194,7 @@ const PurchasePriceInformationPage = () => {
 
       <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px]">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">   {/* text-[32px] */}
             {/* Delivery Time: */}
             {
               localization.ProductsPurchasePriceInformation.DeliveryTime
@@ -221,7 +221,7 @@ const PurchasePriceInformationPage = () => {
 
       <div className="bg-primaryWhite">
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
             {/* Benefits for Buyers: */}
             {
               localization.ProductsPurchasePriceInformation.BenefitsForBuyers

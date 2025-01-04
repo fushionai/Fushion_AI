@@ -118,7 +118,7 @@ const PropertyReportPage = () => {
 
       <div className="relative bg-primaryWhite pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
             {/* Benefits for Buyers: */}
             {
               localization.ProductsPropertyReport.BenefitsForBuyers.heading[
@@ -152,7 +152,7 @@ const PropertyReportPage = () => {
 
       <div className="bg-[#F4F5FF] pb-20 relative">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] max-md:text-center">  {/* text-[32px] */}
             {/* Information Included */}
             {
               localization.ProductsPropertyReport.InformationIncluded.heading[
@@ -185,7 +185,7 @@ const PropertyReportPage = () => {
 
       <div className="bg-primaryWhite py-10">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue ">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue ">  {/* text-[32px] */}
             {/* Delivery Time: */}
             {localization.ProductsPropertyReport.DeliveryTime.heading[language]}
           </h2>

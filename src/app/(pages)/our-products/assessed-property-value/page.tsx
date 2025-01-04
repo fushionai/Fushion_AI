@@ -106,7 +106,7 @@ const AssessedPropertyValuePage = () => {
 
       <div className="relative bg-primaryWhite py-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-darkBlue max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
             {/* What is it? */}
             {localization.ProductsAssessedPropertyValue.questions[language]}
           </h2>
@@ -138,7 +138,7 @@ const AssessedPropertyValuePage = () => {
 
       <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">  {/* text-[32px] */}
             {/* Information Included */}
             {
               localization.ProductsAssessedPropertyValue.InformationIncluded
@@ -170,7 +170,7 @@ const AssessedPropertyValuePage = () => {
 
       <div className="bg-primaryWhite py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[32px] leading-[48px]">
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">  {/* text-[32px] */}
             {/* Delivery Time: */}
             {
               localization.ProductsAssessedPropertyValue.DeliveryTime.heading[
@@ -198,7 +198,7 @@ const AssessedPropertyValuePage = () => {
         </div>
 
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[32px] leading-[48px] text-[#161527] max-md:text-center">
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">  {/* text-[32px] */}
             {/* Benefits for Buyers: */}
             {
               localization.ProductsAssessedPropertyValue.BenefitsForBuyers
