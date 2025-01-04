@@ -635,7 +635,7 @@ export const localization: LocalizationType = {
       buttons: {
         getInTouch: {
           en: "Get in touch with us now",
-          nl: "",
+          nl: "Neem nu contact met ons op",
         },
       },
     },
@@ -796,10 +796,13 @@ export const localization: LocalizationType = {
         nl: "Neem contact op",
       },
     },
-    title: { en: "AI-Powered Valuation and Prediction Report", nl: "" },
+    title: {
+      en: "AI-Powered Valuation and Prediction Report",
+      nl: "AI-Aangedreven Waardering en Voorspellingsrapport",
+    },
     subtitle: {
       en: "The AI-Powered Valuations and Predictions Report utilizes machine learning models to provide accurate valuations and future price predictions for properties. This report is essential for forecasting property market trends and making strategic decisions.",
-      nl: "",
+      nl: "Het AI-aangedreven Waarderings- en Voorspellingsrapport maakt gebruik van machine learning-modellen om nauwkeurige waarderingen en toekomstige prijsvoorspellingen voor vastgoed te leveren. Dit rapport is essentieel voor het voorspellen van trends op de vastgoedmarkt en het nemen van strategische beslissingen.",
     },
     InformationIncluded: {
       heading: {
@@ -816,11 +819,19 @@ export const localization: LocalizationType = {
           "Energy label (if definitively determined)",
           "Estimated current property value",
         ],
-        nl: [],
+        nl: [
+          "Voorspelde toekomstige vastgoedwaarde op basis van trends uit het verleden",
+          "Verkoopprijzen van vergelijkbare woningen in de buurt (tot 20 huisnummers)",
+          "Huidige eigenaar",
+          "Bouwjaar, volume en oppervlakte",
+          "Hypotheek",
+          " Energielabel (indien definitief bepaald)",
+          " Geschatte huidige vastgoedwaarde]",
+        ],
       },
       note: {
         en: "Please note that the Neighborhood Comparative Analysis Report may sometimes be unavailable, and not all elements may be included in every report.",
-        nl: "",
+        nl: "Let op: Het kan voorkomen dat het Buurtvergelijkingsrapport niet beschikbaar is en niet alle elementen in elk rapport zijn opgenomen.",
       },
     },
     DeliveryTime: {
@@ -844,7 +855,11 @@ export const localization: LocalizationType = {
           "Future price predictions based on historical data",
           "Energy label (if available)",
         ],
-        nl: [],
+        nl: [
+          "Nauwkeurige vastgoedwaarderingen met geavanceerde AI-modellen",
+          "Prijsvoorspellingen op basis van historische gegevens",
+          "Energielabel (indien beschikbaar)",
+        ],
       },
     },
   },
@@ -1011,10 +1026,13 @@ export const localization: LocalizationType = {
         nl: "Neem contact op",
       },
     },
-    title: { en: "Property Valuation Analysis Report", nl: "" },
+    title: {
+      en: "Property Valuation Analysis Report",
+      nl: "Property Valuation Analysis Report",
+    },
     subtitle: {
       en: "The Property Valuation Analysis Report offers detailed comparisons of similar properties within the same area, providing insights into the market value of a house. This report is crucial for making informed decisions on property investments by providing the estimated value of the property based on the Comparative Market Analysis (CMA) approach.",
-      nl: "",
+      nl: "Het Property Valuation Analysis Report biedt gedetailleerde vergelijkingen van soortgelijke woningen in hetzelfde gebied, met inzichten in de marktwaarde van een huis. Dit rapport is cruciaal voor het nemen van geïnformeerde beslissingen over vastgoedbeleggingen door de geschatte waarde van het vastgoed te verstrekken op basis van de Comparative Market Analysis (CMA)-benadering.",
     },
     InformationIncluded: {
       heading: {
@@ -1030,11 +1048,18 @@ export const localization: LocalizationType = {
           "Mortgage",
           "Energy label (if definitively determined)",
         ],
-        nl: [],
+        nl: [
+          "Geschatte woningwaarde op basis van de Comparative Market Analysis (CMA)-benadering",
+          "Vergelijkende analyse van soortgelijke woningen in de buurt (tot 20 huisnummers)",
+          "Huidige eigenaar",
+          "Bouwjaar, volume en oppervlakte",
+          "Hypotheek",
+          "Energielabel (indien definitief vastgesteld)",
+        ],
       },
       note: {
         en: "Please note that the Neighborhood Comparative Analysis Report may sometimes be unavailable, and not all elements may be included in every report.",
-        nl: "",
+        nl: "Houd er rekening mee dat het rapport voor buurtvergelijkingen soms niet beschikbaar kan zijn en dat niet alle elementen in elk rapport zijn opgenomen.",
       },
     },
     DeliveryTime: {
@@ -1058,7 +1083,11 @@ export const localization: LocalizationType = {
           "Insights into property value relative to similar homes",
           "Energy label (if available)",
         ],
-        nl: [],
+        nl: [
+          "Uitgebreide vergelijking van woningen in de buurt",
+          "Inzichten in de woningwaarde in vergelijking met soortgelijke huizen",
+          "Energielabel (indien beschikbaar)",
+        ],
       },
     },
   },
