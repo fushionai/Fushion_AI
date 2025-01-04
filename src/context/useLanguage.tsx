@@ -1,4 +1,3 @@
-"use client";
 import React, { ReactNode, createContext, useEffect, useState } from "react";
 
 interface LanguageContextType {
@@ -17,9 +16,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
   const [language, setLanguage] = useState<string>(
-    window != undefined && localStorage.getItem("preferredLanguage") !== null
-      ? localStorage.getItem("preferredLanguage") as string
-      : "en"
+    "en"
   );
 
   useEffect(() => {
