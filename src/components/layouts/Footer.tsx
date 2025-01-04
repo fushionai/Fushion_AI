@@ -46,9 +46,6 @@ const Footer = () => {
 
             <div className=" mt-5 flex items-center gap-6 ">
               <div className="flex items-center gap-[36px] ">
-                {/* <Link href="#" target="_blank">
-                  <Image src={assets.facebook} alt="Our Facebook" />
-                </Link> */}
                 <Link
                   href="https://www.instagram.com/fushionai?igsh=cXJ2MnZ1bTNmZGQ5"
                   target="_blank"

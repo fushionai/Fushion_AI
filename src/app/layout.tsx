@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 // import type { Metadata } from "next";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
+// import { NextUIProvider } from "@nextui-org/react";
 
 // export const metadata: Metadata = {
 //   title: "Fushion AI",
@@ -9,14 +9,42 @@ import { NextUIProvider } from "@nextui-org/react";
 // };
 
 import Footer from "@/components/layouts/Footer";
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
-import { ToastContainer } from "react-toastify";
+// import { Provider } from "react-redux";
+// import { store } from "@/redux/store";
+// import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
-import { CookieConsent } from "@/components/cookie-consent";
+// import { CookieConsent } from "@/components/cookie-consent";
+import { Metadata } from "next";
+import AppProviders from "./AppProviders";
 import { LanguageProvider } from "@/context/useLanguage";
+import Favicon from "./favicon.ico";
+
+export const metadata: Metadata = {
+  title: "Fushion AI",
+  description: "Fushion AI - Transform real estate with the power of data",
+  themeColor: "#2B00FF",
+  icons: [{ rel: "icon", url: Favicon.src }],
+  keywords: ["Fushion", "AI", "FushionAI", "real estate", "AI real estate"],
+  openGraph: {
+    type: "website",
+    url: "https://fushionai.com",
+    siteName: "Fushion AI",
+    title: "Fushion AI",
+    description: "Fushion AI - Transform real estate with the power of data",
+    locale: "en_US",
+    alternateLocale: "nl_NL",
+    images: [
+      {
+        url: Favicon.src,
+        width: 800,
+        height: 630,
+        alt: "FushionAI Logo",
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -46,7 +74,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased`}>
-        <NextUIProvider>
+        {/* <NextUIProvider>
           <Provider store={store}>
             <LanguageProvider>
               <ToastContainer />
@@ -57,7 +85,11 @@ export default function RootLayout({
               <Footer />
             </LanguageProvider>
           </Provider>
-        </NextUIProvider>
+        </NextUIProvider> */}
+        <AppProviders>
+          {children}
+          <Footer />
+        </AppProviders>
       </body>
     </html>
   );

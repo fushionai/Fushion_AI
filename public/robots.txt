@@ -1,0 +1,16 @@
+# General Rules
+User-agent: *
+Allow: /
+
+# Disallowed Paths
+Disallow: /admin
+Disallow: /admin/login
+Disallow: /admin/contacts-data
+Disallow: /admin/change-password
+Disallow: /admin/forgot-password
+
+# Host
+Host: https://fushionai.com
+
+# Sitemaps
+Sitemap: https://fushionai.com/sitemap.xml
