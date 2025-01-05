@@ -10,7 +10,7 @@ Disallow: /admin/change-password
 Disallow: /admin/forgot-password
 
 # Host
-Host: https://fushionai.com
+Host: https://www.fushionai.com
 
 # Sitemaps
-Sitemap: https://fushionai.com/sitemap.xml
+Sitemap: https://www.fushionai.com/sitemap.xml
