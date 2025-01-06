@@ -44,7 +44,7 @@ const TopNavBar = () => {
     },
     {
       title: "Our Projects",
-      link: "/",
+      link: "/our-products",
     },
     {
       title: "About Us",
@@ -95,15 +95,22 @@ const TopNavBar = () => {
       <NavbarContent>
         <Link locale={locale} href="/">
           <NavbarBrand className="flex items-center gap-4">
-            <Image src={logo} alt="Logo" className="w-[104px] h-[70px]" />
-            <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
+            <Image
+              src={logo}
+              alt="Logo"
+              className="w-[80px] sm:w-[104px] h-[70px]"
+            />
+            <p className="font-bold text-primaryWhite text-[12px] sm:text-[18px] max-sm:text-[16px] font-istok leading-[15px] sm:leading-[23px] tracking-[.20em] sm:tracking-[.30em]">
               FUSHION AI
             </p>
           </NavbarBrand>
         </Link>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex gap-10" justify="center">
+      <NavbarContent
+        className="hidden lg:flex gap-6 xl:gap-10"
+        justify="center"
+      >
         <NavbarItem>
           <Link
             className={`${
@@ -138,7 +145,7 @@ const TopNavBar = () => {
               ? "text-primaryWhite"
               : "text-secondaryGray"
           } font-roboto font-bold text-xl`}
-          href="/our-products" 
+          href="/our-products"
         >
           {" "}
           {/* Our projects */}
@@ -195,7 +202,7 @@ const TopNavBar = () => {
 
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="md:hidden "
+        className="lg:hidden "
         icon={
           isMenuOpen ? (
             <Image src={assets.close} alt="Navbar close" loading="eager" />
@@ -218,6 +225,8 @@ const TopNavBar = () => {
                     ? pathname === "/"
                       ? "text-primaryWhite"
                       : "text-secondaryGray"
+                    : item.title === "Our Projects"
+                    ? "text-secondaryGray" // redirects to products
                     : pathname?.includes(item.link)
                     ? "text-primaryWhite"
                     : "text-secondaryGray"
@@ -256,18 +265,28 @@ const TopNavBar = () => {
                       {locale == "en" ? "EN" : "NL"}
                     </p>
                   </button>
-                ) : item.title === "Our Projects" ? (
-                  <button
-                    className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      onOpen();
-                    }}
-                  >
-                    {/* Our Projects */}
-                    {t("Project.title")}
-                  </button>
                 ) : (
+                  //   item.title === "Our Projects" ? (
+                  // <button
+                  //   className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
+                  //   onClick={(e) => {
+                  //     e.preventDefault();
+                  //     onOpen();
+                  //   }}
+                  // >
+                  // <Link
+                  //   className={`${
+                  //     pathname?.includes("/our-projects")
+                  //       ? "text-primaryWhite"
+                  //       : "text-secondaryGray"
+                  //   } w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px]`}
+                  //   href="/our-products"
+                  // >
+                  //   {/* Our Projects */}
+                  //   {t("Project.title")}
+                  // </Link>
+                  // ):
+                  // </button>
                   <p className="text-center mx-auto">{item.title}</p>
                 )}
               </Link>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { setCookie, getCookie } from "cookies-next";
+import { useLocale } from "next-intl";
 
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,6 +27,18 @@ export function CookieConsent() {
 
   if (!isVisible) return null;
 
+  const locale = useLocale();
+
+  const downloadPdf = (filename: string) => {
+    const pdfUrl = `/${filename}-${locale}.pdf`;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = `${filename}-${locale}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4  z-50">
       <div className="bg-white max-w-7xl mx-auto rounded-2xl border md:p-6 p-4 py-7 bg-background">
@@ -39,12 +52,29 @@ export function CookieConsent() {
           </p>
           <div className="flex items-center justify-between">
             <div className="flex flex-wrap gap-2">
-              <Link href="#" color="secondary" className="text-sm font-medium">
+              {/* <Link
+                href={downloadPdf("Privacy-Policy")}
+                color="secondary"
+                className="text-sm font-medium" */}
+              {/* > */}
+              <button
+                onClick={() => downloadPdf("Privacy-Policy")}
+                className="text-sm font-medium text-secondary"
+              >
                 Privacy policy
-              </Link>
-              <Link href="#" color="secondary" className="text-sm font-medium">
+              </button>
+
+              {/* </Link> */}
+              {/* <Link
+                href={downloadPdf("Cookie-Policy")}
+                color="secondary" */}
+              <button
+                onClick={() => downloadPdf("Cookie-Policy")}
+                className="text-sm font-medium text-secondary"
+              >
                 Terms of use
-              </Link>
+                {/* </Link> */}
+              </button>
             </div>
             <div className="flex flex-wrap gap-2 items-center justify-end">
               <Button

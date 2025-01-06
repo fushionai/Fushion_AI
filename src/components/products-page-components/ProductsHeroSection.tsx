@@ -104,7 +104,7 @@ const ProductsHeroSection = () => {
               {/* Consultancy */}
               {t("buttons.consultancy")}
             </h3>
-            <p className="mt-2 text-center  font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite ">
+            <p className="mt-2 text-center  font-roboto font-normal text-[16px] leading-[24px]  text-primaryWhite ">
               {/* Our AI-powered consultancy services empower real estate
               professionals with data-driven insights to make smarter, faster
               decisions. Tailored to your needs, we revolutionize the way you

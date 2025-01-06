@@ -23,10 +23,10 @@ const Footer = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const downloadPdf = (filename: string) => {
-    const pdfUrl = `/${filename}.pdf`;
+    const pdfUrl = `/${filename}-${locale}.pdf`;
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = `${filename}.pdf`;
+    link.download = `${filename}-${locale}.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -118,17 +118,17 @@ const Footer = () => {
           <div className="flex flex-wrap items-center gap-2 font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
             <p> Fushion AI 2024 (c) {t("Footer.rights")} </p>
             <p>|</p>
-            <button onClick={() => downloadPdf("Privacy policy")}>
+            <button onClick={() => downloadPdf("Privacy-Policy")}>
               {/* Privacy Policy */}
               {t("Footer.privacyPolicy")}{" "}
             </button>
             <p>|</p>
-            <button onClick={() => downloadPdf("Terms and conditions")}>
+            <button onClick={() => downloadPdf("Terms-and-Conditions")}>
               {/* Terms and Conditions */}
               {t("Footer.termsAndConditions")}{" "}
             </button>
             <p>|</p>
-            <button onClick={() => downloadPdf("Cookie policy")}>
+            <button onClick={() => downloadPdf("Cookie-Policy")}>
               {/* Cookie Policy */}
               {t("Footer.CookiePolicy")}{" "}
             </button>
