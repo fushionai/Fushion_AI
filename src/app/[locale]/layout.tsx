@@ -18,7 +18,6 @@ import Script from "next/script";
 // import { CookieConsent } from "@/components/cookie-consent";
 import { Metadata } from "next";
 import AppProviders from "./AppProviders";
-import { LanguageProvider } from "@/context/useLanguage";
 import Favicon from "./favicon.ico";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
@@ -102,12 +101,10 @@ export default async function RootLayout({
           </Provider>
         </NextUIProvider> */}
         <NextIntlClientProvider messages={messages}>
-          <LanguageProvider>
             <AppProviders>
               {children}
               <Footer />
             </AppProviders>
-          </LanguageProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -10,7 +10,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  // Link as NextLink,
+  // Link,
   Button,
 } from "@nextui-org/react";
 
@@ -50,6 +50,7 @@ const TopNavBar = () => {
       title: "About Us",
       link: "/about-us",
     },
+
     {
       title: "Contact",
       link: "/contact",
@@ -62,7 +63,7 @@ const TopNavBar = () => {
 
   // const pathname = usePathname(); //todo:
 
- const t = useTranslations("");
+  const t = useTranslations("");
 
   const locale = useLocale();
   const pathname = usePathname();
@@ -92,7 +93,7 @@ const TopNavBar = () => {
       }`}
     >
       <NavbarContent>
-        <Link  locale={locale} href="/">
+        <Link locale={locale} href="/">
           <NavbarBrand className="flex items-center gap-4">
             <Image src={logo} alt="Logo" className="w-[104px] h-[70px]" />
             <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
@@ -123,9 +124,27 @@ const TopNavBar = () => {
             href="/our-products"
           >
             {/* Our Products */}
-             {t("Project.title")}
+            {t("ProductsHeroSection.title")}
           </Link>
         </NavbarItem>
+
+        {/* <button
+          onClick={onOpen} 
+          className="font-roboto font-bold text-xl leading-[18px] text-secondaryGray"
+        >*/}
+        <Link
+          className={`${
+            pathname?.includes("/our-projects")
+              ? "text-primaryWhite"
+              : "text-secondaryGray"
+          } font-roboto font-bold text-xl`}
+          href="/our-products" 
+        >
+          {" "}
+          {/* Our projects */}
+          {t("Project.title")}
+        </Link>
+
         <NavbarItem>
           <Link
             className={`${
@@ -136,21 +155,15 @@ const TopNavBar = () => {
             href="/about-us"
           >
             {/* About Us */}
-             {t("AboutUs.title")}
+            {t("AboutUs.title")}
           </Link>
         </NavbarItem>
-        <button
-          onClick={onOpen}
-          className="font-roboto font-bold text-xl leading-[18px] text-secondaryGray"
-        >
-          {/* Our projects */}
-           {t("ProductsHeroSection.title")}
-        </button>
+
         <NavbarItem>
-          <Link  locale={locale} className="" href="/contact">
+          <Link locale={locale} className="" href="/contact">
             <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-xl">
               {/* Contact */}
-               {t("Contact.title")}
+              {t("Contact.title")}
             </Button>
           </Link>
         </NavbarItem>
@@ -213,10 +226,10 @@ const TopNavBar = () => {
                 // size="lg"
               >
                 {index === 4 ? (
-                  <Link  locale={locale} href="/contact" className="w-full">
+                  <Link locale={locale} href="/contact" className="w-full">
                     <button className="w-full h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
                       {/* Contact */}
-                       {t("Contact.title")}
+                      {t("Contact.title")}
                     </button>
                   </Link>
                 ) : index === 5 ? (
@@ -252,7 +265,7 @@ const TopNavBar = () => {
                     }}
                   >
                     {/* Our Projects */}
-                     {t("Project.title")}
+                    {t("Project.title")}
                   </button>
                 ) : (
                   <p className="text-center mx-auto">{item.title}</p>
@@ -270,7 +283,7 @@ const TopNavBar = () => {
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {/* Coming Soon: Exciting New Projects! */}
-                 {t("ProjectModal.Header")}
+                {t("ProjectModal.Header")}
               </ModalHeader>
               <ModalBody>
                 <p>
@@ -279,13 +292,13 @@ const TopNavBar = () => {
                   cutting-edge technology to fresh, bold ideas, there’s
                   something for everyone. Stay tuned for updates, we cant wait
                   to share whats next! */}
-                   {t("ProjectModal.Body")}
+                  {t("ProjectModal.Body")}
                 </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   {/* Close */}
-                   {t("ProjectModal.Footer.CloseButton")}
+                  {t("ProjectModal.Footer.CloseButton")}
                 </Button>
               </ModalFooter>
             </>

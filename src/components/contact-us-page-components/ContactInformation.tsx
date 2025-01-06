@@ -40,7 +40,7 @@ const ContactInformation = () => {
           <Image src={assets.phoneIcon} alt="Our Phone" />
 
           <span className="text-darkBlue font-semibold font-ubuntu">
-            + 1 (31) 36- 2036297
+            + 31 (0) 6 1099 1835
           </span>
         </a>
         <p className="text-sm text-darkBlue font-semibold font-roboto">
