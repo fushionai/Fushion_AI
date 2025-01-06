@@ -53,7 +53,7 @@ const AIPoweredValuationPage = () => {
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
                   {/* AI-Powered Valuation and Prediction Report */}
-                  {t("ProductsAIPoweredValuation.title")}
+                  {t("title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-[1200px]:text-center">
                   {ProductsAIPoweredValuation}

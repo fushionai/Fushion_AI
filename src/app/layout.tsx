@@ -21,7 +21,6 @@ import AppProviders from "./AppProviders";
 import Favicon from "./favicon.ico";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Fushion AI",
@@ -56,11 +55,8 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   // Ensure that the incoming `locale` is valid
-  // if (!routing.locales.includes(locale as any)) {
-  //   notFound();
-  // }
   if (!locales.includes(locale)) {
-    notFound();
+    <></>;
   }
 
   const messages = await getMessages();
@@ -101,10 +97,10 @@ export default async function RootLayout({
           </Provider>
         </NextUIProvider> */}
         <NextIntlClientProvider messages={messages}>
-            <AppProviders>
-              {children}
-              <Footer />
-            </AppProviders>
+          <AppProviders>
+            {children}
+            <Footer />
+          </AppProviders>
         </NextIntlClientProvider>
       </body>
     </html>

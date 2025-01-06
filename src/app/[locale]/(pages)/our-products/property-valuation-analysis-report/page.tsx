@@ -18,19 +18,19 @@ const PropertyValuationAnalysisReportPage = () => {
 
   const propertyAnalysisInformationIncludedList = [
     t("InformationIncluded.list.0"),
-    t("InformationIncluded.list.0"),
-    t("InformationIncluded.list.0"),
-    t("InformationIncluded.list.0"),
-    t("InformationIncluded.list.0"),
-    t("InformationIncluded.list.0"),
+    t("InformationIncluded.list.1"),
+    t("InformationIncluded.list.2"),
+    t("InformationIncluded.list.3"),
+    t("InformationIncluded.list.4"),
+    t("InformationIncluded.list.5"),
   ];
 
   const propertyAnalysisDeliveryTime = t("DeliveryTime.description");
 
   const propertyAnalysisBenefitOfBuyer = [
     t("BenefitsForBuyers.list.0"),
-    t("BenefitsForBuyers.list.0"),
-    t("BenefitsForBuyers.list.0"),
+    t("BenefitsForBuyers.list.1"),
+    t("BenefitsForBuyers.list.2"),
   ];
 
   return (
@@ -52,7 +52,7 @@ const PropertyValuationAnalysisReportPage = () => {
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
                   {/* Property Valuation Analysis Report */}
-                  {t("ProductsValuationAnalysisReport.title")}
+                  {t("title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-[1200px]:text-center">
                   {ProductsValuationAnalysisReport}
