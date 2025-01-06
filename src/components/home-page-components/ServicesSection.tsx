@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,8 +12,7 @@ import Image from "next/image";
 // import servicesSectionContents from "@/contents/home-page-contents/services-section-contents";
 import Service from "./Service";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
-import { localization } from "@/data/localization";
-import { LanguageContext } from "@/context/useLanguage";
+import { useTranslations } from "next-intl";
 
 const ServicesSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -100,29 +99,31 @@ const ServicesSection = () => {
     },
   };
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("Services");
 
   const servicesSectionContents = [
     {
       icon: assets.insights,
-      title: localization.Services.slider.items[`0`].title[language],
-      description: localization.Services.slider.items[`0`].description[language],
+      title: t("slider.items.0.title"),
+
+      description: t("slider.items.0.description"),
     },
 
     {
       icon: assets.bulb,
-      title: localization.Services.slider.items[`1`].title[language],
-      description: localization.Services.slider.items[`1`].description[language],
+      title: t("slider.items.1.title"),
+      description: t("slider.items.1.description"),
+
     },
     {
       icon: assets.certificate,
-      title: localization.Services.slider.items[`2`].title[language],
-      description: localization.Services.slider.items[`2`].description[language],
+      title: t("slider.items.2.title"),
+      description: t("slider.items.2.description"),
     },
     {
       icon: assets.reach,
-      title: localization.Services.slider.items[`3`].title[language],
-      description: localization.Services.slider.items[`3`].description[language],
+      title: t("slider.items.3.title"),
+      description: t("slider.items.3.description"),
     },
   ];
 
@@ -140,7 +141,7 @@ const ServicesSection = () => {
         <div className="flex items-center max-md:justify-center gap-20 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
           <h1 className="text-primaryWhite text-nowrap">
             {/* Service We Offer */}
-            {localization.Services.title[language]}
+            {t("title")}
           </h1>
           <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
         </div>

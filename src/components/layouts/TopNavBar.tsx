@@ -1,7 +1,7 @@
 "use client";
 
-import { useContext, useState } from "react";
-import { usePathname } from "next/navigation";
+import { startTransition, useState } from "react";
+import { useParams } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -10,7 +10,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
+  // Link as NextLink,
   Button,
 } from "@nextui-org/react";
 
@@ -25,8 +25,9 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,14 +60,25 @@ const TopNavBar = () => {
     },
   ];
 
+  // const pathname = usePathname(); //todo:
+
+ const t = useTranslations("");
+
+  const locale = useLocale();
   const pathname = usePathname();
-
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
-
-  const { changeLanguage } = useContext(LanguageContext);
+  const params = useParams();
+  const router = useRouter();
 
   const handleLanguageChange = (lang: string) => {
-    changeLanguage(lang);
+    startTransition(() => {
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: lang }
+      );
+    });
   };
 
   return (
@@ -80,7 +92,7 @@ const TopNavBar = () => {
       }`}
     >
       <NavbarContent>
-        <Link href="/">
+        <Link  locale={locale} href="/">
           <NavbarBrand className="flex items-center gap-4">
             <Image src={logo} alt="Logo" className="w-[104px] h-[70px]" />
             <p className="font-bold text-primaryWhite text-[18px] max-sm:text-[16px] font-istok leading-[23px] tracking-[.30em]">
@@ -111,7 +123,7 @@ const TopNavBar = () => {
             href="/our-products"
           >
             {/* Our Products */}
-            {localization.Project.title[language]}
+             {t("Project.title")}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -124,7 +136,7 @@ const TopNavBar = () => {
             href="/about-us"
           >
             {/* About Us */}
-            {localization.AboutUs.title[language]}
+             {t("AboutUs.title")}
           </Link>
         </NavbarItem>
         <button
@@ -132,20 +144,20 @@ const TopNavBar = () => {
           className="font-roboto font-bold text-xl leading-[18px] text-secondaryGray"
         >
           {/* Our projects */}
-          {localization.ProductsHeroSection.title[language]}
+           {t("ProductsHeroSection.title")}
         </button>
         <NavbarItem>
-          <Link className="" href="/contact">
+          <Link  locale={locale} className="" href="/contact">
             <Button className="h-[37px] rounded-none font-roboto bg-primaryBlue text-primaryWhite font-bold text-xl">
               {/* Contact */}
-              {localization.Contact.title[language]}
+               {t("Contact.title")}
             </Button>
           </Link>
         </NavbarItem>
         <NavbarItem>
           <button
             className="flex gap-x-1 items-center text-primaryWhite text-xl"
-            onClick={() => handleLanguageChange(language == "en" ? "nl" : "en")}
+            onClick={() => handleLanguageChange(locale == "en" ? "nl" : "en")}
           >
             <svg
               stroke="currentColor"
@@ -161,7 +173,8 @@ const TopNavBar = () => {
             </svg>
 
             <p className="font-semibold font-roboto text-lg text-primaryWhite">
-              {language == "en" ? "EN" : "NL"}
+              {/* {language == "en" ? "EN" : "NL"} */}
+              {locale.toLocaleUpperCase()}
             </p>
           </button>
         </NavbarItem>
@@ -197,20 +210,20 @@ const TopNavBar = () => {
                     : "text-secondaryGray"
                 } w-full font-roboto font-bold text-[24px]`}
                 href={item.link}
-                size="lg"
+                // size="lg"
               >
                 {index === 4 ? (
-                  <Link href="/contact" className="w-full">
+                  <Link  locale={locale} href="/contact" className="w-full">
                     <button className="w-full h-[69px]  rounded-none font-roboto bg-primaryBlue   text-primaryWhite font-bold text-[24px]">
                       {/* Contact */}
-                      {localization.Contact.title[language]}
+                       {t("Contact.title")}
                     </button>
                   </Link>
                 ) : index === 5 ? (
                   <button
                     className="flex gap-x-1 items-center text-primaryWhite text-xl w-full justify-center mt-[-30px]"
                     onClick={() =>
-                      handleLanguageChange(language == "en" ? "nl" : "en")
+                      handleLanguageChange(locale == "en" ? "nl" : "en")
                     }
                   >
                     <svg
@@ -227,7 +240,7 @@ const TopNavBar = () => {
                     </svg>
 
                     <p className="font-semibold font-roboto text-lg text-primaryWhite">
-                      {language == "en" ? "EN" : "NL"}
+                      {locale == "en" ? "EN" : "NL"}
                     </p>
                   </button>
                 ) : item.title === "Our Projects" ? (
@@ -239,7 +252,7 @@ const TopNavBar = () => {
                     }}
                   >
                     {/* Our Projects */}
-                    {localization.Project.title[language]}
+                     {t("Project.title")}
                   </button>
                 ) : (
                   <p className="text-center mx-auto">{item.title}</p>
@@ -257,7 +270,7 @@ const TopNavBar = () => {
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {/* Coming Soon: Exciting New Projects! */}
-                {localization.ProjectModal.Header[language]}
+                 {t("ProjectModal.Header")}
               </ModalHeader>
               <ModalBody>
                 <p>
@@ -266,13 +279,13 @@ const TopNavBar = () => {
                   cutting-edge technology to fresh, bold ideas, there’s
                   something for everyone. Stay tuned for updates, we cant wait
                   to share whats next! */}
-                  {localization.ProjectModal.Body[language]}
+                   {t("ProjectModal.Body")}
                 </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   {/* Close */}
-                  {localization.ProjectModal.Footer.CloseButton[language]}
+                   {t("ProjectModal.Footer.CloseButton")}
                 </Button>
               </ModalFooter>
             </>

@@ -34,6 +34,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   const changeLanguage = (newLanguage: string) => {
     setLanguage(newLanguage);
     localStorage.setItem("preferredLanguage", newLanguage);
+    document.cookie = `language=${newLanguage}; path=/; max-age=${60 * 60 * 24 * 365}`; // Expires in 1 year
   };
 
   return (

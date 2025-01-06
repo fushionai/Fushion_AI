@@ -9,12 +9,11 @@ import AboutUsOurValues from "@/components/about-us-page-components/AboutUsOurVa
 // import AboutUsLatestNews from "@/components/about-us-page-components/AboutUsLatestNews";
 // import ContactSection from "@/components/about-us-page-components/ContactSection";
 
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useAppDispatch } from "@/redux/hooks";
 import { toast } from "react-toastify";
 import { getNews } from "@/redux/news/newsSlice";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 import AboutUsMissionVision from "@/components/about-us-page-components/AboutUsMissionVision";
 
 const AboutUsPage = () => {
@@ -31,7 +30,7 @@ const AboutUsPage = () => {
     fetchNews();
   }, [dispatch]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("AboutUs");
 
   return (
     <section>
@@ -50,7 +49,7 @@ const AboutUsPage = () => {
           <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
               {/* About Us */}
-              {localization.AboutUs.title[language]}
+              {t("title")}
             </h2>
             <h6 className="max-w-[1158px] mx-auto mt-5 sm:mt-10 font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite text-center">
               {/* We are a rapidly growing tech startup specializing in artificial
@@ -62,7 +61,7 @@ const AboutUsPage = () => {
               but highly skilled team thrives on collaboration and creativity,
               pushing the boundaries of what&apos;s possible in the real estate
               market. */}
-              {localization.AboutUs.description[language]}
+              {t("description")}
             </h6>
 
             <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">

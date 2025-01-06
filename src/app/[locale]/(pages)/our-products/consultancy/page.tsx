@@ -6,12 +6,10 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
 import { Button, Link } from "@nextui-org/react";
 import { ArrowRight } from "lucide-react";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const Consultancy = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("ProductsHeroSection.consultancy");
 
   return (
     <section>
@@ -30,7 +28,7 @@ const Consultancy = () => {
           <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
               {/* Consultancy */}
-              {localization.ProductsHeroSection.consultancy.title[language]}
+              {t("title")}
             </h2>
             <h6 className="max-w-[1158px] mx-auto mt-5 sm:mt-10 font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite text-center">
               {/* At Fushion AI, we offer tailored consultancy services to support
@@ -43,11 +41,7 @@ const Consultancy = () => {
               with data-driven strategies, enabling you to make informed
               decisions and maximize returns. Together, we ensure you stay ahead
               in the competitive real estate landscape. */}
-              {
-                localization.ProductsHeroSection.consultancy.subheading[
-                  language
-                ]
-              }
+              {t("subheading")}
             </h6>
 
             <Link href="/contact" className="flex items-center justify-center">
@@ -57,10 +51,8 @@ const Consultancy = () => {
                 size="lg"
               >
                 {/* Get in touch with us now */}
-                {
-                  localization.ProductsHeroSection.consultancy.buttons
-                    .getInTouch[language]
-                }
+                {t("buttons.getInTouch")}
+
                 <ArrowRight />
               </Button>
             </Link>

@@ -8,41 +8,34 @@ import TopNavBar from "@/components/layouts/TopNavBar";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 
 import assert from "@/assets/index";
-import Link from "next/link";
-import { localization } from "@/data/localization";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
+import { Link } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 
 const PropertyReportPage = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+   const locale = useLocale();
+  const t = useTranslations("ProductsPropertyReport");
 
-  const propertyHeroContent =
-    localization.ProductsPropertyReport.subtitle[language];
+  const propertyHeroContent = t("subtitle");
 
-  const propertyHeroList = [
-    localization.ProductsPropertyReport.list[language][0],
-    localization.ProductsPropertyReport.list[language][1],
-    localization.ProductsPropertyReport.list[language][2],
-  ];
+  const propertyHeroList = [t("list.0"), t("list.1"), t("list.2")];
 
   const propertyBenefitOfBuyer = [
-    localization.ProductsPropertyReport.BenefitsForBuyers.list[language][0],
-    localization.ProductsPropertyReport.BenefitsForBuyers.list[language][1],
-    localization.ProductsPropertyReport.BenefitsForBuyers.list[language][2],
+    t("BenefitsForBuyers.list.0"),
+    t("BenefitsForBuyers.list.1"),
+    t("BenefitsForBuyers.list.2"),
   ];
 
   const propertyInformationIncludedList = [
-    localization.ProductsPropertyReport.InformationIncluded.list[language][0],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][1],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][2],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][3],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][4],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][5],
-    localization.ProductsPropertyReport.InformationIncluded.list[language][6],
+    t("InformationIncluded.list.0"),
+    t("InformationIncluded.list.1"),
+    t("InformationIncluded.list.2"),
+    t("InformationIncluded.list.3"),
+    t("InformationIncluded.list.4"),
+    t("InformationIncluded.list.5"),
+    t("InformationIncluded.list.6"),
   ];
 
-  const propertyDeliveryTime =
-    localization.ProductsPropertyReport.DeliveryTime.description[language];
+  const propertyDeliveryTime = t("DeliveryTime.description");
   return (
     <div>
       <section className="relative pb-36 max-sm:pb-20">
@@ -62,7 +55,7 @@ const PropertyReportPage = () => {
               <header className="max-w-[542px]">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-md:text-center max-md:text-[32px] max-md:leading-[48px]">
                   {/* Property Report */}
-                  {localization.ProductsPropertyReport.title[language]}{" "}
+                  {t("title")}{" "}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-md:text-center">
                   {propertyHeroContent}
@@ -85,20 +78,16 @@ const PropertyReportPage = () => {
                     {/* Please note that the Comprehensive Property Report may
                     sometimes be unavailable, and not all elements may be
                     included in every report. */}
-                    {localization.ProductsPropertyReport.note[language]}
+                    {t("note")}
                   </p>
                 </div>
               </div>
             </div>
             <div className="max-md:flex justify-center items-center">
-              <Link href="/contact">
+              <Link href="/contact" locale={locale}>
                 <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
-                  {
-                    localization.ProductsPropertyReport.buttons.contactUs[
-                      language
-                    ]
-                  }
+                  {t("buttons.contactUs")}
                 </Button>
               </Link>
             </div>
@@ -118,13 +107,11 @@ const PropertyReportPage = () => {
 
       <div className="relative bg-primaryWhite pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Benefits for Buyers: */}
-            {
-              localization.ProductsPropertyReport.BenefitsForBuyers.heading[
-                language
-              ]
-            }
+            {t("BenefitsForBuyers.heading")}
           </h2>
 
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
@@ -152,13 +139,11 @@ const PropertyReportPage = () => {
 
       <div className="bg-[#F4F5FF] pb-20 relative">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Information Included */}
-            {
-              localization.ProductsPropertyReport.InformationIncluded.heading[
-                language
-              ]
-            }
+            {t("InformationIncluded.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             {propertyInformationIncludedList.map((list, index) => (
@@ -185,9 +170,11 @@ const PropertyReportPage = () => {
 
       <div className="bg-primaryWhite py-10">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue ">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue ">
+            {" "}
+            {/* text-[32px] */}
             {/* Delivery Time: */}
-            {localization.ProductsPropertyReport.DeliveryTime.heading[language]}
+            {t("DeliveryTime.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             <li className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue ">

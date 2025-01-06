@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import assets from "@/assets/index";
 import { Button } from "@nextui-org/react";
-import Link from "next/link";
+// import Link from "next/link";
 import logo from "@/assets/icons/logo.svg";
 import {
   Modal,
@@ -13,12 +13,12 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
-import { localization } from "@/data/localization";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Footer = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const locale = useLocale();
+  const t = useTranslations("");
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -81,27 +81,27 @@ const Footer = () => {
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               {/* About Us */}
-              {localization.AboutUs.title[language]}
+              {t("AboutUs.title")}
             </Link>
             <Link
               href="/our-products"
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               {/* Our Products */}
-              {localization.Project.title[language]}
+              {t("Project.title")}
             </Link>
             <button
               onClick={onOpen}
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               {/* Our projects */}
-              {localization.Project.title[language]}
+              {t("Project.title")}
             </button>
             <div className="flex max-md:w-full">
-              <Link className="max-md:w-full" href="/contact">
+              <Link className="max-md:w-full" href="/contact" locale={locale}>
                 <Button className="flex px-5 h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
                   {/* Contact Us */}
-                  {localization.UpFooter.buttons.contactUs[language]}
+                  {t("UpFooter.buttons.contactUs")}
                 </Button>
               </Link>
             </div>
@@ -112,25 +112,25 @@ const Footer = () => {
         <div className="flex flex-col gap-4 mt-6">
           <p className="font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
             {/* Innovating Real Estate with AI Precision */}
-            {localization.Footer.heading[language]}
+            {t("Footer.heading")}
           </p>
 
           <div className="flex flex-wrap items-center gap-2 font-ubuntu font-normal text-[13px] leading-[18px] text-primaryWhite">
-            <p> Fushion AI 2024 (c) {localization.Footer.rights[language]} </p>
+            <p> Fushion AI 2024 (c) {t("Footer.rights")} </p>
             <p>|</p>
             <button onClick={() => downloadPdf("Privacy policy")}>
               {/* Privacy Policy */}
-              {localization.Footer.privacyPolicy[language]}{" "}
+              {t("Footer.privacyPolicy")}{" "}
             </button>
             <p>|</p>
             <button onClick={() => downloadPdf("Terms and conditions")}>
               {/* Terms and Conditions */}
-              {localization.Footer.termsAndConditions[language]}{" "}
+              {t("Footer.termsAndConditions")}{" "}
             </button>
             <p>|</p>
             <button onClick={() => downloadPdf("Cookie policy")}>
               {/* Cookie Policy */}
-              {localization.Footer.CookiePolicy[language]}{" "}
+              {t("Footer.CookiePolicy")}{" "}
             </button>
           </div>
         </div>
@@ -142,7 +142,7 @@ const Footer = () => {
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {/* Coming Soon: Exciting New Projects! */}
-                {localization.ProjectModal.Header[language]}
+                {t("ProjectModal.Header")}
               </ModalHeader>
               <ModalBody>
                 <p>
@@ -151,13 +151,13 @@ const Footer = () => {
                   cutting-edge technology to fresh, bold ideas, there’s
                   something for everyone. Stay tuned for updates, we cant wait
                   to share whats next! */}
-                  {localization.ProjectModal.Body[language]}
+                  {t("ProjectModal.Body")}
                 </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   {/* Close */}
-                  {localization.ProjectModal.Footer.CloseButton[language]}
+                  {t("ProjectModal.Footer.CloseButton")}
                 </Button>
               </ModalFooter>
             </>

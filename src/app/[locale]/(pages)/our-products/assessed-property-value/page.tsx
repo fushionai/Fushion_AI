@@ -6,36 +6,26 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 // import assessedPropertyContents from "@/contents/our-products-contents/assessed-property-value";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
-import Link from "next/link";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
-import { localization } from "@/data/localization";
+import { Link } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 
 const AssessedPropertyValuePage = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const locale = useLocale();
+  const t = useTranslations("ProductsAssessedPropertyValue");
 
   const assessedHeroSectionList = [
-    localization.ProductsAssessedPropertyValue.list[language][0],
-    localization.ProductsAssessedPropertyValue.list[language][1],
-    localization.ProductsAssessedPropertyValue.list[language][2],
-    localization.ProductsAssessedPropertyValue.list[language][3],
+    t("list.0"),
+    t("list.1"),
+    t("list.2"),
+    t("list.3"),
   ];
 
-  const assessedDeliveryTime =
-    localization.ProductsAssessedPropertyValue.DeliveryTime.description[
-      language
-    ];
+  const assessedDeliveryTime = t("DeliveryTime.description");
 
   const assessedBenefitOfBuyer = [
-    localization.ProductsAssessedPropertyValue.BenefitsForBuyers.list[
-      language
-    ][0],
-    localization.ProductsAssessedPropertyValue.BenefitsForBuyers.list[
-      language
-    ][1],
-    localization.ProductsAssessedPropertyValue.BenefitsForBuyers.list[
-      language
-    ][2],
+    t("BenefitsForBuyers.list.0"),
+    t("BenefitsForBuyers.list.1"),
+    t("BenefitsForBuyers.list.2"),
   ];
 
   return (
@@ -57,15 +47,11 @@ const AssessedPropertyValuePage = () => {
               <header className="max-w-[542px]">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-md:text-center max-md:text-[32px] max-md:leading-[48px]">
                   {/* Assessed Property Value */}
-                  {localization.ProductsAssessedPropertyValue.title[language]}
+                  {t("title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-md:text-center">
                   {/* Ideal for accurately estimating the value of a property. */}
-                  {
-                    localization.ProductsAssessedPropertyValue.subtitle[
-                      language
-                    ]
-                  }
+                  {t("subtitle")}
                 </p>
               </header>
               <ul className="list-disc space-y-3 max-md:px-6">
@@ -80,13 +66,10 @@ const AssessedPropertyValuePage = () => {
               </ul>
             </div>
             <div className="max-md:flex justify-center items-center">
-              <Link href="/contact">
+              <Link href="/contact" locale={locale}>
                 <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
-                  {
-                    localization.ProductsAssessedPropertyValue.buttons
-                      .contactUs[language]
-                  }
+                  {t("buttons.contactUs")}
                 </Button>
               </Link>
             </div>
@@ -106,20 +89,18 @@ const AssessedPropertyValuePage = () => {
 
       <div className="relative bg-primaryWhite py-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* What is it? */}
-            {localization.ProductsAssessedPropertyValue.questions[language]}
+            {t("questions")}
           </h2>
           <div className="list-disc space-y-3 px-6 max-w-[800px]">
             <p className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue">
               {/* {assessedPropertyContents.whatIsIt}{" "} */}
-              {localization.ProductsAssessedPropertyValue.answer[language]}
+              {t("answer")}
               <a href="#" className={`text-primaryBlue`}>
-                {
-                  localization.ProductsAssessedPropertyValue.buttons.clickHere[
-                    language
-                  ]
-                }
+                {t("buttons.clickHere")}
               </a>
             </p>
           </div>
@@ -138,12 +119,11 @@ const AssessedPropertyValuePage = () => {
 
       <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Information Included */}
-            {
-              localization.ProductsAssessedPropertyValue.InformationIncluded
-                .heading[language]
-            }{" "}
+            {t("InformationIncluded.heading")}{" "}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             {assessedHeroSectionList.map((list, index) => (
@@ -170,13 +150,11 @@ const AssessedPropertyValuePage = () => {
 
       <div className="bg-primaryWhite py-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">
+            {" "}
+            {/* text-[32px] */}
             {/* Delivery Time: */}
-            {
-              localization.ProductsAssessedPropertyValue.DeliveryTime.heading[
-                language
-              ]
-            }{" "}
+            {t("DeliveryTime.heading")}{" "}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             <li className="font-roboto font-normal text-[20px] leading-[30px]">
@@ -198,12 +176,11 @@ const AssessedPropertyValuePage = () => {
         </div>
 
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-[#161527] max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Benefits for Buyers: */}
-            {
-              localization.ProductsAssessedPropertyValue.BenefitsForBuyers
-                .heading[language]
-            }{" "}
+            {t("BenefitsForBuyers.heading")}{" "}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px] text-[#161527]">
             {assessedBenefitOfBuyer.map((list, index) => (

@@ -6,68 +6,35 @@ import { Button } from "@nextui-org/react";
 import TopNavBar from "@/components/layouts/TopNavBar";
 // import purchaseContents from "@/contents/our-products-contents/purchase-price-contents";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
-import Link from "next/link";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
-import { localization } from "@/data/localization";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const PurchasePriceInformationPage = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const locale = useLocale();
+  const t = useTranslations("ProductsPurchasePriceInformation");
 
-  const heroSectionList = [
-    localization.ProductsPurchasePriceInformation.list[language][0],
-    localization.ProductsPurchasePriceInformation.list[language][1],
-    localization.ProductsPurchasePriceInformation.list[language][2],
-  ];
+  const heroSectionList = [t("list.0"), t("list.1"), t("list.2")];
 
-  const purchasePriceContents =
-    localization.ProductsPurchasePriceInformation.note[language];
+  const purchasePriceContents = t("note");
 
   const informationIncludedList = [
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][0],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][1],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][2],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][3],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][4],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][5],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][6],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][7],
-    localization.ProductsPurchasePriceInformation.InformationIncluded.list[
-      language
-    ][8],
+    t("InformationIncluded.list.0"),
+    t("InformationIncluded.list.1"),
+    t("InformationIncluded.list.2"),
+    t("InformationIncluded.list.3"),
+    t("InformationIncluded.list.4"),
+    t("InformationIncluded.list.5"),
+    t("InformationIncluded.list.6"),
+    t("InformationIncluded.list.7"),
+    t("InformationIncluded.list.8"),
   ];
 
-  const deliveryTime =
-    localization.ProductsPurchasePriceInformation.DeliveryTime.description[
-      language
-    ];
+  const deliveryTime = t("DeliveryTime.description");
 
   const benefitOfBuyersList = [
-    localization.ProductsPurchasePriceInformation.BenefitsForBuyers.list[
-      language
-    ][0],
-    localization.ProductsPurchasePriceInformation.BenefitsForBuyers.list[
-      language
-    ][1],
-    localization.ProductsPurchasePriceInformation.BenefitsForBuyers.list[
-      language
-    ][2],
+    t("BenefitsForBuyers.list.0"),
+    t("BenefitsForBuyers.list.1"),
+    t("BenefitsForBuyers.list.2"),
   ];
 
   return (
@@ -89,21 +56,13 @@ const PurchasePriceInformationPage = () => {
               <header className="max-w-[542px]">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-md:text-center max-md:text-[32px] max-md:leading-[48px]">
                   {/* Purchase Price Information */}
-                  {
-                    localization.ProductsPurchasePriceInformation.title[
-                      language
-                    ]
-                  }
+                  {t("title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-md:text-center">
                   {/* Planning to buy or sell a house on a specific street? Our
                   Transaction Overview provides you with all recent and
                   historical sales and purchase prices of properties. */}
-                  {
-                    localization.ProductsPurchasePriceInformation.subtitle[
-                      language
-                    ]
-                  }
+                  {t("subtitle")}
                 </p>
               </header>
               <ul className="list-disc space-y-3 max-md:px-6">
@@ -118,13 +77,10 @@ const PurchasePriceInformationPage = () => {
               </ul>
             </div>
             <div className="max-md:flex justify-center items-center">
-              <Link href="/contact">
+              <Link href="/contact" locale={locale}>
                 <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
-                  {
-                    localization.ProductsPurchasePriceInformation.buttons
-                      .contactUs[language]
-                  }
+                  {t("buttons.contactUs")}
                 </Button>
               </Link>
             </div>
@@ -144,12 +100,11 @@ const PurchasePriceInformationPage = () => {
 
       <div className="bg-primaryWhite relative pb-16">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Information Included */}
-            {
-              localization.ProductsPurchasePriceInformation.InformationIncluded
-                .heading[language]
-            }
+            {t("InformationIncluded.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             {informationIncludedList.map((list, index) => (
@@ -194,12 +149,11 @@ const PurchasePriceInformationPage = () => {
 
       <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">   {/* text-[32px] */}
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px]">
+            {" "}
+            {/* text-[32px] */}
             {/* Delivery Time: */}
-            {
-              localization.ProductsPurchasePriceInformation.DeliveryTime
-                .heading[language]
-            }
+            {t("DeliveryTime.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             <li className="font-roboto font-normal text-[20px] leading-[30px]">
@@ -221,12 +175,11 @@ const PurchasePriceInformationPage = () => {
 
       <div className="bg-primaryWhite">
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Benefits for Buyers: */}
-            {
-              localization.ProductsPurchasePriceInformation.BenefitsForBuyers
-                .heading[language]
-            }
+            {t("BenefitsForBuyers.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             {benefitOfBuyersList.map((list, index) => (

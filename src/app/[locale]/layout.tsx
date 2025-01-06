@@ -20,6 +20,9 @@ import { Metadata } from "next";
 import AppProviders from "./AppProviders";
 import { LanguageProvider } from "@/context/useLanguage";
 import Favicon from "./favicon.ico";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Fushion AI",
@@ -45,14 +48,25 @@ export const metadata: Metadata = {
     ],
   },
 };
-
-export default function RootLayout({
+const locales = ["en", "nl"];
+export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  // Ensure that the incoming `locale` is valid
+  // if (!routing.locales.includes(locale as any)) {
+  //   notFound();
+  // }
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={locale} translate="no">
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-890ZT6SCEL"
         strategy="afterInteractive"
@@ -73,6 +87,7 @@ export default function RootLayout({
           content="Transform real estate with the power of data"
         />
       </head>
+      <meta name="google" content="notranslate"></meta>
       <body className={`antialiased`}>
         {/* <NextUIProvider>
           <Provider store={store}>
@@ -86,12 +101,14 @@ export default function RootLayout({
             </LanguageProvider>
           </Provider>
         </NextUIProvider> */}
-        <LanguageProvider>
-          <AppProviders>
-            {children}
-            <Footer />
-          </AppProviders>
-        </LanguageProvider>
+        <NextIntlClientProvider messages={messages}>
+          <LanguageProvider>
+            <AppProviders>
+              {children}
+              <Footer />
+            </AppProviders>
+          </LanguageProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,0 +1,474 @@
+{
+  "Hero": {
+    "heading": "Innovatie in Vastgoed met AI-Precisie",
+    "subheading": "Transformeer vastgoed met de kracht van data",
+    "buttons": {
+      "discoverMore": "Ontdek Meer",
+      "contactUs": "Contact Ons"
+    }
+  },
+  "Services": {
+    "title": "Diensten die wij aanbieden",
+    "slider": {
+      "items": [
+        {
+          "title": "Inzichten voor investeerders en professionals",
+          "description": "Wij bieden gedetailleerde analyses die essentieel zijn voor het Neem van strategische beslissingen in vastgoedinvesteringen. Dit omvat markttrends, voorspellingen van vastgoedprijzen en een grondige evaluatie van risico's die verband houden met de huizenmarkt."
+        },
+        {
+          "title": "Maatwerkoplossingen",
+          "description": "Elk project is uniek. Daarom werken we nauw samen met onze klanten om op maat gemaakte oplossingen te leveren die aansluiten bij hun specifieke behoeften en doelen."
+        },
+        {
+          "title": "Onze Expertise",
+          "description": "Met een team van ervaren datawetenschappers en specialisten in financiële econometrie combineren we geavanceerde machine learning-technieken met diepgaande marktkennis. Onze modellen zijn niet alleen nauwkeurig en betrouwbaar, maar worden ook continu aangepast aan de veranderende markt."
+        },
+        {
+          "title": "Toegewijd aan jouw succes",
+          "description": "Bij Fusion AI staat jouw succes centraal. We zijn toegewijd aan het leveren van hoogwaardige diensten die je helpen slimme, op data gebaseerde beslissingen te Neem. Of je nu een consument, makelaar of vastgoedprofessional bent, wij staan klaar om je te ondersteunen met onze expertise."
+        }
+      ]
+    },
+    "navigation": {
+      "prevArrow": {
+        "alt": ""
+      },
+      "nextArrow": {
+        "alt": ""
+      }
+    }
+  },
+  "features": {
+    "title": "Waarom kiezen voor",
+    "subtitle": "Fushion AI?",
+    "description": "Bij Fushion AI geloven we in de transformerende kracht van data om de vastgoedmarkt te revolutioneren. Onze kernmissie is om onze klanten in staat te stellen geavanceerde kunstmatige intelligentie (AI) modellen te gebruiken die essentiële inzichten bieden, zodat ze weloverwogen investeringsbeslissingen kunnen Neem op basis van nauwkeurige en up-to-date informatie.",
+    "accordion": {
+      "order1": {
+        "titlePart1": "Ongeëvenaarde expertise in",
+        "titleColored1": "AI",
+        "titlePart2": "en",
+        "titleColored2": "vastgoed",
+        "description": "Ons team van experts combineert diepgaande kennis van AI met uitgebreide ervaring in de vastgoedsector. Deze unieke combinatie stelt ons in staat om baanbrekende oplossingen te ontwikkelen die specifiek zijn afgestemd op de behoeften van consumenten, vastgoedmakelaars, vastgoedbedrijven en ontwikkelaars."
+      },
+      "order2": {
+        "title": "Uitgebreide",
+        "titleColored1": "data-analyse",
+        "description": "We maken gebruik van geavanceerde AI-algoritmen om enorme hoeveelheden data uit verschillende bronnen te analyseren, zodat onze klanten een volledig overzicht van de markt hebben. Van prijsontwikkelingen en vastgoedwaarderingen tot dynamiek in buurten en investeringspotentieel, onze inzichten dekken elk belangrijk aspect van vastgoed."
+      },
+      "order3": {
+        "title": "Real-time, Nauwkeurige Inzichten",
+        "description": "In de snel veranderende wereld van vastgoed is tijdige informatie cruciaal. Onze AI-modellen verwerken en updaten continu gegevens, waardoor onze klanten real-time inzichten krijgen die de huidige marktomstandigheden weerspiegelen. Dit stelt hen in staat om voorop te blijven lopen op de concurrentie en met vertrouwen beslissingen te Neem."
+      },
+      "order4": {
+        "title": "Maatwerkoplossingen voor Diverse Behoeften",
+        "description": "Bij Fushion AI begrijpen we dat elke klant uniek is. Of u nu een beginnende huizenkoper bent, een ervaren investeerder of een grootschalige projectontwikkelaar, onze diensten zijn ontworpen om aan uw specifieke behoeften te voldoen. We bieden op maat gemaakte oplossingen die aansluiten bij een breed scala aan vastgoedsituaties, zodat u de meest relevante en bruikbare inzichten ontvangt."
+      },
+      "order5": {
+        "title": "Toewijding aan Innovatie",
+        "description": "Wij zetten ons in om aan de voorhoede van technologische vooruitgang te blijven. Door onze AI-modellen voortdurend te verfijnen en de nieuwste ontwikkelingen in datawetenschap te integreren, zorgen we ervoor dat onze klanten profiteren van de meest innovatieve en effectieve tools die op de markt beschikbaar zijn."
+      },
+      "order6": {
+        "title": "Betrouwbare Partner in Vastgoed",
+        "description": "Kiezen voor Fushion AI betekent samenwerken met een vertrouwde bondgenoot tijdens uw vastgoedtraject. Ons doel is om u te helpen de complexiteiten van de markt met gemak te doorgronden, zodat u slimmere, data-gedreven beslissingen kunt Neem die leiden tot succesvolle resultaten."
+      }
+    }
+  },
+  "coreValues": {
+    "title": "Kernwaarden van Fushion AI",
+    "description": "Bij Fushion AI staat uw succes voorop. Wij zetten ons in om hoogwaardige diensten te leveren die u helpen slimme, data-gedreven beslissingen te Neem. Of u nu een consument, vastgoedmakelaar of vastgoedprofessional bent, wij staan klaar om u te ondersteunen met onze expertise.",
+    "values": [
+      {
+        "title": "Innovatie",
+        "description": "De grenzen verleggen van wat mogelijk is met AI om nieuwe en effectieve oplossingen te bieden voor de vastgoedmarkt."
+      },
+      {
+        "title": "Integriteit",
+        "description": "Het handhaven van de hoogste ethische normen in alle zakelijke transacties."
+      },
+      {
+        "title": "Professionaliteit",
+        "description": "Het leveren van eersteklas service met expertise en toewijding."
+      },
+      {
+        "title": "Klantgerichtheid",
+        "description": "De behoeften en het succes van onze klanten centraal stellen in alles wat we doen."
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "Toegewijd aan Uw Succes",
+    "description": "Bij Fushion AI staat uw succes voorop. Wij zijn toegewijd aan het leveren van hoogwaardige diensten die u helpen slimme, data-gedreven beslissingen te Neem. Of u nu een consument, vastgoedmakelaar of vastgoedprofessional bent, wij staan klaar om u te ondersteunen met onze expertise.",
+    "testimonials": [
+      {
+        "testimonial": "Ik had geen idee of mijn appartement in Amsterdam boven de liberalisatiegrens viel of niet, maar FusionAI heeft me echt geholpen om dat uit te zoeken. Ze gaven me een schatting met behulp van het puntensysteem en legden uit dat ik mijn huur niet hoefde te verlagen. Het was een enorme opluchting en super behulpzaam!",
+        "fullName": "Sven K.",
+        "position": "Vastgoedinvesteerder"
+      },
+      {
+        "testimonial": "Ik overwoog om mijn 'erfpacht' in Amsterdam af te kopen, maar FusionAI suggereerde dat het wellicht beter zou zijn om in plaats daarvan te investeren in een nieuw huis. Ze lieten me zien hoe de woningmarkt zich door de tijd heen heeft ontwikkeld, en dat hielp me echt om een slimmer besluit te Neem. Ik ben zo blij dat ik hun advies heb opgevolgd!",
+        "fullName": "Eva M.",
+        "position": "Vastgoedeigenaar"
+      },
+      {
+        "testimonial": "Ik had een hoop juridische documenten nodig over mijn huis, zoals eigendomspapieren en transactie-informatie, en FusionAI regelde alles snel voor me. Ze maakten het hele proces zoveel makkelijker en stressvrij. Ik had het niet zonder hen kunnen doen!",
+        "fullName": "Kane V.",
+        "position": "Vastgoedeigenaar"
+      },
+      {
+        "testimonial": "Ik twijfelde tussen het kopen van twee sociale huurwoningen om te verhuren of één duurdere woning. FusionAI analyseerde de cijfers voor me en stelde voor dat een woning in de vrije markt betere rendementen zou opleveren. Hun advies was precies wat ik nodig had, en ik voel me nu veel zekerder over mijn beslissing.",
+        "fullName": "Lotte D.",
+        "position": "Vastgoedinvesteerder"
+      }
+    ]
+  },
+  "ProductsHeroSection": {
+    "title": "Onze Producten",
+    "subheading": "Ontgrendel uitgebreide marktinformatie met ons Market Info-pakket. Krijg gedetailleerde inzichten in markttrends, vastgoedwaarden en meer om weloverwogen beslissingen te Neem.",
+    "buttons": {
+      "purchasePriceInfo": "Informatie over aankoopprijzen",
+      "purchasePriceInfoDescription": "Gedetailleerde informatie over aankoopprijzen om u te helpen de dynamiek van de vastgoedmarkt te begrijpen.",
+      "assessedPropertyValue": "Getaxeerde Vastgoedwaarde",
+      "assessedPropertyValueDescription": "Toegang tot de getaxeerde waarde van eigendommen om de marktwaarde nauwkeurig te bepalen.",
+      "propertyReport": "Vastgoedrapport",
+      "propertyReportDescription": "Een uitgebreid vastgoedrapport dat aankoopprijsinformatie, getaxeerde waarde, hypotheekdetails en meer combineert. We voegen ook Kadastergegevens toe om de meest betrouwbare en uitgebreide inzichten te bieden.",
+      "consultancy": "Consultancy",
+      "consultancyDescription": "Onze AI-gedreven consultancydiensten bieden vastgoedprofessionals data-gedreven inzichten om slimmer en sneller beslissingen te Neem. Op maat gemaakt, transformeren wij de manier waarop u de vastgoedmarkt benadert."
+    },
+    "consultancy": {
+      "title": "Consultancy",
+      "subheading": "Bij Fushion AI bieden we op maat gemaakte consultancy-diensten om onze klanten te ondersteunen bij het navigeren door de complexiteiten van de vastgoedmarkt. Als tech-gedreven bedrijf combineren we onze expertise in geavanceerde analyses, kunstmatige intelligentie en markttrends om bruikbare inzichten en op maat gemaakte oplossingen te leveren. Of u nu een vastgoedinvesteerder, ontwikkelaar of vastgoedprofessional bent, onze consultancy-diensten zijn erop gericht u te versterken met data-gedreven strategieën, zodat u weloverwogen beslissingen kunt Neem en uw rendement kunt maximaliseren. Samen zorgen we ervoor dat u een stap voor blijft in de concurrerende vastgoedmarkt.",
+      "buttons": {
+        "getInTouch": "Neem nu contact met ons op"
+      }
+    }
+  },
+  "PropertySection": {
+    "title": "Vastgoedwaardering",
+    "description": "Ons Vastgoedwaarderingsproduct maakt gebruik van geavanceerde technologie om nauwkeurige vastgoedwaardebepalingen te bieden.",
+    "sections": [
+      {
+        "title": "Analyse van Vastgoedwaardering",
+        "description": "Vergelijk vergelijkbare eigendommen om nauwkeurige prijzen te bepalen, zodat u concurrerend blijft in de markt.",
+        "buttons": {
+          "learnMore": "Meer informatie",
+          "contactUs": "Contact Ons"
+        }
+      },
+      {
+        "title": "AI-aangedreven Waardering en Voorspellingen",
+        "description": "Vergelijk vergelijkbare eigendommen om nauwkeurige prijzen te bepalen, zodat u concurrerend blijft in de markt.",
+        "buttons": {
+          "learnMore": "Meer informatie",
+          "contactUs": "Contact Ons"
+        }
+      },
+      {
+        "title": "Dashboard (Binnenkort Beschikbaar)",
+        "description": "Blijf vooruit met ons intuïtieve dashboard, ontworpen om ruwe data en bruikbare inzichten direct binnen handbereik te brengen."
+      },
+      {
+        "title": "Data binnen handbereik",
+        "description": "Toegang tot ruwe data en inzichten zonder moeite, zodat u snel en efficiënt data-gedreven beslissingen kunt Neem."
+      }
+    ]
+  },
+  "ProductsOurServices": {
+    "title": "Onze Service",
+    "purchaseInfo": [
+      "Meest recente en historische transacties",
+      "Vraagprijs, transactiedatum, bouwjaar en woningtype",
+      "Aankoopprijs per vierkante meter (op basis van bruikbare oppervlakte)"
+    ],
+    "assessed": [
+      "Laatste aankoopprijs & huidige modelgebaseerde marktwaarde*",
+      "Vergelijking met 10 referentie-eigendommen (ter waarde van € 24,95)",
+      "Kadastrale kaart (ter waarde van € 19,95)",
+      "Aanvullende eigendomsinformatie"
+    ],
+    "products": [
+      {
+        "price": "34.95",
+        "title": "Informatie over Aankoopprijzen",
+        "description": "Van plan om een huis te kopen of verkopen in een specifieke straat? Ons Transactieoverzicht biedt u alle recente en historische verkoop- en aankoopprijzen van woningen."
+      },
+      {
+        "price": "24.95",
+        "title": "Getaxeerde Vastgoedwaarde",
+        "description": "Ideaal voor een nauwkeurige schatting van de waarde van een woning."
+      },
+      {
+        "price": "29.95",
+        "title": "Vastgoedrapport",
+        "description": "Het uitgebreide Vastgoedrapport biedt gedetailleerde informatie over een woning en dient als een solide basis voor het bepalen van de waarde van een woning. Dit rapport kan instrumenteel zijn bij het Neem van een beslissing over een bod op een woning waarin u geïnteresseerd bent."
+      }
+    ],
+    "buttons": {
+      "learnMore": "Meer informatie",
+      "contactUs": "Contact Ons"
+    }
+  },
+  "ProductsAIPoweredValuation": {
+    "buttons": {
+      "contactUs": "Contact Ons"
+    },
+    "title": "AI-Aangedreven Waardering en Voorspellingsrapport",
+    "subtitle": "Het AI-aangedreven Waarderings- en Voorspellingsrapport maakt gebruik van machine learning-modellen om nauwkeurige waarderingen en toekomstige prijsvoorspellingen voor vastgoed te leveren. Dit rapport is essentieel voor het voorspellen van trends op de vastgoedmarkt en het Neem van strategische beslissingen.",
+    "InformationIncluded": {
+      "heading": "Inbegrepen Informatie",
+      "list": [
+        "Voorspelde toekomstige vastgoedwaarde op basis van trends uit het verleden",
+        "Verkoopprijzen van vergelijkbare woningen in de buurt (tot 20 huisnummers)",
+        "Huidige eigenaar",
+        "Bouwjaar, volume en oppervlakte",
+        "Hypotheek",
+        "Energielabel (indien definitief bepaald)",
+        "Geschatte huidige vastgoedwaarde"
+      ],
+      "note": "Let op: Het kan voorkomen dat het Buurtvergelijkingsrapport niet beschikbaar is en niet alle elementen in elk rapport zijn opgenomen."
+    },
+    "DeliveryTime": {
+      "heading": "Levertijd:",
+      "description": "Minder dan 1 werkdag via e-mail na betaling"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Voordelen voor kopers:",
+      "list": [
+        "Nauwkeurige vastgoedwaarderingen met geavanceerde AI-modellen",
+        "Prijsvoorspellingen op basis van historische gegevens",
+        "Energielabel (indien beschikbaar)"
+      ]
+    }
+  },
+  "ProductsPropertyReport": {
+    "buttons": {
+      "contactUs": "Contact Ons"
+    },
+    "title": "Vastgoedrapport",
+    "subtitle": "Het uitgebreide Vastgoedrapport biedt gedetailleerde informatie over een woning en dient als een solide basis voor het waarderen van een huis. Dit rapport kan van cruciaal belang zijn bij het Neem van een beslissing over een bod op een huis waarin u geïnteresseerd bent.",
+    "list": [
+      "Energielabel",
+      "Geschatte woningwaarde",
+      "Verkoopprijzen van vergelijkbare woningen in de buurt"
+    ],
+    "note": "Let op: Het uitgebreide Vastgoedrapport kan soms niet beschikbaar zijn, en niet alle elementen zijn mogelijk in elk rapport opgenomen.",
+    "InformationIncluded": {
+      "heading": "Inbegrepen Informatie",
+      "list": [
+        "Gedetailleerde woningbeschrijving",
+        "Foto's van het pand",
+        "Marktanalyse",
+        "Vergelijkbare verkopen",
+        "Informatie over bestemmingsplannen",
+        "Eigendomsgeschiedenis",
+        "De kadastrale kaart en 10 referentiewoningen"
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Levertijd:",
+      "description": "Minder dan 1 werkdag via e-mail na betaling"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Voordelen voor kopers:",
+      "list": [
+        "Ons meest complete rapport",
+        "Prijzen van vergelijkbare woningen",
+        "Energielabel (indien beschikbaar)"
+      ]
+    }
+  },
+  "ProductsAssessedPropertyValue": {
+    "buttons": {
+      "contactUs": "Contact Ons",
+      "clickHere": " klik hier."
+    },
+    "title": "Getaxeerde Vastgoedwaarde",
+    "subtitle": "Ideaal voor een nauwkeurige schatting van de waarde van een woning.",
+    "questions": "Wat is het?",
+    "answer": "Het Vastgoedwaarderingsrapport biedt een snel en uitgebreid pakket aan vastgoedinformatie. Het rapport heeft betrekking op het pand en het perceel dat gekoppeld is aan het aangevraagde adres. Modelgebaseerde Vastgoedwaarde. Voor meer informatie over onze AVM-waarde",
+    "list": [
+      "Laatste aankoopprijs en huidige modelgebaseerde marktwaarde*",
+      "Vergelijking met 10 referentiewoningen (ter waarde van € 24,95)",
+      "Kadastrale kaart (ter waarde van € 19,95)",
+      "Extra vastgoedinformatie"
+    ],
+    "InformationIncluded": {
+      "heading": "Inbegrepen Informatie",
+      "list": [
+        "Laatste aankoopprijs en huidige modelgebaseerde marktwaarde*",
+        "Vergelijking met 10 referentiewoningen (ter waarde van € 24,95)",
+        "Kadastrale kaart (ter waarde van € 19,95)",
+        "Extra vastgoedinformatie"
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Levertijd:",
+      "description": "Minder dan 1 werkdag via e-mail na betaling"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Voordelen voor kopers:",
+      "list": [
+        "Gedetailleerd Inzicht in het Gebied: Verkrijg een uitgebreid overzicht van het aangevraagde postcodegebied en omliggende postcodes, tot maximaal 20 huisnummers.",
+        "Uitgebreide Vastgoedgegevens: Toegang tot recente en historische transacties van maximaal 20 woningen, ter ondersteuning van weloverwogen beslissingen.",
+        "Vastgoedwaarderingsinformatie: Ontvang de officiële WOZ-waarde als nauwkeurige referentie voor vastgoedwaardering."
+      ]
+    }
+  },
+  "ProductsValuationAnalysisReport": {
+    "buttons": {
+      "contactUs": "Contact Ons"
+    },
+    "title": "Property Valuation Analysis Report",
+    "subtitle": "Het Property Valuation Analysis Report biedt gedetailleerde vergelijkingen van soortgelijke woningen in hetzelfde gebied, met inzichten in de marktwaarde van een huis. Dit rapport is cruciaal voor het Neem van geïnformeerde beslissingen over vastgoedbeleggingen door de geschatte waarde van het vastgoed te verstrekken op basis van de Comparative Market Analysis (CMA)-benadering.",
+    "InformationIncluded": {
+      "heading": "Inbegrepen Informatie",
+      "list": [
+        "Geschatte woningwaarde op basis van de Comparative Market Analysis (CMA)-benadering",
+        "Vergelijkende analyse van soortgelijke woningen in de buurt (tot 20 huisnummers)",
+        "Huidige eigenaar",
+        "Bouwjaar, volume en oppervlakte",
+        "Hypotheek",
+        "Energielabel (indien definitief vastgesteld)"
+      ],
+      "note": "Houd er rekening mee dat het rapport voor buurtvergelijkingen soms niet beschikbaar kan zijn en dat niet alle elementen in elk rapport zijn opgenomen."
+    },
+    "DeliveryTime": {
+      "heading": "Levertijd:",
+      "description": "Minder dan 1 werkdag via e-mail na betaling"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Voordelen voor kopers:",
+      "list": [
+        "Uitgebreide vergelijking van woningen in de buurt",
+        "Inzichten in de woningwaarde in vergelijking met soortgelijke huizen",
+        "Energielabel (indien beschikbaar)"
+      ]
+    }
+  },
+  "ProductsPurchasePriceInformation": {
+    "buttons": {
+      "contactUs": "Contact Ons"
+    },
+    "title": "Informatie over Aankoopprijzen",
+    "subtitle": "Van plan om een huis te kopen of verkopen in een specifieke straat? Ons Transactieoverzicht biedt u alle recente en historische verkoop- en aankoopprijzen van woningen.",
+    "note": "Het Overzicht van Aankoopprijzen biedt details over zowel recente als historische verkopen en de bijbehorende aankoopprijzen* van woningen die zijn verkocht in het aangevraagde postcodegebied, evenals een selectie van omliggende gebieden. Dit is nuttig als u van plan bent een huis te kopen of te verkopen in een specifieke straat. U kunt het Overzicht van Aankoopprijzen gebruiken om de aankoop- of verkoopprijs van een woning te bepalen of aan te vragen en om de woninginflatie te analyseren. U ziet de prijzen waarvoor woningen zijn verkocht binnen het aangevraagde postcodegebied.",
+    "list": [
+      "Meest recente en historische transacties",
+      "Vraagprijs, transactiedatum, bouwjaar en woningtype",
+      "Aankoopprijs per vierkante meter (op basis van bruikbare oppervlakte)"
+    ],
+    "InformationIncluded": {
+      "heading": "Inbegrepen Informatie",
+      "list": [
+        "Overzicht van het aangevraagde postcodegebied en een selectie van omliggende postcodes tot maximaal 20 huisnummers*",
+        "Maximum van 20 huisnummers",
+        "Meest recente en historische transacties*",
+        "WOZ-waarde van de woningen*",
+        "Aankoopprijs per m² (op basis van bruikbare oppervlakte)",
+        "Inclusief vraagprijs*, transactiedatum, bouwjaar en woningtype",
+        "Directe online levering!",
+        "Transactiedatum, WOZ-waarde, aankoopprijs per m², vraagprijs (indien geregistreerd/gedigitaliseerd), perceeloppervlakte*, woninginhoud en bouwjaar*, zoals opgenomen in onze bronregisters.",
+        "Opmerking: Commerciële transacties (bijv. meer dan 5 woningen) worden niet vermeld."
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Levertijd:",
+      "description": "Minder dan 1 werkdag via e-mail na betaling"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Voordelen voor Kopers:",
+      "list": [
+        "Gedetailleerd Inzicht in het Gebied: Verkrijg een uitgebreid overzicht van het aangevraagde postcodegebied en omliggende postcodes, tot maximaal 20 huisnummers.",
+        "Uitgebreide Vastgoedgegevens: Toegang tot recente en historische transacties van maximaal 20 huisnummers voor weloverwogen besluitvorming.",
+        "Vastgoedwaarderingsinformatie: Ontvang de WOZ-waarde van de woningen voor een officiële taxatiereferentie."
+      ]
+    }
+  },
+  "consultancy": {
+    "title": "Consultancy",
+    "description": "Bij Fushion AI bieden we op maat gemaakte consultancy-diensten om onze klanten te ondersteunen bij het navigeren door de complexiteiten van de vastgoedmarkt. Als tech-gedreven bedrijf combineren we onze expertise in geavanceerde analyses, kunstmatige intelligentie en markttrends om bruikbare inzichten en op maat gemaakte oplossingen te leveren. Of u nu een vastgoedbelegger, ontwikkelaar of vastgoedprofessional bent, onze consultancy-diensten zijn ontworpen om u te voorzien van op gegevens gebaseerde strategieën, zodat u weloverwogen beslissingen kunt Neem en rendement kunt maximaliseren. Samen zorgen we ervoor dat u voor blijft in het competitieve vastgoedlandschap."
+  },
+  "Project": {
+    "title": "Onze Projecten"
+  },
+  "ProjectModal": {
+    "Header": "Binnenkort: Spannende Nieuwe Projecten!",
+    "Body": "Er komen grote dingen aan! We zijn bezig met de lancering van een reeks innovatieve projecten die bedoeld zijn om te inspireren en indruk te maken. Van baanbrekende technologie tot frisse, gedurfde ideeën, er is voor ieder wat wils. Blijf op de hoogte van updates, we kunnen niet wachten om te delen wat er komen gaat!",
+    "Footer": {
+      "CloseButton": "Sluiten"
+    }
+  },
+  "AboutUs": {
+    "title": "Over Ons",
+    "description": "Wij zijn een snelgroeiende tech-startup die gespecialiseerd is in oplossingen met kunstmatige intelligentie voor de vastgoedsector. Ons jonge en dynamische team is toegewijd aan het revolutioneren van de industrie door middel van innovatieve AI-gedreven technologieën. Met een focus op het leveren van baanbrekende oplossingen, streven we ernaar om de manier waarop vastgoedprofessionals werken te transformeren en data-gedreven beslissingen te Neem. Ons kleine maar zeer bekwame team bloeit op samenwerking en creativiteit, en verlegt de grenzen van wat mogelijk is op de vastgoedmarkt."
+  },
+  "AboutUsValues": {
+    "title": "Onze Waarden",
+    "values": [
+      {
+        "title": "Innovatie",
+        "description": "We streven er continu naar om baanbrekende AI-oplossingen te ontwikkelen die de grenzen van technologie in de vastgoedsector verleggen."
+      },
+      {
+        "title": "Samenwerking",
+        "description": "Ons succes wordt gedreven door een teamgerichte aanpak, waarbij creativiteit en synergie binnen ons kleine en dynamische team worden gestimuleerd."
+      },
+      {
+        "title": "Uitmuntendheid",
+        "description": "We zetten ons in om producten en diensten van de hoogste kwaliteit te leveren, zodat onze klanten optimale resultaten behalen door middel van data-gedreven besluitvorming."
+      }
+    ]
+  },
+  "AboutUsMissionVision": {
+    "title": "Missie en Visie voor Fushion AI",
+    "mission": {
+      "title": "Missie",
+      "description": "Bij Fushion AI is het onze missie om de vastgoedsector te revolutioneren door innovatieve, AI-gedreven oplossingen te leveren die professionals in staat stellen data-gedreven beslissingen te Neem. Wij streven ernaar om vastgoedprocessen te vereenvoudigen en te verbeteren, en zo groei en efficiëntie te bevorderen door middel van baanbrekende technologie."
+    },
+    "vision": {
+      "title": "Visie",
+      "description": "Onze visie is om de toonaangevende kracht in technologische innovatie binnen de vastgoedsector te worden. Door de grenzen van AI te verleggen, streven we naar een toekomst waarin vastgoedbeslissingen slimmer, sneller en efficiënter zijn, en waarin samenwerking, creativiteit en duurzame groei voor alle belanghebbenden worden bevorderd."
+    }
+  },
+  "UpFooter": {
+    "title": "Klaar om uw vastgoedproces te vereenvoudigen?",
+    "subheading": "Neem contact met ons op en probeer het nu!",
+    "buttons": {
+      "contactUs": "Contact Ons"
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "altTitle": "Contact Ons",
+    "ContactInfo": {
+      "title": "Contactinformatie:",
+      "description": "Voor algemene vragen en ondersteuning kunt u ons e-mailen op:",
+      "emailLabel": "U kunt onze klantenservice bereiken via WhatsApp",
+      "workingHours": "Maandag - Vrijdag, 9:00 uur - 18:00 uur"
+    },
+    "Form": {
+      "firstNamePlaceholder": "Voornaam",
+      "lastNamePlaceholder": "Achternaam",
+      "emailPlaceholder": "E-mail",
+      "phonePlaceholder": "Telefoon (optioneel)",
+      "companyName": "Bedrijfsnaam",
+      "messagePlaceholder": "Bericht",
+      "sendButton": "Verzenden",
+      "sendingButton": "Verzenden",
+      "errorMessage": {
+        "firstName": "Voornaam is vereist",
+        "lastName": "Achternaam is vereist",
+        "email": "E-mail is vereist",
+        "validEmail": "Voer een geldig e-mailadres in",
+        "company": "Bedrijfsnaam is vereist",
+        "message": "Bericht is vereist"
+      }
+    }
+  },
+  "Footer": {
+    "heading": "Innovatie in vastgoed met AI-precisie",
+    "rights": "Alle rechten voorbehouden",
+    "privacyPolicy": "Privacybeleid",
+    "termsAndConditions": "Terms & Condition",
+    "CookiePolicy": "Cookies beleid"
+  }
+}

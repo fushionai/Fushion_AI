@@ -4,56 +4,34 @@ import Image from "next/image";
 import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
-// import propertyAnalysis from "@/contents/our-products-contents/property-analysis";
+// import aiPoweredContents from "@/contents/our-products-contents/ai-powered-valuation";
 import assets from "@/assets/index";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
-import Link from "next/link";
-import { LanguageContext } from "@/context/useLanguage";
-import { useContext } from "react";
-import { localization } from "@/data/localization";
+import { Link } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 
-const PropertyValuationAnalysisReportPage = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
- 
-  const ProductsValuationAnalysisReport =
-    localization.ProductsValuationAnalysisReport.subtitle[language];
+const AIPoweredValuationPage = () => {
+  const locale = useLocale();
+  const t = useTranslations("ProductsAIPoweredValuation");
 
-  const propertyAnalysisInformationIncludedList = [
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][0],
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][1],
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][2],
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][3],
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][4],
-    localization.ProductsValuationAnalysisReport.InformationIncluded.list[
-      language
-    ][5],
+  const ProductsAIPoweredValuation = t("subtitle");
+
+  const aIPoweredValuationInformationIncludedList = [
+    t("InformationIncluded.list.0"),
+    t("InformationIncluded.list.1"),
+    t("InformationIncluded.list.2"),
+    t("InformationIncluded.list.3"),
+    t("InformationIncluded.list.4"),
+    t("InformationIncluded.list.5"),
+    t("InformationIncluded.list.6"),
   ];
 
-  const propertyAnalysisDeliveryTime =
-    localization.ProductsValuationAnalysisReport.DeliveryTime.description[
-      language
-    ];
+  const aIPoweredValuationDeliveryTime = t("DeliveryTime.description");
 
-  const propertyAnalysisBenefitOfBuyer = [
-    localization.ProductsValuationAnalysisReport.BenefitsForBuyers.list[
-      language
-    ][0],
-    localization.ProductsValuationAnalysisReport.BenefitsForBuyers.list[
-      language
-    ][1],
-    localization.ProductsValuationAnalysisReport.BenefitsForBuyers.list[
-      language
-    ][2],
+  const aIPoweredValuationBenefitOfBuyer = [
+    t("BenefitsForBuyers.list.0"),
+    t("BenefitsForBuyers.list.1"),
+    t("BenefitsForBuyers.list.2"),
   ];
 
   return (
@@ -74,30 +52,27 @@ const PropertyValuationAnalysisReportPage = () => {
             <div className="flex flex-row max-[1200px]:flex-col-reverse justify-between  max-[1200px]:justify-center  items-center gap-12">
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
                 <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
-                  {/* Property Valuation Analysis Report */}
-                  {localization.ProductsValuationAnalysisReport.title[language]}
+                  {/* AI-Powered Valuation and Prediction Report */}
+                  {t("ProductsAIPoweredValuation.title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-[1200px]:text-center">
-                  {ProductsValuationAnalysisReport}
+                  {ProductsAIPoweredValuation}
                 </p>
               </header>
 
               <div className="bg-[#EDEEF9] rounded-[16px] p-12 max-sm:p-10 lg:mr-20">
                 <Image
-                  src={assets.propertyRobot}
+                  src={assets.propertyAI}
                   alt="Property Valuation Analysis Report"
                   loading="eager"
                 />
               </div>
             </div>
             <div className="max-[1200px]:flex justify-center items-center">
-              <Link href="/contact">
+              <Link href="/contact" locale={locale}>
                 <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
-                  {
-                    localization.ProductsValuationAnalysisReport.buttons
-                      .contactUs[language]
-                  }
+                  {t("buttons.contactUs")}
                 </Button>
               </Link>
             </div>
@@ -117,15 +92,14 @@ const PropertyValuationAnalysisReportPage = () => {
 
       <div className="relative bg-primaryWhite pb-20">
         <article className="max-container flex flex-wrap   max-lg:gap-6 py-8  px-32 max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Information Included */}
-            {
-              localization.ProductsValuationAnalysisReport.InformationIncluded
-                .heading[language]
-            }
+            {t("InformationIncluded.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-            {propertyAnalysisInformationIncludedList.map((list, index) => (
+            {aIPoweredValuationInformationIncludedList.map((list, index) => (
               <li
                 key={index}
                 className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue"
@@ -139,10 +113,7 @@ const PropertyValuationAnalysisReportPage = () => {
                 {/* Please note that the Neighborhood Comparative Analysis Report
                 may sometimes be unavailable, and not all elements may be
                 included in every report. */}
-                {
-                  localization.ProductsValuationAnalysisReport
-                    .InformationIncluded.note[language]
-                }
+                {t("InformationIncluded.note")}
               </p>
             </div>
           </ul>
@@ -161,16 +132,15 @@ const PropertyValuationAnalysisReportPage = () => {
 
       <div className="relative bg-[#F4F5FF] pb-20">
         <article className="max-container flex items-center flex-wrap  max-lg:gap-6 py-8 px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px] ">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px] font-ubuntu font-bold text-[30px] leading-[48px] ">
+            {" "}
+            {/* text-[32px] */}
             {/* Delivery Time: */}
-            {
-              localization.ProductsPurchasePriceInformation.DeliveryTime
-                .heading[language]
-            }
+            {t("DeliveryTime.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
             <li className="font-roboto font-normal text-[20px] leading-[30px] ">
-              {propertyAnalysisDeliveryTime}
+              {aIPoweredValuationDeliveryTime}
             </li>
           </ul>
         </article>
@@ -188,15 +158,14 @@ const PropertyValuationAnalysisReportPage = () => {
 
       <div className="bg-primaryWhite">
         <article className="max-container flex flex-wrap  max-lg:gap-6 py-8  px-32  max-md:px-4 ">
-          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">  {/* text-[32px] */}
+          <h2 className="md:min-w-[356px]  font-ubuntu font-bold text-[30px] leading-[48px] text-darkBlue max-md:text-center">
+            {" "}
+            {/* text-[32px] */}
             {/* Benefits for Buyers: */}
-            {
-              localization.ProductsPurchasePriceInformation.BenefitsForBuyers
-                .heading[language]
-            }
+            {t("BenefitsForBuyers.heading")}
           </h2>
           <ul className="list-disc space-y-3 px-6 max-w-[800px]">
-            {propertyAnalysisBenefitOfBuyer.map((list, index) => (
+            {aIPoweredValuationBenefitOfBuyer.map((list, index) => (
               <li
                 key={index}
                 className="font-roboto font-normal text-[20px] leading-[30px] text-darkBlue"
@@ -224,4 +193,4 @@ const PropertyValuationAnalysisReportPage = () => {
   );
 };
 
-export default PropertyValuationAnalysisReportPage;
+export default AIPoweredValuationPage;

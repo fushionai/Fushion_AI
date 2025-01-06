@@ -2,24 +2,22 @@
 import Image from "next/image";
 
 import assets from "@/assets";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const ContactInformation = () => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("Contact");
 
   return (
     <div className="space-y-6 md:w-1/2">
       <h2 className="text-2xl font-semibold font-roboto text-darkBlue">
         {/* Contact info: */}
-        {localization.Contact.ContactInfo.title[language]}
+        {t("ContactInfo.title")}
       </h2>
 
       <div className="space-y-4">
         <p className="text-secondaryGray font-semibold font-roboto">
           {/* For general inquiries and support, please email us at */}
-          {localization.Contact.ContactInfo.description[language]}
+          {t("ContactInfo.description")}
         </p>
         <a
           href="mailto:info@fushionai.com"
@@ -36,7 +34,7 @@ const ContactInformation = () => {
       <div className="space-y-4">
         <p className="text-secondaryGray font-semibold font-roboto">
           {/* You can reach our customer service via WhatsApp */}
-          {localization.Contact.ContactInfo.emailLabel[language]}
+          {t("ContactInfo.emailLabel")}
         </p>
         <a className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
           <Image src={assets.phoneIcon} alt="Our Phone" />
@@ -47,7 +45,7 @@ const ContactInformation = () => {
         </a>
         <p className="text-sm text-darkBlue font-semibold font-roboto">
           {/* Monday - Friday, 9:00 AM - 6:00 PM */}
-          {localization.Contact.ContactInfo.workingHours[language]}
+          {t("ContactInfo.workingHours")}
         </p>
       </div>
     </div>
