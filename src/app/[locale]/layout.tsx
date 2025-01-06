@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   keywords: ["Fushion", "AI", "FushionAI", "real estate", "AI real estate"],
   openGraph: {
     type: "website",
-    url: "https://fushionai.com",
+    url: "https://www.fushionai.com",
     siteName: "Fushion AI",
     title: "Fushion AI",
     description: "Fushion AI - Transform real estate with the power of data",
