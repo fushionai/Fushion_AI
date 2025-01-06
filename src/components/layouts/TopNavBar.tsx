@@ -31,7 +31,7 @@ import { Link, usePathname, useRouter } from "@/i18n/routing";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpenChange } = useDisclosure();
 
   const menuItems = [
     {

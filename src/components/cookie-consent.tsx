@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
+// import { Link } from "@nextui-org/link";
 import { setCookie, getCookie } from "cookies-next";
 import { useLocale } from "next-intl";
 
 export function CookieConsent() {
+  const locale = useLocale();
+  
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,6 @@ export function CookieConsent() {
 
   if (!isVisible) return null;
 
-  const locale = useLocale();
 
   const downloadPdf = (filename: string) => {
     const pdfUrl = `/${filename}-${locale}.pdf`;
