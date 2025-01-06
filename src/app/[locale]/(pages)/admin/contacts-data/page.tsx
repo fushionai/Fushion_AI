@@ -74,7 +74,7 @@ const AdminDashboardContactsData = () => {
 
   React.useLayoutEffect(() => {
     if ((token && isTokenExpired()) || !token) {
-      redirect("/admin/login");
+      redirect("en/admin/login");
     }
   }, [token]);
 
@@ -180,7 +180,7 @@ const AdminDashboardContactsData = () => {
   const handleLogOut = () => {
     dispatch(logout());
 
-    redirect("/admin/login");
+    redirect("en/admin/login");
   };
 
   if (isLoading) {

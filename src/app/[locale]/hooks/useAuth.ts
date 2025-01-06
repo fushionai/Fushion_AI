@@ -10,7 +10,7 @@ const useAuth = () => {
 
   useEffect(() => {
     if (!token || isTokenExpired(token)) {
-      router.push("/admin/login"); // Redirect to login page if no token or token expired
+      router.push("/en/admin/login"); // Redirect to login page if no token or token expired
     }
   }, [router, token]);
 

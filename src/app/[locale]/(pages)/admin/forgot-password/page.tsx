@@ -80,7 +80,7 @@ export default function ForgotPasswordPage() {
           </form>
 
           <div className="mt-4 text-center">
-            <Link href="/admin/login" color="primary">
+            <Link href="/en/admin/login" color="primary">
               Back to Login
             </Link>
           </div>
