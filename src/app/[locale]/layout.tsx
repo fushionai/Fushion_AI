@@ -17,10 +17,10 @@ import Script from "next/script";
 
 // import { CookieConsent } from "@/components/cookie-consent";
 import { Metadata } from "next";
-import AppProviders from "./AppProviders";
 import Favicon from "./favicon.ico";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import AppProviders from "./AppProviders";
 
 export const metadata: Metadata = {
   title: "Fushion AI",

@@ -12,7 +12,7 @@ const Admin = () => {
   useLayoutEffect(() => {
     const token = localStorage.getItem("token");
     if (token && !isTokenExpired) {
-      redirect("/admin/contacts-data");
+      redirect("en/admin/contacts-data");
     }
   });
 
