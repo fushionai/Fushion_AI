@@ -12,7 +12,7 @@ export default function AppProviders({ children }: { children: React.ReactNode }
     <NextUIProvider>
       <Provider store={store}>
         <ToastContainer />
-        <div className="w-full min-h-[100vh] h-auto">
+        <div className="w-full min-h-[100vh] h-auto overflow-x-hidden">
           {children}
           <CookieConsent />
         </div>
