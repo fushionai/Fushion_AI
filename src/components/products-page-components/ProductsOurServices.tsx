@@ -9,9 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import assets from "@/assets/index";
 
 import ProductsOurService from "./ProductsOurService";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const ProductsOurServices = () => {
   // const purchaseInfo = [
@@ -80,27 +78,27 @@ const ProductsOurServices = () => {
     },
   };
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("ProductsOurServices");
 
   const purchaseInfo = [
-    localization.ProductsOurServices.purchaseInfo[language][0],
-    localization.ProductsOurServices.purchaseInfo[language][1],
-    localization.ProductsOurServices.purchaseInfo[language][2],
+    t("purchaseInfo.0"),
+    t("purchaseInfo.1"),
+    t("purchaseInfo.2"),
   ];
 
   const assessed = [
-    localization.ProductsOurServices.assessed[language][0],
-    localization.ProductsOurServices.assessed[language][1],
-    localization.ProductsOurServices.assessed[language][2],
-    localization.ProductsOurServices.assessed[language][3],
+    t("assessed.0"),
+    t("assessed.1"),
+    t("assessed.2"),
+    t("assessed.3"),
   ];
-  
+
   return (
     <section className="py-[120px] bg-primaryWhite">
       <header className="mb-6">
         <h1 className="font-ubuntu font-bold text-[40px] leading-[45px] text-center text-darkBlue">
           {/* Our Service */}
-          {localization.ProductsOurServices.title[language]}
+          {t("title")}
         </h1>
       </header>
 
@@ -111,11 +109,11 @@ const ProductsOurServices = () => {
             price="34.95"
             title={
               // "Purchase Price Information"
-              localization.ProductsOurServices.products[0].title[language]
+              t("products.0.title")
             }
             description={
               // "Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties"
-              localization.ProductsOurServices.products[0].description[language]
+              t("products.0.description")
             }
             lists={purchaseInfo}
             goToLink="/our-products/purchase-price-info"
@@ -124,11 +122,11 @@ const ProductsOurServices = () => {
             price="24.95"
             title={
               // "Assessed Property Value"
-              localization.ProductsOurServices.products[1].title[language]
+              t("products.1.title")
             }
             description={
               // "Ideal for accurately estimating the value of a property."
-              localization.ProductsOurServices.products[1].description[language]
+              t("products.1.description")
             }
             lists={assessed}
             goToLink="/our-products/assessed-property-value"
@@ -137,11 +135,11 @@ const ProductsOurServices = () => {
             price="29.95"
             title={
               // "Property Report"
-              localization.ProductsOurServices.products[2].title[language]
+              t("products.2.title")
             }
             description={
               // "The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing."
-              localization.ProductsOurServices.products[2].description[language]
+              t("products.2.description")
             }
             goToLink="/our-products/property-report"
           />
@@ -156,11 +154,11 @@ const ProductsOurServices = () => {
             price="34.95"
             title={
               // "Purchase Price Information"
-              localization.ProductsOurServices.products[0].title[language]
+              t("products.0.title")
             }
             description={
               // "Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties"
-              localization.ProductsOurServices.products[0].description[language]
+              t("products.0.description")
             }
             lists={purchaseInfo}
             goToLink="/our-products/purchase-price-info"
@@ -169,11 +167,11 @@ const ProductsOurServices = () => {
             price="24.95"
             title={
               // "Assessed Property Value"
-              localization.ProductsOurServices.products[1].title[language]
+              t("products.1.title")
             }
             description={
               // "Ideal for accurately estimating the value of a property."
-              localization.ProductsOurServices.products[1].description[language]
+              t("products.1.description")
             }
             lists={assessed}
             goToLink="/our-products/assessed-property-value"
@@ -182,11 +180,11 @@ const ProductsOurServices = () => {
             price="29.95"
             title={
               // "Property Report"
-              localization.ProductsOurServices.products[2].title[language]
+              t("products.2.title")
             }
             description={
               // "The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing."
-              localization.ProductsOurServices.products[2].description[language]
+              t("products.2.description")
             }
             goToLink="/our-products/property-report"
           />

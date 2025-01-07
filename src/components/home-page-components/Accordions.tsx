@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback, useContext } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
@@ -54,7 +53,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
     };
   }, [lastScrollY, thresholds, handleSelectionChange]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("features");
 
   return (
     <Accordion
@@ -92,7 +91,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* Unmatched Expertise in{" "} */}
-            {localization.Features.accordion.order1.titlePart1[language]}
+            {t("accordion.order1.titlePart1")}
             <span
               className={`${
                 selectedKeys.has("1")
@@ -100,11 +99,10 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
                   : "text-secondaryGray"
               }`}
             >
-              {/* AI */}
-              {localization.Features.accordion.order1.titleColored1[language]}
+              {/* AI */} {t("accordion.order1.titleColored1")}
             </span>{" "}
             {/* and{" "} */}
-            {localization.Features.accordion.order1.titlePart2[language]}
+            {t("accordion.order1.titlePart2")}{" "}
             <span
               className={`text-nowrap ${
                 selectedKeys.has("1")
@@ -113,14 +111,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
               }`}
             >
               {/* Real Estate */}
-              {localization.Features.accordion.order1.titleColored2[language]}
+              {t("accordion.order1.titleColored2")}
             </span>
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[0].description} */}
-          {localization.Features.accordion.order1.description[language]}
+          {t("accordion.order1.description")}
         </p>
       </AccordionItem>
       <AccordionItem
@@ -151,7 +149,7 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* Comprehensive */}
-            {localization.Features.accordion.order2.title[language]}
+            {t("accordion.order2.title")}
             <span
               className={`${
                 selectedKeys.has("2")
@@ -161,14 +159,14 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             >
               {" "}
               {/* Data Analysis */}
-              {localization.Features.accordion.order2.titleColored1[language]}
+              {t("accordion.order2.titleColored1")}
             </span>{" "}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[1].description} */}
-          {localization.Features.accordion.order2.description[language]}
+          {t("accordion.order2.description")}
         </p>
       </AccordionItem>
 
@@ -200,13 +198,13 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* {featuresSectionContent[2].title} */}
-            {localization.Features.accordion.order3.title[language]}
+            {t("accordion.order3.title")}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[2].description} */}
-          {localization.Features.accordion.order3.description[language]}
+          {t("accordion.order3.description")}
         </p>
       </AccordionItem>
 
@@ -238,13 +236,13 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* {featuresSectionContent[3].title} */}
-            {localization.Features.accordion.order4.title[language]}
+            {t("accordion.order4.title")}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[3].description} */}
-          {localization.Features.accordion.order4.description[language]}
+          {t("accordion.order4.description")}
         </p>
       </AccordionItem>
 
@@ -276,13 +274,13 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* {featuresSectionContent[4].title} */}
-            {localization.Features.accordion.order5.title[language]}
+            {t("accordion.order5.title")}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[4].description} */}
-          {localization.Features.accordion.order5.description[language]}
+          {t("accordion.order5.description")}
         </p>
       </AccordionItem>
 
@@ -314,13 +312,13 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
             }`}
           >
             {/* {featuresSectionContent[5].title} */}
-            {localization.Features.accordion.order6.title[language]}
+            {t("accordion.order6.title")}
           </h5>
         }
       >
         <p className="font-roboto text-[20px] leading-[30px] text-darkGray">
           {/* {featuresSectionContent[5].description} */}
-          {localization.Features.accordion.order6.description[language]}
+          {t("accordion.order6.description")}
         </p>
       </AccordionItem>
     </Accordion>

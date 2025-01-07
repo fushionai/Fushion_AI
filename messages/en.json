@@ -1,0 +1,476 @@
+{
+  "heading": "Innovating Real Estate with AI Precision",
+
+  "Hero": {
+    "heading": "Innovating Real Estate with AI Precision",
+    "subheading": "Transform real estate with the power of data",
+    "buttons": {
+      "discoverMore": "Discover More",
+      "contactUs": "Contact Us"
+    }
+  },
+  "Services": {
+    "title": "Service We Offer",
+    "slider": {
+      "items": [
+        {
+          "title": "Insights for Investors and Professionals",
+          "description": "We provide detailed analyses essential for making strategic decisions in real estate investments. This includes market trends, property price forecasts, and a thorough evaluation of risks related to the housing market."
+        },
+        {
+          "title": "Custom Solutions",
+          "description": "Every project is unique. Therefore, we work closely with our clients to deliver tailored solutions that meet their specific needs and goals."
+        },
+        {
+          "title": "Our Expertise",
+          "description": "With a team of experienced data scientists and specialists in financial econometrics, we combine advanced machine learning techniques with deep market knowledge. Our models are not only accurate and reliable but also continuously adapted to the changing market."
+        },
+        {
+          "title": "Committed to Your Success",
+          "description": "At Fushion AI, your success is our priority. We are dedicated to delivering high-quality services that help you make smart, data-driven decisions. Whether you are a consumer, real estate agent, or real estate professional, we are here to support you with our expertise."
+        }
+      ]
+    },
+    "navigation": {
+      "prevArrow": {
+        "alt": "Previous arrow"
+      },
+      "nextArrow": {
+        "alt": "Next arrow"
+      }
+    }
+  },
+  "features": {
+    "title": "Why Choose",
+    "subtitle": "Fushion AI",
+    "description": "At Fushion AI, we believe in the transformative power of data to revolutionize the real estate market. Our core mission is to empower our clients with advanced artificial intelligence (AI) models that deliver essential insights, helping them make informed investment decisions based on accurate and up-to-date information.",
+    "accordion": {
+      "order1": {
+        "titlePart1": "Unmatched Expertise in",
+        "titleColored1": "AI",
+        "titlePart2": "and",
+        "titleColored2": "Real Estate",
+        "description": "Our team of experts combines deep knowledge in AI with extensive experience in the real estate industry. This unique blend allows us to develop cutting-edge solutions tailored specifically to the needs of consumers, real estate agents, property companies, and developers."
+      },
+      "order2": {
+        "title": "Comprehensive",
+        "titleColored1": "Data Analysis",
+        "description": "We leverage sophisticated AI algorithms to analyze vast amounts of data from various sources, ensuring our clients have a comprehensive view of the market. From price trends and property valuations to neighborhood dynamics and investment potential, our insights cover every critical aspect of real estate."
+      },
+      "order3": {
+        "title": "Real-Time, Accurate Insights",
+        "description": "In the fast-paced world of real estate, timely information is crucial. Our AI models continuously process and update data, providing our clients with real-time insights that reflect the current market conditions. This enables them to stay ahead of the competition and make decisions with confidence."
+      },
+      "order4": {
+        "title": "Tailored Solutions for Diverse Needs",
+        "description": "At Fushion AI, we understand that every client is unique. Whether you're a first-time homebuyer, a seasoned investor, or a large-scale developer, our services are designed to meet your specific needs. We offer customizable solutions that cater to a wide range of real estate scenarios, ensuring you get the most relevant and actionable insights."
+      },
+      "order5": {
+        "title": "Commitment to Innovation",
+        "description": "We are committed to staying at the forefront of technological advancements. By constantly refining our AI models and incorporating the latest developments in data science, we ensure that our clients benefit from the most innovative and effective tools available in the market."
+      },
+      "order6": {
+        "title": "Trusted Partner in Real Estate",
+        "description": "Choosing Fushion AI means partnering with a trusted ally in your real estate journey. Our goal is to help you navigate the complexities of the market with ease, making smarter, data-driven decisions that lead to successful outcomes."
+      }
+    }
+  },
+  "coreValues": {
+    "title": "Core Values of Fushion AI",
+    "description": "At Fushion AI, your success is our priority. We are dedicated to delivering high-quality services that help you make smart, data-driven decisions. Whether you are a consumer, real estate agent, or real estate professional, we are here to support you with our expertise.",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "Pushing the boundaries of what's possible with AI to bring new and effective solutions to the real estate market."
+      },
+      {
+        "title": "Integrity",
+        "description": "Maintaining the highest ethical standards in all business dealings."
+      },
+      {
+        "title": "Professionalism",
+        "description": "Delivering top-notch service with expertise and dedication."
+      },
+      {
+        "title": "Customer-Centricity",
+        "description": "Putting the needs and success of our clients at the forefront of everything we do."
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "Committed to Your Success",
+    "description": "At Fushion AI, your success is our priority. We are dedicated to delivering high-quality services that help you make smart, data-driven decisions. Whether you are a consumer, real estate agent, or real estate professional, we are here to support you with our expertise.",
+    "testimonials": [
+      {
+        "testimonial": "I had no idea if my apartment in Amsterdam was above the liberalization threshold or not, but FusionAI really helped me figure it out. They gave me an estimate using the points system and explained that I didn’t need to lower my rent. It was a huge relief and super helpful!",
+        "fullName": "Sven K.",
+        "position": "Property Investor"
+      },
+      {
+        "testimonial": "I was thinking about buying off my leasehold in Amsterdam, but FusionAI suggested I might be better off investing in a new home instead. They showed me how the housing market has performed over time, and it really helped me make a smarter decision. I’m so glad I got their advice!",
+        "fullName": "Eva M.",
+        "position": "Property Owner"
+      },
+      {
+        "testimonial": "I needed a bunch of legal documents about my home, like ownership papers and transaction info, and FusionAI got everything together for me quickly. They made the whole process so much easier and stress-free. I couldn’t have done it without them!",
+        "fullName": "Kane V.",
+        "position": "Property Owner"
+      },
+      {
+        "testimonial": "I was torn between buying two social housing units to rent out or one more expensive place. FusionAI broke down the numbers for me and suggested the free market property would have better returns. Their advice was exactly what I needed, and I feel way more confident about my decision now.",
+        "fullName": "Lotte D.",
+        "position": "Real Estate Investor"
+      }
+    ]
+  },
+  "UpFooter": {
+    "title": "Ready to Simplify Your Real Estate process?",
+    "subheading": "Contact us and try it now",
+    "buttons": {
+      "contactUs": "Contact Us"
+    }
+  },
+  "ProductsHeroSection": {
+    "title": "Our Products",
+    "subheading": "Unlock comprehensive market information with our Market Info package. Get detailed insights into market trends, property values, and more to make informed decisions.",
+    "buttons": {
+      "purchasePriceInfo": "Purchase Price Information",
+      "purchasePriceInfoDescription": "Detailed purchase price information to help you understand real estate market dynamics.",
+      "assessedPropertyValue": "Assessed Property Value",
+      "assessedPropertyValueDescription": "Access the assessed value of properties to gauge market value accurately.",
+      "propertyReport": "Property Report",
+      "propertyReportDescription": "An extensive property report combining purchase price info, assessed value, mortgage details, and more. We also include Cadastre data to ensure the most reliable and comprehensive insights.",
+      "consultancy": "Consultancy",
+      "consultancyDescription": "Our AI-powered consultancy services empower real estate professionals with data-driven insights to make smarter, faster decisions. Tailored to your needs, we revolutionize the way you navigate the real estate market."
+    },
+    "consultancy": {
+      "title": "Consultancy",
+      "subheading": "At Fushion AI, we offer tailored consultancy services to support our clients in navigating the complexities of the real estate market. As a tech-driven company, we combine our expertise in advanced analytics, artificial intelligence, and market trends to deliver actionable insights and customized solutions. Whether you're a property investor, developer, or real estate professional, our consultancy services are designed to empower you with data-driven strategies, enabling you to make informed decisions and maximize returns. Together, we ensure you stay ahead in the competitive real estate landscape.",
+      "buttons": {
+        "getInTouch": "Get in touch with us now"
+      }
+    }
+  },
+  "PropertySection": {
+    "title": "Property Valuation",
+    "description": "Our Property Valuation product leverages advanced technology to provide accurate property value assessments.",
+    "sections": [
+      {
+        "title": "Property Valuation Analysis",
+        "description": "Compare similar properties to determine accurate pricing, ensuring you stay competitive in the market.",
+        "buttons": {
+          "learnMore": "Learn more",
+          "contactUs": "Contact Us"
+        }
+      },
+      {
+        "title": "AI-Powered Valuation and Predictions",
+        "description": "Compare similar properties to determine accurate pricing, ensuring you stay competitive in the market.",
+        "buttons": {
+          "learnMore": "Learn more",
+          "contactUs": "Contact Us"
+        }
+      },
+      {
+        "title": "Dashboard (Launching Soon)",
+        "description": "Stay ahead with our intuitive dashboard, designed to bring raw data and actionable insights right to your fingertips."
+      },
+      {
+        "title": "Data at Your Fingertips",
+        "description": "Access raw data and insights effortlessly, allowing you to make data-driven decisions quickly and efficiently."
+      }
+    ]
+  },
+  "ProductsOurServices": {
+    "title": "Our Service",
+    "purchaseInfo": [
+      "Most recent and historical transactions",
+      "Asking price, transaction date, year built, and property type",
+      "Purchase price per square meter (based on usable area)"
+    ],
+    "assessed": [
+      "Latest purchase price & current model-based market value*",
+      "Comparison with 10 reference properties (worth € 24.95)",
+      "Cadastral map (worth € 19.95)",
+      "Additional property information"
+    ],
+    "products": [
+      {
+        "price": "34.95",
+        "title": "Purchase Price Information",
+        "description": "Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties."
+      },
+      {
+        "price": "24.95",
+        "title": "Assessed Property Value",
+        "description": "Ideal for accurately estimating the value of a property."
+      },
+      {
+        "price": "29.95",
+        "title": "Property Report",
+        "description": "The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing."
+      }
+    ],
+    "buttons": {
+      "learnMore": "Learn more",
+      "contactUs": "Contact Us"
+    }
+  },
+  "ProductsAIPoweredValuation": {
+    "buttons": {
+      "contactUs": "Contact Us"
+    },
+    "title": "AI-Powered Valuation and Prediction Report",
+    "subtitle": "The AI-Powered Valuations and Predictions Report utilizes machine learning models to provide accurate valuations and future price predictions for properties. This report is essential for forecasting property market trends and making strategic decisions.",
+    "InformationIncluded": {
+      "heading": "Information Included",
+      "list": [
+        "Predicted future property value based on past trends",
+        "Sale prices of similar properties nearby (up to 20 house numbers)",
+        "Current owner",
+        "Year built, volume, and area",
+        "Mortgage",
+        "Energy label (if definitively determined)",
+        "Estimated current property value"
+      ],
+      "note": "Please note that the Neighborhood Comparative Analysis Report may sometimes be unavailable, and not all elements may be included in every report."
+    },
+    "DeliveryTime": {
+      "heading": "Delivery Time:",
+      "description": "Less than 1 working day via email upon payment"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Benefits for Buyers:",
+      "list": [
+        "Accurate property valuations using advanced AI models",
+        "Future price predictions based on historical data",
+        "Energy label (if available)"
+      ]
+    }
+  },
+  "ProductsPropertyReport": {
+    "buttons": {
+      "contactUs": "Contact Us"
+    },
+    "title": "Property Report",
+    "subtitle": "The Comprehensive Property Report provides detailed information about a property, serving as a solid foundation for valuing a home. This report can be instrumental when deciding on an offer for a house you are interested in purchasing.",
+    "list": [
+      "Energy label",
+      "Estimated property value",
+      "Sale prices of similar properties nearby"
+    ],
+    "note": "Please note that the Comprehensive Property Report may sometimes be unavailable, and not all elements may be included in every report.",
+    "InformationIncluded": {
+      "heading": "Information Included",
+      "list": [
+        "Detailed property description",
+        "Property photos",
+        "Market analysis",
+        "Comparable sales",
+        "Zoning information",
+        "Ownership history",
+        "the cadastral map and 10 reference properties"
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Delivery Time:",
+      "description": "Less than 1 working day via email upon payment"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Benefits for Buyers:",
+      "list": [
+        "Our most complete report",
+        "Prices of comparable properties",
+        "Energy label (if available)"
+      ]
+    }
+  },
+  "ProductsAssessedPropertyValue": {
+    "buttons": {
+      "contactUs": "Contact Us",
+      "clickHere": " click here."
+    },
+    "title": "Assessed Property Value",
+    "subtitle": "Ideal for accurately estimating the value of a property.",
+    "questions": "What is it?",
+    "answer": "The Property Value Report offers a quick and comprehensive package of property information. The report pertains to the property and the parcel linked to the requested address. Model-Based Property Value For more information about our AVM value",
+    "list": [
+      "Latest purchase price & current model-based market value*",
+      "Comparison with 10 reference properties (worth € 24.95)",
+      "Cadastral map (worth € 19.95)",
+      "Additional property information"
+    ],
+    "InformationIncluded": {
+      "heading": "Information Included",
+      "list": [
+        "Latest purchase price & current model-based market value*",
+        "Comparison with 10 reference properties (worth € 24.95)",
+        "Cadastral map (worth € 19.95)",
+        "Additional property information"
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Delivery Time:",
+      "description": "Less than 1 working day via email upon payment"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Benefits for Buyers:",
+      "list": [
+        "Detailed Area Insight: Get a comprehensive overview of the requested postal code area and surrounding postal codes, covering up to 20 house numbers.",
+        "Comprehensive Property Data: Access recent and historical transactions for up to 20 properties, aiding informed decision-making.",
+        "Property Value Information: Receive the official WOZ value for accurate property valuation reference."
+      ]
+    }
+  },
+  "ProductsValuationAnalysisReport": {
+    "buttons": {
+      "contactUs": "Contact Us"
+    },
+    "title": "Property Valuation Analysis Report",
+    "subtitle": "The Property Valuation Analysis Report offers detailed comparisons of similar properties within the same area, providing insights into the market value of a house. This report is crucial for making informed decisions on property investments by providing the estimated value of the property based on the Comparative Market Analysis (CMA) approach.",
+    "InformationIncluded": {
+      "heading": "Information Included",
+      "list": [
+        "Estimated property value based on the Comparative Market Analysis (CMA) approach",
+        "Comparative analysis of similar properties nearby (up to 20 house numbers)",
+        "Current owner",
+        "Year built, volume, and area",
+        "Mortgage",
+        "Energy label (if definitively determined)"
+      ],
+      "note": "Please note that the Neighborhood Comparative Analysis Report may sometimes be unavailable, and not all elements may be included in every report."
+    },
+    "DeliveryTime": {
+      "heading": "Delivery Time:",
+      "description": "Less than 1 working day via email upon payment"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Benefits for Buyers:",
+      "list": [
+        "Comprehensive comparison of neighborhood properties",
+        "Insights into property value relative to similar homes",
+        "Energy label (if available)"
+      ]
+    }
+  },
+  "ProductsPurchasePriceInformation": {
+    "buttons": {
+      "contactUs": "Contact Us"
+    },
+    "title": "Purchase Price Information",
+    "subtitle": "Planning to buy or sell a house on a specific street? Our Transaction Overview provides you with all recent and historical sales and purchase prices of properties.",
+    "note": "The Purchase Price Overview provides details on both recent and historical sales and corresponding purchase prices* of homes sold in the requested postal code area as well as a selection of surrounding areas. This is useful if you are planning to buy or sell a house on a specific street. You can use the Purchase Price Overview to determine or request the purchase or sale price of a house, and also analyze housing inflation. You will see the prices for which homes have been sold within the requested postal code area.",
+    "list": [
+      "Most recent and historical transactions",
+      "Asking price, transaction date, year built, and property type",
+      "Purchase price per square meter (based on usable area)"
+    ],
+    "InformationIncluded": {
+      "heading": "Information Included",
+      "list": [
+        "Overview of the requested postal code area and a selection of surrounding postal codes up to 20 house numbers*",
+        "Maximum of 20 house numbers",
+        "Most recent and historical transactions*",
+        "WOZ value of the properties*",
+        "Purchase price per m² (based on usable area)",
+        "Includes asking price*, transaction date, year built, and property type",
+        "Direct online delivery!",
+        "Transaction date, WOZ value, purchase price per m², asking price (if registered/digitalized), land area*, property volume, and year built*, as recorded in our source registers.",
+        "Note: Commercial transactions (e.g., more than 5 homes) are not listed."
+      ]
+    },
+    "DeliveryTime": {
+      "heading": "Delivery Time:",
+      "description": "Less than 1 working day via email upon payment"
+    },
+    "BenefitsForBuyers": {
+      "heading": "Benefits for Buyers:",
+      "list": [
+        "Detailed Area Insight: Obtain a comprehensive overview of the requested postal code area and surrounding postal codes, covering up to 20 house numbers.",
+        "Comprehensive Property Data: Access up to 20 house numbers' recent and historical transactions for informed decision-making.",
+        "Property Value Information: Receive the WOZ value of the properties for an official valuation reference."
+      ]
+    }
+  },
+  "consultancy": {
+    "title": "Consultancy",
+    "description": "At Fushion AI, we offer tailored consultancy services to support our clients in navigating the complexities of the real estate market. As a tech-driven company, we combine our expertise in advanced analytics, artificial intelligence, and market trends to deliver actionable insights and customized solutions. Whether you're a property investor, developer, or real estate professional, our consultancy services are designed to empower you with data-driven strategies, enabling you to make informed decisions and maximize returns. Together, we ensure you stay ahead in the competitive real estate landscape."
+  },
+  "Project": {
+    "title": "Our Projects"
+  },
+  "ProjectModal": {
+    "Header": "Coming Soon: Exciting New Projects!",
+    "Body": "Big things are on the way! We’re gearing up to launch a series of innovative projects designed to inspire and impress. From cutting-edge technology to fresh, bold ideas, there’s something for everyone. Stay tuned for updates, we can't wait to share what’s next!",
+    "Footer": {
+      "CloseButton": "Close"
+    }
+  },
+  "AboutUs": {
+    "title": "About Us",
+    "description": "We are a rapidly growing tech startup specializing in artificial intelligence solutions for the real estate sector. Our young and dynamic team is dedicated to revolutionizing the industry through innovative AI-driven technologies. With a focus on delivering cutting-edge solutions, we aim to transform the way real estate professionals operate and make data-driven decisions. Our small but highly skilled team thrives on collaboration and creativity, pushing the boundaries of what's possible in the real estate market."
+  },
+  "AboutUsValues": {
+    "title": "Our Values",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We continuously strive to develop cutting-edge AI solutions that push the boundaries of technology in the real estate sector."
+      },
+      {
+        "title": "Collaboration",
+        "description": "Our success is driven by a team-oriented approach, fostering creativity and synergy within our small and dynamic team."
+      },
+      {
+        "title": "Excellence",
+        "description": "We are committed to delivering the highest quality products and services, ensuring our clients achieve optimal results through data-driven decision-making."
+      }
+    ]
+  },
+  "AboutUsMissionVision": {
+    "title": "Mission and Vision for Fushion AI",
+    "mission": {
+      "title": "Mission",
+      "description": "At Fushion AI, our mission is to revolutionize the real estate industry by delivering innovative, AI-driven solutions that empower professionals to make data-driven decisions. We aim to simplify and enhance the way real estate operates, creating opportunities for growth and efficiency through cutting-edge technology."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Our vision is to become the leading force in technological innovation within the real estate sector. By pushing the boundaries of AI, we strive to create a future where real estate decisions are smarter, faster, and more efficient, fostering collaboration, creativity, and sustainable growth for all stakeholders."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "altTitle": "Contact Us",
+    "ContactInfo": {
+      "title": "Contact info:",
+      "description": "For general inquiries and support, please email us at",
+      "emailLabel": "You can reach our customer service via WhatsApp",
+      "workingHours": "Monday - Friday, 9:00 AM - 6:00 PM"
+    },
+    "Form": {
+      "firstNamePlaceholder": "First name",
+      "lastNamePlaceholder": "Last name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone (optional)",
+      "companyName": "Company Name",
+      "messagePlaceholder": "Message",
+      "sendButton": "Send",
+      "sendingButton": "sending...",
+      "errorMessage": {
+        "firstName": "First Name is required",
+        "lastName": "Last Name is required",
+        "email": "Email is required",
+        "validEmail": "Please enter a valid email address",
+        "company": "Company is required",
+        "message": "Message is required"
+      }
+    }
+  },
+  "Footer": {
+    "heading": "Innovating Real Estate with AI Precision",
+    "rights": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions",
+    "CookiePolicy": "Cookie Policy"
+  }
+}

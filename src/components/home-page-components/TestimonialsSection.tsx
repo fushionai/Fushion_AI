@@ -9,9 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import testimonialSectionContents from "@/contents/home-page-contents/testimonial-section-contents";
 import assets from "@/assets/index";
 import Testimonial from "./Testimonial";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const TestimonialsSection = () => {
   const CustomPrevArrow = (props: any) => {
@@ -81,32 +79,28 @@ const TestimonialsSection = () => {
     },
   };
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("Testimonials");
 
   const testimonialSectionContents = [
     {
-      testimonial:
-        localization.Testimonials.testimonials[0].testimonial[language],
-      fullName: localization.Testimonials.testimonials[0].fullName[language],
-      position: localization.Testimonials.testimonials[0].position[language],
+      testimonial: t("testimonials.0.testimonial"),
+      fullName: t("testimonials.0.fullName"),
+      position: t("testimonials.0.position"),
     },
     {
-      testimonial:
-        localization.Testimonials.testimonials[1].testimonial[language],
-      fullName: localization.Testimonials.testimonials[1].fullName[language],
-      position: localization.Testimonials.testimonials[1].position[language],
+      testimonial: t("testimonials.1.testimonial"),
+      fullName: t("testimonials.1.fullName"),
+      position: t("testimonials.1.position"),
     },
     {
-      testimonial:
-        localization.Testimonials.testimonials[2].testimonial[language],
-      fullName: localization.Testimonials.testimonials[2].fullName[language],
-      position: localization.Testimonials.testimonials[2].position[language],
+      testimonial: t("testimonials.2.testimonial"),
+      fullName: t("testimonials.2.fullName"),
+      position: t("testimonials.2.position"),
     },
     {
-      testimonial:
-        localization.Testimonials.testimonials[3].testimonial[language],
-      fullName: localization.Testimonials.testimonials[3].fullName[language],
-      position: localization.Testimonials.testimonials[3].position[language],
+      testimonial: t("testimonials.3.testimonial"),
+      fullName: t("testimonials.3.fullName"),
+      position: t("testimonials.3.position"),
     },
   ];
 
@@ -127,7 +121,7 @@ const TestimonialsSection = () => {
           <div className="flex items-center max-md:justify-center gap-7 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
             <h1 className="text-primaryWhite md:text-nowrap max-md:text-center ">
               {/* Committed to Your Success */}
-              {localization.Testimonials.title[language]}
+              {t("title")}
             </h1>
             <span className="max-md:hidden block bg-primaryWhite h-[1px] w-[65%]" />
           </div>
@@ -137,7 +131,7 @@ const TestimonialsSection = () => {
             data-driven decisions. Whether you are a consumer, real estate
             agent, or real estate professional, we are here to support you with
             our expertise. */}
-            {localization.Testimonials.description[language]}
+            {t("description")}
           </p>
         </header>
 

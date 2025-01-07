@@ -1,9 +1,8 @@
 "use client";
 
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
-import { Button, Link } from "@nextui-org/react";
-import { useContext } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Button } from "@nextui-org/react";
+import { Link } from "@/i18n/routing";
 
 const ProductsOurService = ({
   price,
@@ -18,7 +17,8 @@ const ProductsOurService = ({
   lists?: string[];
   goToLink?: string;
 }) => {
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const locale = useLocale();
+  const t = useTranslations("ProductsOurServices");
 
   return (
     <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[382px] max-xl:max-w-[360px] max-[1149px]:max-w-[95%] max-[1149px]:mx-auto">
@@ -53,24 +53,24 @@ const ProductsOurService = ({
       </main>
       <footer>
         <div className="mt-9 max-sm:mt-6 flex items-center justify-center gap-2">
-          <Link href={goToLink}>
+          <Link href={goToLink || ""} locale={locale}>
             <Button
               className="py-4 px-2 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none
             max-xl:text-base max-xl:px-4
             "
             >
               {/* Learn more */}
-              {localization.ProductsOurServices.buttons?.learnMore[language]}
+              {t("buttons.learnMore")}
             </Button>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" locale={locale}>
             <Button
               className="py-4 px-2 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none
                max-xl:text-base max-xl:px-4
             "
             >
               {/* Contact Us */}
-              {localization.ProductsOurServices.buttons?.contactUs[language]}
+              {t("buttons.contactUs")}
             </Button>
           </Link>
         </div>

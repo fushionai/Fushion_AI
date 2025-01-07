@@ -1,13 +1,12 @@
 "use client";
-import { useState, useEffect, useMemo, useContext } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import Image from "next/image";
 
 import Accordions from "./Accordions";
 import SlidingAccordion from "./AccordionsSmallScreen";
 import assets from "@/assets/index";
-import { LanguageContext } from "@/context/useLanguage";
-import { localization } from "@/data/localization";
+import { useTranslations } from "next-intl";
 
 const FeaturesSection = () => {
   const [selectedOrder, setSelectedOrder] = useState(new Set(["1"]));
@@ -33,17 +32,17 @@ const FeaturesSection = () => {
     }
   }, [selectedOrder, imageMap]);
 
-  const { language } = useContext(LanguageContext) as { language: "en" | "nl" };
+  const t = useTranslations("features");
 
   return (
     <section className="max-container bg-primaryWhite py-20 max-md:pb-0">
       <header>
         <h2 className="px-10 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-center text-darkBlue leading-[32px]">
           {/* Why Choose{" "} */}
-          {localization.Features.title[language]}
+          {t("title")}{" "}
           <span className="max-md:text-primaryBlue">
             {/* Fushion AI  */}
-            {localization.Features.subtitle[language]}
+            {t("subtitle")}
           </span>
           ?
         </h2>
@@ -53,7 +52,7 @@ const FeaturesSection = () => {
           our clients with advanced artificial intelligence (AI) models that
           deliver essential insights, helping them make informed investment
           decisions based on accurate and up-to-date information. */}
-          {localization.Features.description[language]}
+          {t("description")}
         </p>
       </header>
       <main className="mt-20 max-md:mt-10 ">
