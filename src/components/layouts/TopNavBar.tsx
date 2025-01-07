@@ -31,7 +31,7 @@ import { Link, usePathname, useRouter } from "@/i18n/routing";
 
 const TopNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const menuItems = [
     {
@@ -135,23 +135,13 @@ const TopNavBar = () => {
           </Link>
         </NavbarItem>
 
-        {/* <button
-          onClick={onOpen} 
+        <button
+          onClick={onOpen}
           className="font-roboto font-bold text-xl leading-[18px] text-secondaryGray"
-        >*/}
-        <Link
-          className={`${
-            pathname?.includes("/our-projects")
-              ? "text-primaryWhite"
-              : "text-secondaryGray"
-          } font-roboto font-bold text-xl`}
-          href="/our-products"
         >
-          {" "}
           {/* Our projects */}
           {t("Project.title")}
-        </Link>
-
+        </button>
         <NavbarItem>
           <Link
             className={`${
@@ -265,28 +255,18 @@ const TopNavBar = () => {
                       {locale == "en" ? "EN" : "NL"}
                     </p>
                   </button>
+                ) : item.title === "Our Projects" ? (
+                  <button
+                    className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onOpen();
+                    }}
+                  >
+                    {/* Our Projects */}
+                    {t("Project.title")}
+                  </button>
                 ) : (
-                  //   item.title === "Our Projects" ? (
-                  // <button
-                  //   className="w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px] text-secondaryGray"
-                  //   onClick={(e) => {
-                  //     e.preventDefault();
-                  //     onOpen();
-                  //   }}
-                  // >
-                  // <Link
-                  //   className={`${
-                  //     pathname?.includes("/our-projects")
-                  //       ? "text-primaryWhite"
-                  //       : "text-secondaryGray"
-                  //   } w-full text-center font-roboto bg-transparent font-bold text-[24px] leading-[18px]`}
-                  //   href="/our-products"
-                  // >
-                  //   {/* Our Projects */}
-                  //   {t("Project.title")}
-                  // </Link>
-                  // ):
-                  // </button>
                   <p className="text-center mx-auto">{item.title}</p>
                 )}
               </Link>

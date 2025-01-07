@@ -15,7 +15,7 @@ const LoginPage = () => {
   React.useLayoutEffect(() => {
     const token = localStorage.getItem("token");
     if (token && !isTokenExpired()) {
-      redirect("/admin/contacts-data");
+      redirect("/en/admin/contacts-data");
     }
   }, []);
 
@@ -93,7 +93,7 @@ const LoginPage = () => {
         if (response.meta.requestStatus === "rejected") {
           throw new Error("Invalid credentials");
         }
-        router.push("/admin/contacts-data");
+        router.push("/en/admin/contacts-data");
         toast.success("user have successfully logged in");
         setFormState({
           email: "",
@@ -183,7 +183,7 @@ const LoginPage = () => {
             </Button>
           </form>
           <div className="mt-4 text-center">
-            <Link href="/admin/forgot-password" color="primary">
+            <Link href="/en/admin/forgot-password" color="primary">
               Forgot password?
             </Link>
           </div>
