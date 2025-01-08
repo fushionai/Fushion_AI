@@ -4,13 +4,16 @@ import Image from "next/image";
 import TopNavBar from "@/components/layouts/TopNavBar";
 
 import heroBg from "@/assets/images/products-page-images/our-products-hero.png";
-import { Button, Link } from "@nextui-org/react";
+// import { Button, Link } from "@nextui-org/react";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { BlueButton } from "@/components/home-page-components/CustomeButton";
+import { Link } from "@/i18n/routing";
 
 const Consultancy = () => {
   const t = useTranslations("ProductsHeroSection.consultancy");
-
+  const locale = useLocale();
+  
   return (
     <section>
       <section className="relative bg-center bg-cover bg-no-repeat pb-36 max-sm:pb-28">
@@ -44,17 +47,21 @@ const Consultancy = () => {
               {t("subheading")}
             </h6>
 
-            <Link href="/contact" className="flex items-center justify-center">
-              <Button
+            <Link
+              href="/contact"
+              className="flex items-center justify-center"
+              locale={locale}
+            >
+              <BlueButton
                 className="mt-12 rounded-sm bg-primaryBlue text-primaryLightBlue font-roboto font-medium text-lg leading-[28px] text-center"
                 color="primary"
-                size="lg"
+                // size="lg"
               >
                 {/* Get in touch with us now */}
                 {t("buttons.getInTouch")}
 
                 <ArrowRight />
-              </Button>
+              </BlueButton>
             </Link>
 
             <div className="absolute -bottom-2 left-0 right-0 w-full bg-transparent h-24">

@@ -30,7 +30,7 @@ const ProductsOurService = ({
             &euro;
           </span>
         </h2>
-        <h3 className="px-16 mt-9 font-ubuntu font-medium text-[24px] leading-[36px] text-center text-darkBlue ">
+        <h3 className="px-2 sm:px-16 mt-9 font-ubuntu font-medium text-[24px] leading-[36px] text-center text-darkBlue ">
           {title}
         </h3>
         <p className="mt-6 text-center font-roboto font-normal text-base leading-[24px]  text-secondaryGray">

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 // import aiPoweredContents from "@/contents/our-products-contents/ai-powered-valuation";
@@ -9,6 +9,7 @@ import assets from "@/assets/index";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
+import { BlueButton } from "@/components/home-page-components/CustomeButton";
 
 const AIPoweredValuationPage = () => {
   const locale = useLocale();
@@ -49,9 +50,9 @@ const AIPoweredValuationPage = () => {
             <TopNavBar />
           </header>
           <main className="mt-16 px-10 md:mt-24 md:px-32 max-sm:px-2 ">
-            <div className="flex flex-row max-[1200px]:flex-col-reverse justify-between  max-[1200px]:justify-center  items-center gap-12">
+            <div className="flex flex-row max-[1200px]:flex-col-reverse justify-between  max-[1200px]:justify-center  items-center gap-12 overflow-x-hidden">
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
-                <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
+                <h1 className="font-ubuntu font-bold text-[30px] sm:text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px] break-all">
                   {/* AI-Powered Valuation and Prediction Report */}
                   {t("title")}
                 </h1>
@@ -70,10 +71,10 @@ const AIPoweredValuationPage = () => {
             </div>
             <div className="max-[1200px]:flex justify-center items-center">
               <Link href="/contact" locale={locale}>
-                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                <BlueButton className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
                   {t("buttons.contactUs")}
-                </Button>
+                </BlueButton>
               </Link>
             </div>
           </main>

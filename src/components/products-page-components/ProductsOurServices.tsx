@@ -96,7 +96,7 @@ const ProductsOurServices = () => {
   return (
     <section className="py-[120px] bg-primaryWhite">
       <header className="mb-6">
-        <h1 className="font-ubuntu font-bold text-[40px] leading-[45px] text-center text-darkBlue">
+        <h1 className="font-ubuntu font-bold text-[30px] sm:text-[40px] leading-[45px] text-center text-darkBlue">
           {/* Our Service */}
           {t("title")}
         </h1>

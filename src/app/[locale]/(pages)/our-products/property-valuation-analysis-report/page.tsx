@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 
 import TopNavBar from "@/components/layouts/TopNavBar";
 // import propertyAnalysis from "@/contents/our-products-contents/property-analysis";
@@ -9,6 +9,7 @@ import assets from "@/assets/index";
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { BlueButton } from "@/components/home-page-components/CustomeButton";
 
 const PropertyValuationAnalysisReportPage = () => {
   const locale = useLocale();
@@ -69,10 +70,10 @@ const PropertyValuationAnalysisReportPage = () => {
             </div>
             <div className="max-[1200px]:flex justify-center items-center">
               <Link href="/contact" locale={locale}>
-                <Button className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
+                <BlueButton className="mt-[26px] w-[200px] max-md:w-full h-[60px] bg-primaryBlue rounded-none text-primaryWhite font-roboto font-bold text-[24px] leading-[28px] text-center">
                   {/* Contact Us */}
                   {t("buttons.contactUs")}
-                </Button>
+                </BlueButton>
               </Link>
             </div>
           </main>

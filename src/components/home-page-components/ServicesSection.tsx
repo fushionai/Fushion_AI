@@ -138,8 +138,8 @@ const ServicesSection = () => {
       />
       <div className="-z-10 before:content-[''] before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[#161527] before:opacity-[80%]"></div>
       <main className="max-container relative z-20 ">
-        <div className="flex items-center max-md:justify-center gap-20 font-bold font-ubuntu text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
-          <h1 className="text-primaryWhite text-nowrap">
+        <div className="flex items-center max-md:justify-center gap-20 font-bold font-ubuntu text-[30px] sm:text-[40px] max-md:text-[32px] text-primaryWhite leading-[45px]">
+          <h1 className="text-primaryWhite sm:text-nowrap">
             {/* Service We Offer */}
             {t("title")}
           </h1>
