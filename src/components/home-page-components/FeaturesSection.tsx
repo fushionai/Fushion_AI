@@ -56,7 +56,7 @@ const FeaturesSection = () => {
         </p>
       </header>
       <main className="mt-20 max-md:mt-10 ">
-        <div className="max-lg:hidden px-28 flex justify-between transition-all h-[200lvh]">
+        <div className="max-lg:hidden px-28 flex justify-between transition-all h-[120lvh]">
           <article className="max-w-[556px] relative">
             <div className="sticky top-0 ">
               <Accordions setSelectedOrder={setSelectedOrder} />

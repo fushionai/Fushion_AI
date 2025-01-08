@@ -15,11 +15,11 @@ const Accordions = ({ setSelectedOrder }: { setSelectedOrder: any }) => {
   const thresholds = useMemo(
     () => [
       initialOffset,
-      initialOffset + 200,
-      initialOffset + 400,
-      initialOffset + 600,
-      initialOffset + 800,
-      initialOffset + 1000,
+      initialOffset + 70,
+      initialOffset + 140,
+      initialOffset + 210,
+      initialOffset + 290,
+      initialOffset + 360,
     ],
     [initialOffset]
   );
