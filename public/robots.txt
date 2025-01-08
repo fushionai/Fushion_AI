@@ -2,12 +2,14 @@
 User-agent: *
 Allow: /
 
-# Disallowed Paths
-Disallow: /admin
-Disallow: /admin/login
-Disallow: /admin/contacts-data
-Disallow: /admin/change-password
-Disallow: /admin/forgot-password
+# Disallowed Paths for All Locales
+Disallow: /*/admin
+Disallow: /*/admin/change-password
+Disallow: /*/admin/change-password/*
+Disallow: /*/admin/contacts-data
+Disallow: /*/admin/forgot-password
+Disallow: /*/admin/login
+
 
 # Host
 Host: https://www.fushionai.com
