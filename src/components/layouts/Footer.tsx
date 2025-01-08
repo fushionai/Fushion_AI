@@ -15,6 +15,7 @@ import {
 } from "@nextui-org/react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { BlueButton } from "../home-page-components/CustomeButton";
 
 const Footer = () => {
   const locale = useLocale();
@@ -88,7 +89,7 @@ const Footer = () => {
               className="max-md:self-start font-roboto font-bold text-base leading-[18px] text-[#AFAFAF] text-nowrap"
             >
               {/* Our Products */}
-              {t("Project.title")}
+              {t("ProductsHeroSection.title")}
             </Link>
             <button
               onClick={onOpen}
@@ -99,10 +100,10 @@ const Footer = () => {
             </button>
             <div className="flex max-md:w-full">
               <Link className="max-md:w-full" href="/contact" locale={locale}>
-                <Button className="flex px-5 h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
+                <BlueButton className="flex px-5 h-[40px] max-md:w-full mx-auto  rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-base max-md:text-lg leading-[28px] text-center">
                   {/* Contact Us */}
                   {t("UpFooter.buttons.contactUs")}
-                </Button>
+                </BlueButton>
               </Link>
             </div>
           </div>

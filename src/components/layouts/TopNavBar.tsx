@@ -167,7 +167,9 @@ const TopNavBar = () => {
         <NavbarItem>
           <button
             className="flex gap-x-1 items-center text-primaryWhite text-xl"
-            onClick={() => handleLanguageChange(locale == "en" ? "nl" : "en")}
+            onClick={() => {
+              handleLanguageChange(locale == "en" ? "nl" : "en");
+            }}
           >
             <svg
               stroke="currentColor"
@@ -231,12 +233,13 @@ const TopNavBar = () => {
                       {t("Contact.title")}
                     </button>
                   </Link>
-                ) : index === 5 ? (
+                ) : item.title === "Language" ? (
                   <button
                     className="flex gap-x-1 items-center text-primaryWhite text-xl w-full justify-center mt-[-30px]"
-                    onClick={() =>
-                      handleLanguageChange(locale == "en" ? "nl" : "en")
-                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLanguageChange(locale == "en" ? "nl" : "en");
+                    }}
                   >
                     <svg
                       stroke="currentColor"

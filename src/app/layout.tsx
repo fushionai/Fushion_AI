@@ -1,6 +1,6 @@
 // "use client";
 // import type { Metadata } from "next";
-import "./globals.css";
+import "./[locale]/globals.css";
 // import { NextUIProvider } from "@nextui-org/react";
 
 // export const metadata: Metadata = {
@@ -8,7 +8,6 @@ import "./globals.css";
 //   description: "Transform real estate with the power of data",
 // };
 
-import Footer from "@/components/layouts/Footer";
 // import { Provider } from "react-redux";
 // import { store } from "@/redux/store";
 // import { ToastContainer } from "react-toastify";
@@ -17,10 +16,7 @@ import Script from "next/script";
 
 // import { CookieConsent } from "@/components/cookie-consent";
 import { Metadata } from "next";
-import Favicon from "./favicon.ico";
-import { getMessages } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import AppProviders from "./AppProviders";
+import Favicon from "./[locale]/favicon.ico";
 
 export const metadata: Metadata = {
   title: "Fushion AI",
@@ -32,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://www.fushionai.com",
     siteName: "Fushion AI",
     title: "Fushion AI",
-    description: "Fushion AI - Transform real estate with the power of data", 
+    description: "Fushion AI - Transform real estate with the power of data",
     locale: "en_US",
     alternateLocale: "nl_NL",
     images: [
@@ -58,7 +54,6 @@ export default async function RootLayout({
     <></>;
   }
 
-  const messages = await getMessages();
   return (
     <html lang={locale} translate="no">
       <Script
@@ -82,26 +77,7 @@ export default async function RootLayout({
         />
       </head>
       <meta name="google" content="notranslate"></meta>
-      <body className={`antialiased`}>
-        {/* <NextUIProvider>
-          <Provider store={store}>
-            <LanguageProvider>
-              <ToastContainer />
-              <div className="w-full min-h-[100vh] h-auto">
-                {children}
-                <CookieConsent />
-              </div>
-              <Footer />
-            </LanguageProvider>
-          </Provider>
-        </NextUIProvider> */}
-        <NextIntlClientProvider messages={messages}>
-          <AppProviders>
-            {children}
-            <Footer />
-          </AppProviders>
-        </NextIntlClientProvider>
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }

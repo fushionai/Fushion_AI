@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 
-import { Button } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 
 import heroBg from "@/assets/images/home-page-images/hero_bg.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { BlueButton } from "./CustomeButton";
 
 const UpFooter = () => {
   const locale = useLocale();
@@ -32,10 +33,10 @@ const UpFooter = () => {
         </p>
         <div className="max-md:flex justify-center">
           <Link href="/contact" className="max-md:w-full" locale={locale}>
-            <Button className="mt-9 max-md:mt-6 flex px-[23px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
+            <BlueButton className="mt-9 max-md:mt-6 flex px-[23px] max-md:w-full mx-auto h-[60px] rounded-none bg-primaryBlue text-primaryLightBlue font-roboto font-bold text-[24px] max-md:text-lg leading-[28px] text-center">
               {/* Contact Us */}
               {t("buttons.contactUs")}
-            </Button>
+            </BlueButton>
           </Link>
         </div>
       </main>

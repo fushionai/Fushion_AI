@@ -1,8 +1,9 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { Button } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 import { Link } from "@/i18n/routing";
+import { BlueButton, WhiteButton } from "../home-page-components/CustomeButton";
 
 const ProductsOurService = ({
   price,
@@ -21,8 +22,8 @@ const ProductsOurService = ({
   const t = useTranslations("ProductsOurServices");
 
   return (
-    <section className="bg-primaryLightBlue py-12 px-6 h-[736px] max-w-[382px] max-xl:max-w-[360px] max-[1149px]:max-w-[95%] max-[1149px]:mx-auto">
-      <header className="h-[320px]">
+    <section className="bg-primaryLightBlue py-12 px-6 !h-full sm:h-[736px] max-w-[382px] max-xl:max-w-[360px] max-[1149px]:max-w-[95%] max-[1149px]:mx-auto">
+      <header className="h-full sm:h-[320px]">
         <h2 className="relative w-fit mx-auto font-ubuntu font-bold text-[64px] leading-[73px] text-primaryBlue text-center">
           {price}
           <span className="absolute top-0 -left-4 font-roboto font-medium text-[28px] leading-[42px]">
@@ -37,7 +38,7 @@ const ProductsOurService = ({
         </p>
       </header>
 
-      <main className="h-[210px] mt-9">
+      <main className="h-full sm:h-[210px] mt-9">
         {lists && (
           <ul className="space-y-[10px] list-disc px-2">
             {lists.map((list, index) => (
@@ -54,24 +55,24 @@ const ProductsOurService = ({
       <footer>
         <div className="mt-9 max-sm:mt-6 flex items-center justify-center gap-2">
           <Link href={goToLink || ""} locale={locale}>
-            <Button
+            <WhiteButton
               className="py-4 px-2 border border-darkBlue bg-transparent font-roboto font-bold text-[24px] text-center text-darkBlue rounded-none
             max-xl:text-base max-xl:px-4
             "
             >
               {/* Learn more */}
               {t("buttons.learnMore")}
-            </Button>
+            </WhiteButton>
           </Link>
           <Link href="/contact" locale={locale}>
-            <Button
+            <BlueButton
               className="py-4 px-2 bg-primaryBlue font-roboto font-bold text-[24px] text-center text-primaryWhite  rounded-none
                max-xl:text-base max-xl:px-4
             "
             >
               {/* Contact Us */}
               {t("buttons.contactUs")}
-            </Button>
+            </BlueButton>
           </Link>
         </div>
       </footer>
