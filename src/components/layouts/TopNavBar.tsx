@@ -95,11 +95,9 @@ const TopNavBar = () => {
       <NavbarContent>
         <Link locale={locale} href="/">
           <NavbarBrand className="flex items-center gap-4">
-            <Image
-              src={logo}
-              alt="Logo"
-              className="w-[80px] sm:w-[104px] h-[70px]"
-            />
+            <div className="w-[90px] h-[100px] sm:w-[160px] sm:h-[120px]">
+              <Image src={logo} alt="Logo" className="w-full h-full" />
+            </div>
             <p className="font-bold text-primaryWhite text-[12px] sm:text-[18px] max-sm:text-[16px] font-istok leading-[15px] sm:leading-[23px] tracking-[.20em] sm:tracking-[.30em]">
               FUSHION AI
             </p>

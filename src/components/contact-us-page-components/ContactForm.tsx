@@ -67,13 +67,13 @@ const ContactForm = ({ setToast }: any) => {
       isValid = false;
     }
 
-    if (!formState.company) {
-      errors.company =
-        // "Company is required";
-        t("Form.errorMessage.company");
+    // if (!formState.company) {
+    //   errors.company =
+    //     // "Company is required";
+    //     t("Form.errorMessage.company");
 
-      isValid = false;
-    }
+    //   isValid = false;
+    // }
 
     if (!formState.message) {
       errors.message =
