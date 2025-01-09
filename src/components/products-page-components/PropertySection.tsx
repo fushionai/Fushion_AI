@@ -26,8 +26,8 @@ const PropertySection = () => {
 
       <main className="mt-[60px]">
         <article className="flex flex-col gap-20 justify-center items-center w-full">
-          <div className="flex max-sm:flex-col items-center gap-6 max-w-full">
-            <div className="bg-[#EDEEF9] rounded-[16px] p-12">
+          <div className="flex max-sm:flex-col items-center gap-6">
+            <div className="bg-[#EDEEF9] rounded-[16px] p-12 md:min-w-[210px]">
               <Image
                 src={assets.propertyRobot}
                 alt="Property Valuation"
@@ -35,7 +35,7 @@ const PropertySection = () => {
               />
             </div>
             <div className="max-w-full sm:max-w-[473px]">
-              <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue">
+              <h2 className="font-ubuntu font-bold max-md:font-medium  text-[30px] sm:text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue break-words">
                 {/* Property Valuation Analysis */}
                 {t("sections.0.title")}
               </h2>
@@ -69,7 +69,7 @@ const PropertySection = () => {
           </div>
           <div className="flex max-sm:flex-col-reverse items-center gap-6 max-w-full">
             <div className="max-w-full sm:max-w-[473px]">
-              <h2 className="font-ubuntu font-bold max-md:font-medium  text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue break-all">
+              <h2 className="font-ubuntu font-bold max-md:font-medium  text-[30px] sm:text-[40px] max-md:text-[24px] leading-[45px] max-md:leading-[36px] text-darkBlue break-words">
                 {/* AI-Powered Valuation and Predictions */}
                 {t("sections.1.title")}
               </h2>

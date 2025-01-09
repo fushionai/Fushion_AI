@@ -44,7 +44,7 @@ const TopNavBar = () => {
     },
     {
       title: "Our Projects",
-      link: "/our-products",
+      link: "/",
     },
     {
       title: "About Us",
@@ -269,6 +269,12 @@ const TopNavBar = () => {
                     {/* Our Projects */}
                     {t("Project.title")}
                   </button>
+                ) : index === 1 ? (
+                  <p className="text-center mx-auto">
+                    {t("ProductsHeroSection.title")}
+                  </p>
+                ) : index === 3 ? (
+                  <p className="text-center mx-auto">{t("AboutUs.title")}</p>
                 ) : (
                   <p className="text-center mx-auto">{item.title}</p>
                 )}

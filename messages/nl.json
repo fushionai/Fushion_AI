@@ -284,7 +284,7 @@
     "title": "Getaxeerde Vastgoedwaarde",
     "subtitle": "Ideaal voor een nauwkeurige schatting van de waarde van een woning.",
     "questions": "Wat is het?",
-    "answer": "Het Vastgoedwaarderingsrapport biedt een snel en uitgebreid pakket aan vastgoedinformatie. Het rapport heeft betrekking op het pand en het perceel dat gekoppeld is aan het aangevraagde adres. Modelgebaseerde Vastgoedwaarde. Voor meer informatie over onze AVM-waarde",
+    "answer": "Het Vastgoedwaarderingsrapport biedt een snel en uitgebreid pakket aan vastgoedinformatie. Het rapport heeft betrekking op het pand en het perceel dat gekoppeld is aan het aangevraagde adres.",
     "list": [
       "Laatste aankoopprijs en huidige modelgebaseerde marktwaarde*",
       "Vergelijking met 10 referentiewoningen (ter waarde van € 24,95)",
@@ -317,8 +317,8 @@
     "buttons": {
       "contactUs": "Contact Ons"
     },
-    "title": "Property Valuation Analysis Report",
-    "subtitle": "Het Property Valuation Analysis Report biedt gedetailleerde vergelijkingen van soortgelijke woningen in hetzelfde gebied, met inzichten in de marktwaarde van een huis. Dit rapport is cruciaal voor het Neem van geïnformeerde beslissingen over vastgoedbeleggingen door de geschatte waarde van het vastgoed te verstrekken op basis van de Comparative Market Analysis (CMA)-benadering.",
+    "title": "Vastgoedwaarderings Analyse",
+    "subtitle": "Het Vastgoedwaarderings analyse-rapport biedt gedetailleerde vergelijkingen van soortgelijke woningen in hetzelfde gebied, met inzichten in de marktwaarde van een huis. Dit rapport is cruciaal voor het Neem van geïnformeerde beslissingen over vastgoedbeleggingen door de geschatte waarde van het vastgoed te verstrekken op basis van de Comparative Market Analysis (CMA)-benadering.",
     "InformationIncluded": {
       "heading": "Inbegrepen Informatie",
       "list": [
@@ -385,7 +385,7 @@
   },
   "consultancy": {
     "title": "Consultancy",
-    "description": "Bij Fushion AI bieden we op maat gemaakte consultancy-diensten om onze klanten te ondersteunen bij het navigeren door de complexiteiten van de vastgoedmarkt. Als tech-gedreven bedrijf combineren we onze expertise in geavanceerde analyses, kunstmatige intelligentie en markttrends om bruikbare inzichten en op maat gemaakte oplossingen te leveren. Of u nu een vastgoedbelegger, ontwikkelaar of vastgoedprofessional bent, onze consultancy-diensten zijn ontworpen om u te voorzien van op gegevens gebaseerde strategieën, zodat u weloverwogen beslissingen kunt Neem en rendement kunt maximaliseren. Samen zorgen we ervoor dat u voor blijft in het competitieve vastgoedlandschap."
+    "description": "Bij Fushion AI bieden we op maat gemaakte consultancy-diensten om onze klanten te ondersteunen bij het navigeren door de complexiteiten van de vastgoedmarkt. Als tech-gedreven bedrijf combineren we onze expertise in geavanceerde analyses, kunstmatige intelligentie en markttrends om bruikbare inzichten en op maat gemaakte oplossingen te leveren. Of u nu een vastgoedbelegger, ontwikkelaar of vastgoedprofessional bent, onze consultancy-diensten zijn ontworpen om u te voorzien van op gegevens gebaseerde strategieën, zodat u weloverwogen beslissingen kunt nemen en uw rendement kunt maximaliseren. Samen zorgen we ervoor dat u voor blijft in het competitieve vastgoedlandschap."
   },
   "Project": {
     "title": "Onze Projecten"

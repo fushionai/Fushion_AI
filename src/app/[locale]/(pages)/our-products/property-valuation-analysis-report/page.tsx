@@ -51,8 +51,8 @@ const PropertyValuationAnalysisReportPage = () => {
           <main className="mt-16 px-10 md:mt-24 md:px-32 max-sm:px-2 ">
             <div className="flex flex-row max-[1200px]:flex-col-reverse justify-between  max-[1200px]:justify-center  items-center gap-12">
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
-                <h1 className="font-ubuntu font-bold text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
-                  {/* Property Valuation Analysis Report */}
+                <h1 className="font-ubuntu font-bold !text-[8vw] sm:!text-[42px] lg:!text-[48px] xl:!text-[54px] !leading-[40px] sm:!leading-[68px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px]">
+                  {/* Vastgoedwaarderingsanalyse */}
                   {t("title")}
                 </h1>
                 <p className="mt-[26px] max-md:mt-[36px] font-roboto font-normal text-[20px] leading-[30px] text-primaryWhite max-[1200px]:text-center">

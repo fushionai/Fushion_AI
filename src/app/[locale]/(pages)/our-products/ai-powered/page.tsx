@@ -52,7 +52,7 @@ const AIPoweredValuationPage = () => {
           <main className="mt-16 px-10 md:mt-24 md:px-32 max-sm:px-2 ">
             <div className="flex flex-row max-[1200px]:flex-col-reverse justify-between  max-[1200px]:justify-center  items-center gap-12 overflow-x-hidden">
               <header className="max-w-[542px] max-[1200px]:max-w-fit">
-                <h1 className="font-ubuntu font-bold text-[30px] sm:text-[64px] leading-[73px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px] break-all">
+                <h1 className="font-ubuntu font-bold !text-[30px] sm:!text-[48px] lg:!text-[54px] leading-[68px] text-primaryWhite max-[1200px]:text-center max-md:text-[32px] max-md:leading-[48px] break-words sm:break-normal">
                   {/* AI-Powered Valuation and Prediction Report */}
                   {t("title")}
                 </h1>
