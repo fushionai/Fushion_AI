@@ -9,6 +9,7 @@ Disallow: /*/admin/change-password/*
 Disallow: /*/admin/contacts-data
 Disallow: /*/admin/forgot-password
 Disallow: /*/admin/login
+Disallow: /*/our-products/*
 
 
 # Host

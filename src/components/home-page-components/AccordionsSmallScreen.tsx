@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import assert from "@/assets/index";
-import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
+// import featuresSectionContent from "@/contents/home-page-contents/features-section-content";
+import { useTranslations } from "next-intl";
 
 function FeaturesSmallScreen() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,6 +28,8 @@ function FeaturesSmallScreen() {
     setCurrentSlide(index);
     sliderRef.current?.slickGoTo(index);
   };
+
+  const t = useTranslations("features");
 
   return (
     <main className="mx-auto">
@@ -57,15 +60,22 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                Unmatched Expertise in{" "}
-                <span className="text-primaryBlue">AI</span> and{" "}
+                {/* Unmatched Expertise in{" "} */}
+                {t("accordion.order1.titlePart1")}
+                <span className="text-primaryBlue">
+                  {/* AI */} {t("accordion.order1.titleColored1")}
+                </span>{" "}
+                {/* and{" "} */}
+                {t("accordion.order1.titlePart2")}{" "}
                 <span className="text-primaryBlue text-nowrap">
                   {" "}
-                  Real Estate{" "}
+                  {/* Real Estate{" "} */}
+                  {t("accordion.order1.titleColored2")}
                 </span>
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[0].description}
+                {/* {featuresSectionContent[0].description} */}
+                {t("accordion.order1.description")}
               </p>
               <Image
                 src={assert.statisticsWithBg}
@@ -78,11 +88,15 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto ">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                Comprehensive <span className="text-primaryBlue">AI</span> Data
-                Analysis
+                {/* Comprehensive */}
+                {t("accordion.order2.title")}{" "}
+                <span className="text-primaryBlue">AI</span>{" "}
+                {/* Data Analysis */}
+                {t("accordion.order2.titleColored1")}
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[1].description}
+                {/* {featuresSectionContent[1].description} */}
+                {t("accordion.order2.description")}
               </p>
               <Image
                 src={assert.analysisWithBg}
@@ -95,10 +109,12 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto ">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                {featuresSectionContent[2].title}
+                {/* {featuresSectionContent[2].title} */}
+                {t("accordion.order3.title")}
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[2].description}
+                {/* {featuresSectionContent[2].description} */}
+                {t("accordion.order3.description")}
               </p>
               <Image
                 src={assert.insightWithBg}
@@ -111,10 +127,12 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto ">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                {featuresSectionContent[3].title}
+                {/* {featuresSectionContent[3].title} */}
+                {t("accordion.order4.title")}
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[3].description}
+                {/* {featuresSectionContent[3].description} */}
+                {t("accordion.order4.description")}
               </p>
               <Image
                 src={assert.personWithBg}
@@ -127,10 +145,12 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto ">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                {featuresSectionContent[4].title}
+                {/* {featuresSectionContent[4].title} */}
+                {t("accordion.order5.title")}
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[4].description}
+                {/* {featuresSectionContent[4].description} */}
+                {t("accordion.order5.description")}
               </p>
               <Image
                 src={assert.docsWithBg}
@@ -143,10 +163,12 @@ function FeaturesSmallScreen() {
           <div>
             <article className="px-4 mx-auto ">
               <h3 className="font-ubuntu font-medium text-[24px] text-darkBlue leading-[36px] ">
-                {featuresSectionContent[5].title}
+                {/* {featuresSectionContent[5].title} */}
+                {t("accordion.order6.title")}
               </h3>
               <p className="mt-3 font-roboto font-normal text-[20px] leading-[30px]">
-                {featuresSectionContent[5].description}
+                {/* {featuresSectionContent[5].description} */}
+                {t("accordion.order6.description")}
               </p>
               <Image
                 src={assert.agreementWithBg}

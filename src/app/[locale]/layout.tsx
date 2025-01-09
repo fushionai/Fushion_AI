@@ -23,16 +23,23 @@ import { NextIntlClientProvider } from "next-intl";
 import AppProviders from "./AppProviders";
 
 export const metadata: Metadata = {
-  title: "Fushion AI",
-  description: "Fushion AI - Transform real estate with the power of data",
+  title: "Fushion AI - Innovating Real Estate with AI Precision",
+  description: "Transform real estate with the power of data",
   icons: [{ rel: "icon", url: Favicon.src }],
-  keywords: ["Fushion", "AI", "FushionAI", "real estate", "AI real estate"],
+  keywords: [
+    "fushion ai",
+    "Fushion",
+    "ai real estate",
+    "fushion ai real estate",
+    "FushionAI",
+    "real estate",
+  ],
   openGraph: {
     type: "website",
     url: "https://www.fushionai.com",
     siteName: "Fushion AI",
     title: "Fushion AI",
-    description: "Fushion AI - Transform real estate with the power of data", 
+    description: "Fushion AI - Transform real estate with the power of data",
     locale: "en_US",
     alternateLocale: "nl_NL",
     images: [
@@ -75,11 +82,11 @@ export default async function RootLayout({
         `}
       </Script>
       <head>
-        <title>Fushion AI</title>
+        {/* <title>Fushion AI</title>
         <meta
           name="description"
           content="Transform real estate with the power of data"
-        />
+        /> */}
       </head>
       <meta name="google" content="notranslate"></meta>
       <body className={`antialiased`}>

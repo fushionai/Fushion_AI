@@ -47,7 +47,7 @@ const Page = () => {
           <header>
             <TopNavBar />
           </header>
-          <main className="mt-16 px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
+          <main className="mt-16 !px-4 sm:px-10 pb-20 md:mt-20 md:px-32 max-sm:px-2">
             <h2 className="font-ubuntu text-[64px] max-sm:text-[32px]  font-bold text-primaryWhite text-center leading-[73px] max-sm:leading-[48px]">
               {/* Contact Us */}
               {t("altTitle")}
