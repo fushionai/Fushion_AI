@@ -25,7 +25,6 @@ import AppProviders from "./AppProviders";
 export const metadata: Metadata = {
   title: "Fushion AI - Innovating Real Estate with AI Precision",
   description: "Transform real estate with the power of data",
-  icons: [{ rel: "icon", url: Favicon.src }],
   keywords: [
     "fushion ai",
     "Fushion",
@@ -87,6 +86,7 @@ export default async function RootLayout({
           name="description"
           content="Transform real estate with the power of data"
         /> */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
       </head>
       <meta name="google" content="notranslate"></meta>
       <body className={`antialiased`}>
