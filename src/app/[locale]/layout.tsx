@@ -21,16 +21,18 @@ import Favicon from "./favicon.ico";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import AppProviders from "./AppProviders";
+import Cannonical from "./canonical";
 
 export const metadata: Metadata = {
   title: "Fushion AI - Innovating Real Estate with AI Precision",
   description: "Transform real estate with the power of data",
   keywords: [
-    "fushion ai",
     "Fushion",
+    "AI",
+    "FushionAI",
+    "fushion ai",
     "ai real estate",
     "fushion ai real estate",
-    "FushionAI",
     "real estate",
   ],
   openGraph: {
@@ -63,7 +65,6 @@ export default async function RootLayout({
   if (!locales.includes(locale)) {
     <></>;
   }
-
   const messages = await getMessages();
   return (
     <html lang={locale} translate="no">
@@ -87,6 +88,7 @@ export default async function RootLayout({
           content="Transform real estate with the power of data"
         /> */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
+        <Cannonical /> 
       </head>
       <meta name="google" content="notranslate"></meta>
       <body className={`antialiased`}>

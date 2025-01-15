@@ -21,13 +21,14 @@ import Favicon from "./[locale]/favicon.ico";
 export const metadata: Metadata = {
   title: "Fushion AI - Innovating Real Estate with AI Precision",
   description: "Transform real estate with the power of data",
-  icons: [{ rel: "icon", url: Favicon.src }],
+  // icons: [{ rel: "icon", url: Favicon.src }],
   keywords: [
-    "fushion ai",
     "Fushion",
+    "AI",
+    "FushionAI",
+    "fushion ai",
     "ai real estate",
     "fushion ai real estate",
-    "FushionAI",
     "real estate",
   ],
   openGraph: {
@@ -82,6 +83,8 @@ export default async function RootLayout({
           name="description"
           content="Transform real estate with the power of data"
         /> */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
+        {/* <link rel="canonical" href="https://www.fushionai.com/en" /> */}
       </head>
       <meta name="google" content="notranslate"></meta>
       <body className={`antialiased`}>{children}</body>
