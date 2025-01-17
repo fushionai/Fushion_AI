@@ -8,41 +8,41 @@
     
     <!-- Home Page -->
     <url>
-        <loc>https://www.fushionai.com/en</loc>
+        <loc>https://www.fushionai.com</loc>
         <lastmod>2025-01-02T13:09:28.644Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/en" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com" />
         <xhtml:link rel="alternate" hreflang="nl" href="https://www.fushionai.com/nl" />
     </url>
     
     <!-- Our Products Page -->
     <url>
-        <loc>https://www.fushionai.com/en/our-products</loc>
+        <loc>https://www.fushionai.com/our-products</loc>
         <lastmod>2025-01-02T13:09:28.644Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/en/our-products" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/our-products" />
         <xhtml:link rel="alternate" hreflang="nl" href="https://www.fushionai.com/nl/our-products" />
     </url>
     
     <!-- About Us Page -->
     <url>
-        <loc>https://www.fushionai.com/en/about-us</loc>
+        <loc>https://www.fushionai.com/about-us</loc>
         <lastmod>2025-01-02T13:09:28.643Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/en/about-us" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/about-us" />
         <xhtml:link rel="alternate" hreflang="nl" href="https://www.fushionai.com/nl/about-us" />
     </url>
     
     <!-- Contact Page -->
     <url>
-        <loc>https://www.fushionai.com/en/contact</loc>
+        <loc>https://www.fushionai.com/contact</loc>
         <lastmod>2025-01-02T13:09:28.644Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/en/contact" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.fushionai.com/contact" />
         <xhtml:link rel="alternate" hreflang="nl" href="https://www.fushionai.com/nl/contact" />
     </url>
 </urlset>
